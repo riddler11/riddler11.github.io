@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-08T14:24:06.616Z</updated>
+    <updated>2021-10-08T16:43:45.254Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -11,29 +11,29 @@
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[51单片机小车]]></title>
+        <title type="html"><![CDATA[Trolley base on MCS 51 ]]></title>
         <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
         <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
         </link>
         <updated>2021-10-08T07:57:08.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1电路设计">1.电路设计</h1>
-<h4 id="首先先选型">首先先选型</h4>
-<p>在开始前要想好用什么进行控制小车，<br>
-该文章如标题：<br>
-主控选择：89C52芯片<br>
-一辆小车（有两个马达；前马达控制左右，后马达控制前后）<br>
-控制马达的芯片或模块：L298/L9110<br>
-无线模块：NRF24L01（可采用ESP8266联网控制或者HC05蓝牙控制，看个人喜欢）<br>
-降压模块：5V转3.3V（NRF24L01印象中是3.3V）</p>
-<h4 id="接下来就是绘制电路图">接下来就是绘制电路图</h4>
-<p>手绘、软件绘制都行，只要画清楚就行</p>
+        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
+<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
+<p>Try to select the components that control the trolley.<br>
+As the title：<br>
+Main control chip：AT89C52 chip<br>
+A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
+A chip or module that controls a motor：L298/L9110<br>
+Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
+Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
+<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
+<p>You can use your hand or some software to draw, this step is to know what you want.</p>
 <ol>
-<li>单片机来讲，<strong>最小系统</strong>一定要有</li>
-<li>接着   <strong>开关电源</strong> ，单片机就能工作了</li>
-<li>某宝上购置的元器件，本文上的控制马达芯片等，看某宝下面的参考详情<br>
-如：L298是怎么连接能够工作等等，<strong>弄清楚怎么能工作</strong></li>
-<li><strong>那些要用的芯片、模块等连上单片机</strong></li>
-<li>记得要留+引出<strong>烧写代码的端口</strong>，不然每次烧写代码都要把芯片拆下来烧。（万一是贴片主控就很头疼了）。可以使用<strong>牛角座+STC免冷启动烧写器</strong>（具体烧写器名字我有点忘了，大概这个）进行代码烧写，这样就比较方便。USB转TTL的就需要烧写时候断个电再烧进去。</li>
+<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
+<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
+<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
+such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
+<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
+<li>Tips:记得要留+引出<strong>烧写代码的端口</strong>，不然每次烧写代码都要把芯片拆下来烧。（万一是贴片主控就很头疼了）。可以使用<strong>牛角座+STC免冷启动烧写器</strong>（具体烧写器名字我有点忘了，大概这个）进行代码烧写，这样就比较方便。USB转TTL的就需要烧写时候断个电再烧进去。</li>
 </ol>
 <h4 id="做好上述步骤可以开始绘制pcb">做好上述步骤可以开始绘制PCB</h4>
 <p>个人到现在一直用<strong>DXP</strong>，那就根据自己设计的电路图进行绘制PCB。</p>
