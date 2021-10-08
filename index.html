@@ -1,75 +1,207 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://riddler11.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-    <script src="https://riddler11.github.io/media/js/valine.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633701722035">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
     <meta name="description" content="It's what you do in the dark, that puts you in the light." />
-    <meta http-equiv="x-pjax-version" content="v123">
-    <title>Leo's Blog</title>
-</head>
-
-
-<body>
-    <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
-                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-                <!------------------ 顶部菜单栏html👇--------->
-                 
-                <!------------------ 顶部菜单栏html👆--------->
-                </div>
-            </div>
-            <div id="bg">
-            </div>
-            <!------- 背景图加载方式👇----- -->
-            <div id="bgchoice" style="display: none">
-            </div>
-            
-            <div id="bgurl" style="display:none"></div>
-            
-            <!------- 背景图加载方式👆----- --> 
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-    </div>
-        
-    <div id="domainname" style="display:none">https://riddler11.github.io
-        </div>
-
-<!-------------------- live2d功能👇 --------------------------->
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://riddler11.github.io">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633701722035" alt="">
+  </a>
+  <h1 class="site-title">
+    Leo&#39;s Blog
+  </h1>
+  <p class="site-description">
+    It's what you do in the dark, that puts you in the light.
+  </p>
+  <div class="menu-container">
     
-<!-------------------- live2d功能👆 --------------------------->
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          about
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
 
-<!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
-<script>
-    var bgchoice = ""
-    var bg = $('#bg');
-    var bgurl = document.getElementById("bgurl").innerHTML;
-    if (bgchoice == 'default')
-    {
-        for (var i = 0; i < 3; i++)
-            bgurl = bgurl.replace("\\", "/");
-        bgurl = "https://riddler11.github.io/" + bgurl;
-    }
-    bg.css("background", "url('" + bgurl + "')");
-
-    window.onload = function () {
-        aplayerbtnInit();
-    }
-</script>
-<!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-
+    
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        <h2 class="post-title">51单片机小车</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          4 min read
+        </span>
         
-</body>
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
+        <h2 class="post-title">ESP8266远程控制台灯</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          10 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
+        <h2 class="post-title">AD绘制arduino，含原理图及自己遇过的坑</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
+        <h2 class="post-title">学习强国打卡系统</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          8 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
+        <h2 class="post-title">nodemcu/ESP12F土壤湿度传感器使用效果及代码详解</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
+        <h2 class="post-title">nodemcu/ESP12F贝壳物联实时监控环境温度</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2021-10-08
+        </span>
+        <span>
+          1 min read
+        </span>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </div>
+    </article>
+  
+</div>
+
+    
+        <div class="pagination-container">
+  
+  
+</div>
+
+    
+        <div class="site-footer">
+  
+  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+  </body>
 </html>
