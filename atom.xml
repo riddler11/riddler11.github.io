@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-08T07:46:56.292Z</updated>
+    <updated>2021-10-08T07:57:22.812Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,566 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[51单片机小车]]></title>
+        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
+        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        </link>
+        <updated>2021-10-08T07:57:08.000Z</updated>
+        <content type="html"><![CDATA[<p>#1.电路设计<br>
+####首先先选型<br>
+在开始前要想好用什么进行控制小车，<br>
+该文章如标题：<br>
+主控选择：89C52芯片<br>
+一辆小车（有两个马达；前马达控制左右，后马达控制前后）<br>
+控制马达的芯片或模块：L298/L9110<br>
+无线模块：NRF24L01（可采用ESP8266联网控制或者HC05蓝牙控制，看个人喜欢）<br>
+降压模块：5V转3.3V（NRF24L01印象中是3.3V）<br>
+####接下来就是绘制电路图<br>
+手绘、软件绘制都行，只要画清楚就行</p>
+<ol>
+<li>单片机来讲，<strong>最小系统</strong>一定要有</li>
+<li>接着   <strong>开关电源</strong> ，单片机就能工作了</li>
+<li>某宝上购置的元器件，本文上的控制马达芯片等，看某宝下面的参考详情<br>
+如：L298是怎么连接能够工作等等，<strong>弄清楚怎么能工作</strong></li>
+<li><strong>那些要用的芯片、模块等连上单片机</strong></li>
+<li>记得要留+引出<strong>烧写代码的端口</strong>，不然每次烧写代码都要把芯片拆下来烧。（万一是贴片主控就很头疼了）。可以使用<strong>牛角座+STC免冷启动烧写器</strong>（具体烧写器名字我有点忘了，大概这个）进行代码烧写，这样就比较方便。USB转TTL的就需要烧写时候断个电再烧进去。</li>
+</ol>
+<p>####做好上述步骤可以开始绘制PCB<br>
+个人到现在一直用<strong>DXP</strong>，那就根据自己设计的电路图进行绘制PCB。</p>
+<p>当然DXP提供了可以画电路原理图的东西，原理图库，原理图会用可以直接用</p>
+<p>画好之后记得一定一定要<strong>检查</strong>，检查连线有没连好等</p>
+<p>####打样<br>
+交给公司打样，制作出来自己设计的东西<br>
+<strong>焊接</strong>完成后，再进行调试</p>
+<p>#2.代码调试<br>
+####完成第一部分的电路，并打完样后可以进行实际电路的调试<br>
+如果想同步进行代码调试的话，可以用<strong>仿真</strong>protues<br>
+仿真的作用相信大家都不陌生：模拟真实条件下硬件运行的状态，当然模拟这个不能拼出一辆像样的小车，但是里面选型有马达motor。<br>
+####先调试的是让小车能够动起来</p>
+<ol>
+<li>小车能动起来，首先证明小车马达没问题，才能有后面的控制环节。</li>
+<li>小车若不能动，那就进行问题排查  <strong>或许是马达问题</strong> <strong>或许是L298出现问题</strong> <strong>也可能是电路板电路一些问题</strong> 这时候召唤一下<strong>万用表</strong></li>
+<li>马达很简单，用块电池正负一接就可以看它会不会动（最好也串个电阻，万一电流过大，这检测过程可能也会烧马达）</li>
+<li>其它用万用表测一下有没电什么的【测电流是串进电路（测电流最好也并个电阻，反正我本人就烧过万用表），电压是并联就行】<br>
+####下一步是进行控制代码调试<br>
+设计中是用NRF24L01来控制，那么<strong>注意电压</strong><br>
+51单片机的电压是5V，这个模块是3.3V<br>
+模块烧掉了就不可能控制<br>
+假设电脑进行控制，则<strong>电脑是信息发送端，单片机是信息接收端</strong></li>
+</ol>
+<p>先进行单一控制（如前进，P2.0口是0，P2.1口是1，单片机接收信号“1”）<br>
+在电脑用串口调试助手，发送1的信号<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="串口调试助手例图" loading="lazy"><br>
+#####单片机的关键代码示例</p>
+<pre><code>    if(	rece_buf[1]=='1') 	 		//第1位以后是收到的命令数据，rece_buf[0]是数据位数长度
+                {
+                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
+                  M1=1；
+                }
+
+</code></pre>
+<p>####前进调试成功后就进行下一步举一反三<br>
+通过相同方式完成后退，停止，左转，右转控制</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ESP8266远程控制台灯]]></title>
+        <id>https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/</id>
+        <link href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
+        </link>
+        <updated>2021-10-08T07:56:42.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="硬件">硬件</h2>
+<p>micro USB</p>
+<p>USB母座</p>
+<p>继电器</p>
+<p>电阻电容若干</p>
+<p>ESP8266-12F</p>
+<p>CH340C</p>
+<h2 id="硬件电路">硬件电路</h2>
+<p>####USB转UART一键下载电路<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-7af4fa842b3649e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CH340C的电路设计" loading="lazy"></p>
+<p>####5V转3.3V电路（降压、供电）</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-9260f8db2dd30164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5V转3.3V" loading="lazy"></figure>
+<p>####ESP8266-12F主控电路</p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-78cd55e6ee1d8b73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最小系统" loading="lazy"></figure>
+<p>####key电路<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-b466c78c8baafa79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></p>
+<p>####继电器电路<br>
+此处设计为了给USB供电充足，避免供电不足灯频闪，加了个电容，利用电容充放电来提供充足电压（这是我个人的想法，不知正确否，实际测试过才行，也欢迎各位读者批评指正）<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-118c7ceaca18a6ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="继电器电路" loading="lazy"></p>
+<p>####总电路原理图<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
+<p>###2020.8.28翻车部分<br>
+  <strong>板子到了焊接，第一块板在所有焊接完成后，发现CH340C的芯片有问题。早上单独焊接了烧写的电路CH340C，在新版上的烧写电路是没问题的，电脑也能成功识别<br>
+  由于过于自信，没有多买元件，使得第一板哪里有错误难以检查，而且没有好好核对原理图，买少了元件导致没得焊三个电阻，虽然有最小系统，但是烧录固件ESP12F呈现了十分奇怪的一直闪灯，但不走进程的状态</strong><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左边为焊好的板，由于检查到CH340C的损坏所以把它焊下来了。右边为对比检测，下载电路是没问题的" loading="lazy"><br>
+  <strong>更多分析可以观看B站同步分享的视频</strong><br>
+<a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">B站同步的分析视频</a></p>
+<p>###2020.8.31成功控制台灯<br>
+<a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">B站观看效果点击这里</a><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="通过自己写的APP点亮台灯图片" loading="lazy"><br>
+ 自己设计的这块板子理论上能够控制所有采用USB 5V供电的设备</p>
+<h2 id="硬件代码部分">硬件代码部分</h2>
+<p>1.  先为ESP8266-12F刷入固件（可先刷AT固件，接着刷入nodemcu固件，避免出现错误）</p>
+<ol start="2">
+<li>接着写代码，可以用esplorer用lua写代码，或者用arduinoIDE用C语言写代码，本人用C语言比较多，且用arduinoIDE比较多因此选择arduinoIDE</li>
+</ol>
+<p>代码思路，先连接WIFI，连上网后连上物联网平台（这里我使用贝壳物联，进行内网穿透，使得外网发信息能够收到），接着写控制代码（这里贝壳物联有demo，再对demo进行修改）</p>
+<pre><code>/*
+    此文件需安装Arduino esp8266开发环境支持，环境搭建参见：http://www.bigiot.net/talk/237.html
+    本程序可以用来控制两路继电器
+    ESP8266烧入此程序直接，使用高低电频控制光耦继电器来控制电灯
+    我的继电器默认高电频开启，所以在初始化时都初始化为低电平，play开启D5，stop关闭D5.ESP8266上的灯作为提示灯
+    代码基于https://github.com/bigiot/bigiotArduino/blob/master/examples/ESP8266/kaiguan/kaiguan.ino
+    上的代码进行调整，此代码可以直接烧入到nodemcu模块，分享代码希望对大家有帮助（2020.9.7）
+*/
+
+#include &lt;ESP8266WiFi.h&gt;
+#include &lt;aJSON.h&gt;
+
+//=============  此处必须修该============
+String DEVICEID=&quot;***&quot;; // 你的设备编号   ==
+String  APIKEY = &quot;***&quot;; // 设备密码==//贝壳物联申请一下
+//=======================================
+unsigned long lastCheckInTime = 0; //记录上次报到时间
+const unsigned long postingInterval = 40000; // 每隔40秒向服务器报到一次
+
+const char* ssid     = &quot;***&quot;;//无线名称
+const char* password = &quot;***&quot;;//无线密码
+
+const char* host = &quot;www.bigiot.net&quot;;
+const int httpPort = 8181;
+
+int ELed=D4;
+
+int SW=D5;
+int SW1=D6;
+//int arr_len = sizeof(pins)/sizeof(pins[0]);
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  
+  WiFi.begin(ssid, password);
+  //默认输出关闭电频
+  pinMode(ELed,OUTPUT);
+  pinMode(SW,OUTPUT);
+  pinMode(SW1,OUTPUT);
+  digitalWrite(ELed,HIGH);
+  digitalWrite(SW,LOW);
+  digitalWrite(SW1,LOW);
+
+  
+}
+
+WiFiClient client;
+
+void loop() {
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.print(&quot;.&quot;);
+  }
+
+  // Use WiFiClient class to create TCP connections
+  if (!client.connected()) {
+    if (!client.connect(host, httpPort)) {
+      Serial.println(&quot;connection failed&quot;);
+      delay(5000);
+      return;
+    }
+  }
+
+  if(millis() - lastCheckInTime &gt; postingInterval || lastCheckInTime==0) {
+    checkIn();
+  }
+  
+  // Read all the lines of the reply from server and print them to Serial
+  if (client.available()) {
+    String inputString = client.readStringUntil('\n');
+    inputString.trim();
+    Serial.println(inputString);
+    int len = inputString.length()+1;
+    if(inputString.startsWith(&quot;{&quot;) &amp;&amp; inputString.endsWith(&quot;}&quot;)){
+      char jsonString[len];
+      inputString.toCharArray(jsonString,len);
+      aJsonObject *msg = aJson.parse(jsonString);
+      processMessage(msg);
+      aJson.deleteItem(msg);          
+    }
+  }
+}
+
+void processMessage(aJsonObject *msg){
+  aJsonObject* method = aJson.getObjectItem(msg, &quot;M&quot;);
+  aJsonObject* content = aJson.getObjectItem(msg, &quot;C&quot;);     
+  aJsonObject* client_id = aJson.getObjectItem(msg, &quot;ID&quot;);
+  if (!method) {
+    return;
+  }
+    String M = method-&gt;valuestring;
+    if(M == &quot;say&quot;){
+      String C = content-&gt;valuestring;
+      String F_C_ID = client_id-&gt;valuestring;
+      if(C == &quot;sw1&quot;){
+
+        digitalWrite(ELed,LOW); //ESP8266上的灯亮
+        digitalWrite(SW,HIGH);//D5口通电
+        sayToClient(F_C_ID,&quot;LED All on!&quot;);    
+      }else if(C == &quot;stop1&quot;){
+
+        digitalWrite(ELed,HIGH);//ESP8266上的灯灭
+        digitalWrite(SW,LOW);//D5口断电
+        sayToClient(F_C_ID,&quot;LED All off!&quot;); //贝壳平台可以看到这句提示   
+      }else if(C==&quot;sw2&quot;){
+         digitalWrite(ELed,LOW);
+        digitalWrite(SW1,HIGH);//D6通电
+        sayToClient(F_C_ID,&quot;SW2 ON!&quot;);
+        }else if(C==&quot;stop2&quot;){
+         digitalWrite(ELed,HIGH);
+        digitalWrite(SW1,LOW);//D6断电
+        sayToClient(F_C_ID,&quot;SW2 OFF!&quot;);
+        }
+        
+
+    }
+}
+
+void checkIn() {
+    String msg = &quot;{\&quot;M\&quot;:\&quot;checkin\&quot;,\&quot;ID\&quot;:\&quot;&quot; + DEVICEID + &quot;\&quot;,\&quot;K\&quot;:\&quot;&quot; + APIKEY + &quot;\&quot;}\n&quot;;
+    client.print(msg);
+    lastCheckInTime = millis(); 
+}
+
+void sayToClient(String client_id, String content){
+  String msg = &quot;{\&quot;M\&quot;:\&quot;say\&quot;,\&quot;ID\&quot;:\&quot;&quot; + client_id + &quot;\&quot;,\&quot;C\&quot;:\&quot;&quot; + content + &quot;\&quot;}\n&quot;;
+  client.print(msg);
+  lastCheckInTime = millis();
+}
+</code></pre>
+<h2 id="控制软件">控制软件</h2>
+<p>自己开发个app或者使用贝壳物联提供的app<br>
+这里我用HbuilderX自己开发的app，5+app。简单来说是网站式的app<br>
+参考代码部分：</p>
+<pre><code>//2020.9.15更新
+&lt;!DOCTYPE html&gt;
+&lt;html &gt;
+&lt;head &gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot; /&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;script src=&quot;js/mui.min.js&quot;&gt;&lt;/script&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/1.css&quot;/&gt;
+    &lt;link href=&quot;css/mui.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
+    &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
+      	mui.init();
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div class=&quot;abg&quot;&gt;//这里class是自己写的一个背景图片css样式
+	&lt;br&gt;
+	&lt;div style=&quot;margin: auto;text-align: center;font-size: x-large;color: white;font:;&quot;&gt;&lt;label&gt;宿舍台灯控制&lt;/label&gt;&lt;/div&gt;
+	
+	
+			&lt;br&gt;
+			&lt;div class=&quot;bod&quot;&gt;
+			&lt;div style=&quot;display: flex;color: white;&quot;&gt;&lt;label&gt;开关1：&lt;/label&gt;
+				&lt;div class=&quot;mui-switch &quot; id=&quot;mySwitch&quot;&gt;
+					&lt;div class=&quot;mui-switch-handle&quot;&gt;&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div style=&quot;display: flex; color: white;&quot;&gt;&lt;label&gt;&amp;nbsp;&amp;nbsp;开关2：&lt;/label&gt;
+					&lt;div class=&quot;mui-switch &quot; id=&quot;mySwitch1&quot;&gt;
+						&lt;div class=&quot;mui-switch-handle&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			
+	
+			
+			
+&lt;/div&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+			var ws = new WebSocket(&quot;ws://www.bigiot.net:8383&quot;);
+			//var lb = document.getElementById(&quot;lb2&quot;)
+			ws.onopen = function() {
+				
+				mui.toast(&quot;连接成功&quot;)//软件界面显示连接成功
+			};
+			ws.onmessage = function(evt) {
+				var received_msg = evt.data;
+				//lb.innerText = received_msg
+				console.log(received_msg);
+				var obj = JSON.parse(received_msg)
+				if (obj.M == &quot;WELCOME TO BIGIOT&quot;) {
+					ws.send('{&quot;M&quot;:&quot;checkin&quot;,&quot;ID&quot;:&quot;设备ID&quot;,&quot;K&quot;:&quot;APIKEY&quot;}')//发送连接设备
+				}
+				if(obj.M==&quot;checkinok&quot;){
+					mui.toast(&quot;服务器连接成功！可以进行控制&quot;)//这里是判断贝壳物联有没返回成功连接信息
+				}
+				if (obj.M == &quot;ping&quot;) //判断是否收到心跳包
+				{
+					ws.send('{&quot;M&quot;:&quot;beat&quot;}') //发送心跳包数据
+				}
+			};
+			document.getElementById(&quot;mySwitch&quot;).addEventListener(&quot;toggle&quot;, function(event) {
+				if (event.detail.isActive) {
+					mui.toast(&quot;打开开关1&quot;)
+					console.log(&quot;你启动了开关&quot;);
+					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;sw1&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')//D+设备ID,D代表设备。D+ID代表要发送信息到我们的esp8266设备
+				} else {
+					mui.toast(&quot;关闭开关1&quot;)
+					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;stop1&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')//这里发送的命令要跟ESP8266的判断的命令相匹配才会产生效果
+					console.log(&quot;你关闭了开关&quot;);
+				}
+			})
+			document.getElementById(&quot;mySwitch1&quot;).addEventListener(&quot;toggle&quot;, function(event) {
+				if (event.detail.isActive) {
+					mui.toast(&quot;打开开关2&quot;)
+					console.log(&quot;你启动了开关&quot;);
+					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;sw2&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')
+				} else {
+					mui.toast(&quot;关闭开关2&quot;)
+					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;stop2&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')
+					console.log(&quot;你关闭了开关&quot;);
+					
+				}
+			})
+			
+		&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>##最后附上软件界面<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="软件界面效果图" loading="lazy"></p>
+<p>文件已开源（2020.9.15），码云gitee下载地址:https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
+<p>（2020.9.21）在运用到控制台灯上，有些灯会出现频闪的问题。初步分析是由于里面元器件会分压到最后没能达到额定电压导致不能正常工作，需要对电路进行分析计算，以解决这个问题</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AD绘制arduino，含原理图及自己遇过的坑]]></title>
+        <id>https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/</id>
+        <link href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
+        </link>
+        <updated>2021-10-08T07:56:21.000Z</updated>
+        <content type="html"><![CDATA[<p>####本人使用的是AD15<br>
+####绘制的是arduino uno板<br>
+####含四个大电路（供电电路，比较电路，usb烧写下载电路和AVR单片机电路）</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="供电电路" loading="lazy"></figure>
+<p>####比较电路是我觉得是最有意思的部分。通过LM358对USB供电与DC供电相比较，选择有电的那一边<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较电路" loading="lazy"></p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="usb烧写下载电路" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR单片机电路" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最终绘制完的效果" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="焊接完成烧入程序测试效果" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="arduinoIDE串口观测的结果" loading="lazy"></figure>
+<p>由于身边刚好有个DHT11温湿度传感器，于是决定写一段小代码测试一下</p>
+<pre><code>#include &lt;dht11.h&gt;//温湿度头文件，要去下载这个头文件
+
+#define DHT11PIN 2 //定义D2为数据输出口
+dht11 DHT11;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);//定义波特率
+
+   pinMode(DHT11PIN,OUTPUT); //设置D2为数据输出
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  temp = analogRead(Aout); //读取A0的模拟数据
+  
+  String a=String(temp);
+  int chk = DHT11.read(DHT11PIN);                 //将读取到的值赋给chk
+int tem=(float)DHT11.temperature;               //将温度值赋值给tem
+int hum=(float)DHT11.humidity;                   //将湿度值赋给hum
+Serial.print(&quot;Tempeature:&quot;);                        //打印出Tempeature:
+Serial.print(tem);                                     //打印温度结果
+Serial.println(&quot;°c&quot;); 
+Serial.print(&quot;Humidity:&quot;);                            //打印出Humidity:
+Serial.print(hum);                                     //打印出湿度结果
+Serial.println(&quot;%&quot;);                                  //打印出%
+Serial.println(&quot;&quot;); 
+
+  delay(500);  //延时500毫秒
+
+}
+</code></pre>
+<p>###遇到的坑</p>
+<ol>
+<li>AMS1117-5.0V会降压，DC005用错适配器供电就会使得只有5V电压导致最终只有3.25V（万用表亲测，是电源适配器的问题）。DC005该换用7-12V的供电再使用</li>
+<li>用DC002可以把AMS1117-5.0V芯片去掉，或者用DC005适配器是5V的时候亦可以把芯片去掉</li>
+<li>绘制原理图库与封装图库，原理图引脚必须要与封装图库里元件引脚相对应，在这基础上要以实际元件的封装引脚对应（就是你要购买的元件）</li>
+</ol>
+<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">最最重要的文件下载地址，点击这里去gitee下载</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[学习强国打卡系统]]></title>
+        <id>https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/</id>
+        <link href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
+        </link>
+        <updated>2021-10-08T07:56:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="该项目纯软件">该项目纯软件</h2>
+<p>目前是一个<strong>网站的形式</strong>来实现学习强国打卡，当初设计是为了提高统计的准确性，以及方便每周值日的同学观看打卡情况，产生做这个系统的想法，目前已经投入使用</p>
+<p>##系统架构<br>
+系统架构是基于MVC开发模式拓展的，包括database数据层、model模型层、dao数据持久层、service业务逻辑层、controller/servlet控制器，各层次分工明确，降低层次耦合度。</p>
+<h4 id="显示层-view">显示层 (View)</h4>
+<p>本系统采用B/S模式。多以jsp/html为主要的显示页面，为了满足页面UI的展示，AJAX数据交换为JSON格式。此层与控制层结合比较紧密，需要二者结合起来协同工作。</p>
+<h2 id="控制层">控制层</h2>
+<p>Controller层负责具体的业务模块流程的控制，这样不仅使程序结构变得清晰，也大大减少了代码量。</p>
+<p>控制层主要用于响应客户端请求，每当请求到系统时，控制层就会调用对应的业务逻辑。请求分多种，如AJAX的数据请求、页面请求、文件上传、文件下载，控制层便会对应地做出相应的数据返回、页面跳转、流返回行为。</p>
+<h2 id="数据持久层">数据持久层</h2>
+<p>DAO层主要是做数据持久层的工作，负责与数据库进行联络的一些任务都封装在此，DAO层的设计首先是设计DAO的接口，然后设计实现类。</p>
+<p>##各层联系<br>
+DAO层，可以单独开发，互相的耦合度很低，完全可以独立进行，这样的一种模式在开发大项目的过程中尤其有优势，Controller，View层因为耦合度比较高，因而要结合在一起开发，但是也可以看作一个整体独立于前两个层进行开发。这样，在层与层之间我们只需要知道接口的定义，调用接口即可完成所需要的逻辑单元应用，一切显得非常清晰简单。</p>
+<p>####下图为目前网站功能架构</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-6922a2d72dee42ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="目前网站的架构" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-2d3437085ecd86cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录界面效果图" loading="lazy"></figure>
+<p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">码云下载地址，直接点击这里</a>，这个代码还是之前有<strong>bug</strong>时候的代码，看懂里面代码并作相应的修改就会有很大的成长。</p>
+<p><strong>这里代码是使用以下软件来进行开发的</strong>：开发工具：MyEclipse10，数据库：MySQL 5.1.32-community，图形化界面数据库操作：navicat，Java环境：jdk1.8.0_131（实际可能是jdk6，MyEclipse创建项目时候最高版本）</p>
+<p><strong>后来我用eclipse来开发</strong>，在myeclipse里那个jdk6换成高版本，一堆叉叉，不换高版本jdk图像处理那里请求的file类那些又没有（具体没有哪些类我忘记了，idea没用过所以没有用），反正看着就很不爽。或者两种jdk存在，导致部分代码出bug；像不执行识别代码什么的。</p>
+<h5 id="上述bug">上述bug</h5>
+<ul>
+<li>打卡天数，到达99天的时候，加到100，就一直查99天的数据进行修改</li>
+</ul>
+<h5 id="打卡天数的流程及实现思路">打卡天数的流程及实现思路</h5>
+<ul>
+<li>在积分录入界面，填好分数那些，或者上传图片等待识别，输入框有内容后，点击上传，打卡天数自增</li>
+<li>打卡天数，个人设计是通过时间的比较来进行实现的，注册时候会自动记录注册时间，接着打卡就通过与注册时间作比较来计算打卡天数</li>
+</ul>
+<p>三种情况：</p>
+<ol>
+<li>注册当天打卡</li>
+<li>注册当天没打卡</li>
+<li>注册后打过卡</li>
+</ol>
+<ul>
+<li>具体应结合代码进行看</li>
+</ul>
+<p>bug出现的原因是当时设计数据库打卡天数时候，数据类型是varchar（255），然后大家到99天的时候，代码总是判断99为最大的天数。我也懒得改数据库那里设计了，我个人解决这个bug的思路是（判断里面的最新的打卡编号，因为打卡编号自增且数据类型为int）。写到这里，想到支部打卡天数的貌似也是varchar类型，这个我有空再改吧<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="心情" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-4a86633ca9568bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="积分录入界面" loading="lazy"></figure>
+<p>##部署在服务器上的bug就精彩多了</p>
+<ol>
+<li>
+<p>本地入数据库没问题，服务器上传中文入数据库就乱码（db.properties里面加useUnicode=true&amp;characterEncoding=UTF-8，解决问题）<a href="https://blog.csdn.net/weixin_30765577/article/details/99580949?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">问题解决链接</a></p>
+</li>
+<li>
+<p>tomcat7版本 jdk只有1.7，图像处理的那些算法不能用，如图报错<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-3af03fc398c40a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="出现请求错误图" loading="lazy"></p>
+</li>
+<li>
+<p>tomacat8版本终于可以了jdk1.8，结果录入的感想全 <em>？？？？？</em>（乱码），一查发现tomcat8直接帮你处理好字符的问题 直接默认UTF-8，而我里面的方法为了tomcat7版本转码成ISO-8859-1。后面我决定不改代码，因为懒，太多代码要删删改改调试，于是决定直接浪费tomcat8的美意，把编码改成ISO-8859-1。<a href="https://blog.csdn.net/lzl_avery/article/details/87348937">问题解决链接</a></p>
+</li>
+</ol>
+<p>4.最精彩部分莫过于这个了。我开发用windows系统，存储目录路径如图 是正斜杠“\”<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-436ab64fdf7dd4cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="存储目录路径" loading="lazy"><br>
+然而实际的服务器是Linux系统（怪我看在Linux系统占服务器空间小，所以选择了Linux，否则就不会出现这么精彩的问题了），先看看不改代码放服务器的情况（可看下图） <em>img\学号\图片名</em> （惊喜加意外，就新建了一个奇奇怪怪的文件夹还不能访问），接下来来看服务器实际存储路径 如图 是反斜杠“/”，如此一来存储就出现问题，<strong>解决方法改成正斜杠改成反斜杠</strong><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-94d96b7c79c9536e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="不改代码存图的路径" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-9b26d297b5569c41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="服务器存储路径" loading="lazy"></p>
+<p>##待提升的地方<br>
+积分界面，关于打卡天数可加一个<strong>应打卡天数</strong>来进行与实际打卡天数作对比。这部分代码方法其实我个人写了，但实际写在前端的时候出现了一点点小问题，现在还不怎么想解决，先凉拌着（不知道咋解决）。<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-e43088944d0c82e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="积分界面图" loading="lazy"></p>
+<p>这个网站其实可以转化为<strong>微信小程序的形式</strong>进行打卡，有能力的同学或者想要拥有这能力的同学可以借鉴我后端写的数据库结构、代码啥的，或者直接将后端的方法链接微信小程序的界面来实现。<strong>大佬可以忽略，直接按需开发</strong></p>
+<p>图像处理我这里实现是使用别人提供的api，图片数据根据支部的一些图片还有自己实际手机的截图，识别准确率我个人觉得其实可以，识别速率写了延迟3s请求，真正体验有时需要反复上传几次才能识别出来（说实话我还是挺不满意的，<strong>没有识别出来会返回上一位识别成功的同学的数据，这是由于我用了个中间变量来存储数据，也算个bug待解决。当时写到崩溃，终于解决识别存数据不入库的方法，后面就有点懒不想写清空上位识别成功数据的代码</strong>）</p>
+<p>图像处理这部分，<strong>有能力其实可以自己写，自己训练识别字库，来提升识别率和准确率（这部分是我目前不具备的能力）</strong>，<em>现在有些用户用了自己的字体识别不出来，由于是用api，所以并不能解决这个问题</em></p>
+<p><strong>可以加上会议签到等功能</strong>，考勤汇总什么的就没有那么辛苦，本人不是很想一个人完成这些所有功能，实在太累了，就交给后面的大佬来实现了</p>
+<p>#####最后附上当时想做成小程序的供需分析<br>
+（我分析了然后，为什么自己不做呢，是由于，我还不想花时间去研究get/post请求与小程序界面的链接，决定简化自己操作，用自己已知大部分的知识缩短开发时间，所以就写了个网站）<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-bd9045e5556cb842.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信小程序版" loading="lazy"></p>
+<p>上述书于2020.11.03，若有补充后续再说<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nodemcu/ESP12F土壤湿度传感器使用效果及代码详解]]></title>
+        <id>https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
+        </link>
+        <updated>2021-10-08T07:55:04.000Z</updated>
+        <content type="html"><![CDATA[<p>首先附上效果图，为了方便调试书写代码，本人用<strong>arduino IDE</strong>来书写代码。<br>
+窗口监视器打印实时效果<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口监视器打印效果图" loading="lazy"></p>
+<p>硬件是我自己画板交给商家制作的，下图是我实际硬件图<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="硬件图" loading="lazy"></p>
+<p>####我所使用的土壤湿度传感器<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这是我购买的土壤湿度传感器" loading="lazy"></p>
+<p>####引脚如图某宝详情<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引脚详情" loading="lazy"></p>
+<p>##土壤湿度传感器与nodemcu接线（ESP12F/ESP8266也可参考）<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="接线示意图" loading="lazy"></p>
+<p>##代码中所读取的是模拟信号值，其实只用接<em>AO，GND，VCC</em>三个引脚<br>
+##接下来是代码部分：</p>
+<pre><code>/**********************************************************************
+作者：燊哥仔
+哔哩哔哩视频讲解：https://www.bilibili.com/video/BV1Lp4y1s7J4
+代码很简单，使用IDE的串口监视器就可看效果
+实际接三个引脚即可AO、GND、VCC
+***********************************************************************/
+int sense_Pin = 0; // 土壤传感器输入接模拟引脚 A0
+int value = 0; //初始化变量value
+
+void setup() {
+  Serial.begin(115200);//设置波特率为115200
+  Serial.println(&quot;\n&quot;);//换行
+}
+
+void loop() {
+  
+  value = analogRead(sense_Pin);//模拟数据读取（A0脚输入的数据）
+  value = value / 10;    //上面的value值除以十赋值给value
+ 
+  Serial.print(value);
+  Serial.println(&quot;%&quot;);
+ 
+  if (value &lt; 50)//value值小于50时，对结果进行判断
+  {
+    
+    Serial.println(&quot;The soil is WET&quot;);//土壤是湿润的
+  }
+  else
+  {
+  
+    Serial.println(&quot;The soil is dry&quot;);//土壤是干燥的
+  }
+  delay(1000);//延时1s，每一秒读取一次
+}
+</code></pre>
+<p><a href="https://download.csdn.net/download/qq_42428700/15044707">CSDN下载代码</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nodemcu/ESP12F贝壳物联实时监控环境温度]]></title>
+        <id>https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
+        </link>
+        <updated>2021-10-08T07:52:15.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="nodemcuesp12f贝壳物联实时监控环境温度">nodemcu/ESP12F贝壳物联实时监控环境温度</h2>
+<p>贝壳物联效果图如下：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图" loading="lazy"></p>
+<h2 id="实现思路">实现思路</h2>
+<ol>
+<li>先联网</li>
+<li>连上贝壳物联</li>
+<li>定时发送信息</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="实际硬件图" loading="lazy"></figure>
+<h3 id="我本人查找了很多资料没有发现实际有效的资料能够辅助我完成">我本人查找了很多资料，没有发现实际有效的资料能够辅助我完成。</h3>
+<p>于是我自己看文档借助贝壳物联的控制代码进行改造成传信息的代码。<br>
+可能是全网首创非lua的C语言代码。</p>
+<h2 id="关键代码">关键代码：</h2>
+<pre><code>//上传信息到接口关键代码
+ String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
+ client.print(msg1);
+</code></pre>
+<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">代码详解视频</a></p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15364861">点击前往CSDN下载代码</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>https://riddler11.github.io/post/test/</id>

@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>51单片机小车 | Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633679838046">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="51单片机小车 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="#1.电路设计
+####首先先选型
+在开始前要想好用什么进行控制小车，
+该文章如标题：
+主控选择：89C52芯片
+一辆小车（有两个马达；前马达控制左右，后马达控制前后）
+控制马达的芯片或模块：L298/L9110
+无线模块：NRF24L01..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://riddler11.github.io">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633679838046" alt="">
+  </a>
+  <h1 class="site-title">
+    Leo&#39;s Blog
+  </h1>
+  <p class="site-description">
+    It's what you do in the dark, that puts you in the light.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          about
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              51单片机小车
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-10-08
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>#1.电路设计<br>
+####首先先选型<br>
+在开始前要想好用什么进行控制小车，<br>
+该文章如标题：<br>
+主控选择：89C52芯片<br>
+一辆小车（有两个马达；前马达控制左右，后马达控制前后）<br>
+控制马达的芯片或模块：L298/L9110<br>
+无线模块：NRF24L01（可采用ESP8266联网控制或者HC05蓝牙控制，看个人喜欢）<br>
+降压模块：5V转3.3V（NRF24L01印象中是3.3V）<br>
+####接下来就是绘制电路图<br>
+手绘、软件绘制都行，只要画清楚就行</p>
+<ol>
+<li>单片机来讲，<strong>最小系统</strong>一定要有</li>
+<li>接着   <strong>开关电源</strong> ，单片机就能工作了</li>
+<li>某宝上购置的元器件，本文上的控制马达芯片等，看某宝下面的参考详情<br>
+如：L298是怎么连接能够工作等等，<strong>弄清楚怎么能工作</strong></li>
+<li><strong>那些要用的芯片、模块等连上单片机</strong></li>
+<li>记得要留+引出<strong>烧写代码的端口</strong>，不然每次烧写代码都要把芯片拆下来烧。（万一是贴片主控就很头疼了）。可以使用<strong>牛角座+STC免冷启动烧写器</strong>（具体烧写器名字我有点忘了，大概这个）进行代码烧写，这样就比较方便。USB转TTL的就需要烧写时候断个电再烧进去。</li>
+</ol>
+<p>####做好上述步骤可以开始绘制PCB<br>
+个人到现在一直用<strong>DXP</strong>，那就根据自己设计的电路图进行绘制PCB。</p>
+<p>当然DXP提供了可以画电路原理图的东西，原理图库，原理图会用可以直接用</p>
+<p>画好之后记得一定一定要<strong>检查</strong>，检查连线有没连好等</p>
+<p>####打样<br>
+交给公司打样，制作出来自己设计的东西<br>
+<strong>焊接</strong>完成后，再进行调试</p>
+<p>#2.代码调试<br>
+####完成第一部分的电路，并打完样后可以进行实际电路的调试<br>
+如果想同步进行代码调试的话，可以用<strong>仿真</strong>protues<br>
+仿真的作用相信大家都不陌生：模拟真实条件下硬件运行的状态，当然模拟这个不能拼出一辆像样的小车，但是里面选型有马达motor。<br>
+####先调试的是让小车能够动起来</p>
+<ol>
+<li>小车能动起来，首先证明小车马达没问题，才能有后面的控制环节。</li>
+<li>小车若不能动，那就进行问题排查  <strong>或许是马达问题</strong> <strong>或许是L298出现问题</strong> <strong>也可能是电路板电路一些问题</strong> 这时候召唤一下<strong>万用表</strong></li>
+<li>马达很简单，用块电池正负一接就可以看它会不会动（最好也串个电阻，万一电流过大，这检测过程可能也会烧马达）</li>
+<li>其它用万用表测一下有没电什么的【测电流是串进电路（测电流最好也并个电阻，反正我本人就烧过万用表），电压是并联就行】<br>
+####下一步是进行控制代码调试<br>
+设计中是用NRF24L01来控制，那么<strong>注意电压</strong><br>
+51单片机的电压是5V，这个模块是3.3V<br>
+模块烧掉了就不可能控制<br>
+假设电脑进行控制，则<strong>电脑是信息发送端，单片机是信息接收端</strong></li>
+</ol>
+<p>先进行单一控制（如前进，P2.0口是0，P2.1口是1，单片机接收信号“1”）<br>
+在电脑用串口调试助手，发送1的信号<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="串口调试助手例图" loading="lazy"><br>
+#####单片机的关键代码示例</p>
+<pre><code>    if(	rece_buf[1]=='1') 	 		//第1位以后是收到的命令数据，rece_buf[0]是数据位数长度
+                {
+                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
+                  M1=1；
+                }
+
+</code></pre>
+<p>####前进调试成功后就进行下一步举一反三<br>
+通过相同方式完成后退，停止，左转，右转控制</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
+              <h3 class="post-title">
+                ESP8266远程控制台灯
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

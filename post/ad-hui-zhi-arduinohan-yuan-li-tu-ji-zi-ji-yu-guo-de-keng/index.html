@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AD绘制arduino，含原理图及自己遇过的坑 | Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633679838046">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="AD绘制arduino，含原理图及自己遇过的坑 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="####本人使用的是AD15
+####绘制的是arduino uno板
+####含四个大电路（供电电路，比较电路，usb烧写下载电路和AVR单片机电路）
+
+####比较电路是我觉得是最有意思的部分。通过LM358对USB供电与DC供电相比较..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://riddler11.github.io">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633679838046" alt="">
+  </a>
+  <h1 class="site-title">
+    Leo&#39;s Blog
+  </h1>
+  <p class="site-description">
+    It's what you do in the dark, that puts you in the light.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          about
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              AD绘制arduino，含原理图及自己遇过的坑
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-10-08
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>####本人使用的是AD15<br>
+####绘制的是arduino uno板<br>
+####含四个大电路（供电电路，比较电路，usb烧写下载电路和AVR单片机电路）</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="供电电路" loading="lazy"></figure>
+<p>####比较电路是我觉得是最有意思的部分。通过LM358对USB供电与DC供电相比较，选择有电的那一边<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较电路" loading="lazy"></p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="usb烧写下载电路" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR单片机电路" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最终绘制完的效果" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="焊接完成烧入程序测试效果" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="arduinoIDE串口观测的结果" loading="lazy"></figure>
+<p>由于身边刚好有个DHT11温湿度传感器，于是决定写一段小代码测试一下</p>
+<pre><code>#include &lt;dht11.h&gt;//温湿度头文件，要去下载这个头文件
+
+#define DHT11PIN 2 //定义D2为数据输出口
+dht11 DHT11;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);//定义波特率
+
+   pinMode(DHT11PIN,OUTPUT); //设置D2为数据输出
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  temp = analogRead(Aout); //读取A0的模拟数据
+  
+  String a=String(temp);
+  int chk = DHT11.read(DHT11PIN);                 //将读取到的值赋给chk
+int tem=(float)DHT11.temperature;               //将温度值赋值给tem
+int hum=(float)DHT11.humidity;                   //将湿度值赋给hum
+Serial.print(&quot;Tempeature:&quot;);                        //打印出Tempeature:
+Serial.print(tem);                                     //打印温度结果
+Serial.println(&quot;°c&quot;); 
+Serial.print(&quot;Humidity:&quot;);                            //打印出Humidity:
+Serial.print(hum);                                     //打印出湿度结果
+Serial.println(&quot;%&quot;);                                  //打印出%
+Serial.println(&quot;&quot;); 
+
+  delay(500);  //延时500毫秒
+
+}
+</code></pre>
+<p>###遇到的坑</p>
+<ol>
+<li>AMS1117-5.0V会降压，DC005用错适配器供电就会使得只有5V电压导致最终只有3.25V（万用表亲测，是电源适配器的问题）。DC005该换用7-12V的供电再使用</li>
+<li>用DC002可以把AMS1117-5.0V芯片去掉，或者用DC005适配器是5V的时候亦可以把芯片去掉</li>
+<li>绘制原理图库与封装图库，原理图引脚必须要与封装图库里元件引脚相对应，在这基础上要以实际元件的封装引脚对应（就是你要购买的元件）</li>
+</ol>
+<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">最最重要的文件下载地址，点击这里去gitee下载</a></p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
+              <h3 class="post-title">
+                学习强国打卡系统
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
