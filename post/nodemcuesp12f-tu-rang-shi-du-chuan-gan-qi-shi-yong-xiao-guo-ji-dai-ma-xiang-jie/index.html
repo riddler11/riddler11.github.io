@@ -2,25 +2,16 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>nodemcu/ESP12F土壤湿度传感器使用效果及代码详解 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633785668365">
+<title>Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633796015297">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="nodemcu/ESP12F土壤湿度传感器使用效果及代码详解 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="首先附上效果图，为了方便调试书写代码，本人用arduino IDE来书写代码。
-窗口监视器打印实时效果
-
-硬件是我自己画板交给商家制作的，下图是我实际硬件图
-
-####我所使用的土壤湿度传感器
-
-####引脚如图某宝详情
-
-##土壤湿度传感..." />
+    <meta name="description" content="First, attach the effect drawing. In order to facilitate debugging and writing code, I use ** Arduino ide ** to write co..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -30,7 +21,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633785668365" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633796015297" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -83,7 +74,7 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              nodemcu/ESP12F土壤湿度传感器使用效果及代码详解
+              Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F
             </h2>
             <div class="post-info">
               <span>
@@ -97,59 +88,78 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>首先附上效果图，为了方便调试书写代码，本人用<strong>arduino IDE</strong>来书写代码。<br>
-窗口监视器打印实时效果<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口监视器打印效果图" loading="lazy"></p>
-<p>硬件是我自己画板交给商家制作的，下图是我实际硬件图<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="硬件图" loading="lazy"></p>
-<p>####我所使用的土壤湿度传感器<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这是我购买的土壤湿度传感器" loading="lazy"></p>
-<p>####引脚如图某宝详情<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引脚详情" loading="lazy"></p>
-<p>##土壤湿度传感器与nodemcu接线（ESP12F/ESP8266也可参考）<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="接线示意图" loading="lazy"></p>
-<p>##代码中所读取的是模拟信号值，其实只用接<em>AO，GND，VCC</em>三个引脚<br>
-##接下来是代码部分：</p>
+                <p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use ** Arduino ide ** to write code.<br>
+Window monitor print real-time effect:<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Window monitor print real-time effect" loading="lazy"></p>
+<p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Hardware diagram" loading="lazy"></p>
+<h4 id="the-soil-moisture-sensor-i-use">The soil moisture sensor I use</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
+<h4 id="pin-details-as-shown-in-the-figure">Pin details as shown in the figure</h4>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Pin details" loading="lazy"></figure>
+<h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Wiring diagram" loading="lazy"></figure>
+<h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins * AO, GND and VCC * are connected</h2>
+<h2 id="next-is-the-code-section">Next is the code section：</h2>
 <pre><code>/**********************************************************************
-作者：燊哥仔
-哔哩哔哩视频讲解：https://www.bilibili.com/video/BV1Lp4y1s7J4
-代码很简单，使用IDE的串口监视器就可看效果
-实际接三个引脚即可AO、GND、VCC
+author：燊哥仔
+bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
+The code is very simple. You can see the effect by using the serial port monitor of IDE
+Actually connect three pins is OK AO、GND、VCC
 ***********************************************************************/
-int sense_Pin = 0; // 土壤传感器输入接模拟引脚 A0
-int value = 0; //初始化变量value
+int sense_Pin = 0; // Soil sensor input connected to analog pin A0
+int value = 0; //initialize variable value
 
 void setup() {
-  Serial.begin(115200);//设置波特率为115200
-  Serial.println(&quot;\n&quot;);//换行
+  Serial.begin(115200);//Set baud rate to115200
+  Serial.println(&quot;\n&quot;);//Newline
 }
 
 void loop() {
   
-  value = analogRead(sense_Pin);//模拟数据读取（A0脚输入的数据）
-  value = value / 10;    //上面的value值除以十赋值给value
+  value = analogRead(sense_Pin);//Analog data reading（A0 pin input data）
+  value = value / 10;    //The above value divided by ten is assigned to value
  
   Serial.print(value);
   Serial.println(&quot;%&quot;);
  
-  if (value &lt; 50)//value值小于50时，对结果进行判断
+  if (value &lt; 50)//When the value is less than 50, judge the result
   {
     
-    Serial.println(&quot;The soil is WET&quot;);//土壤是湿润的
+    Serial.println(&quot;The soil is WET&quot;);//Window monitor print the situation
   }
   else
   {
   
-    Serial.println(&quot;The soil is dry&quot;);//土壤是干燥的
+    Serial.println(&quot;The soil is dry&quot;);
   }
-  delay(1000);//延时1s，每一秒读取一次
+  delay(1000);//Delay1 second. Read every second
 }
 </code></pre>
-<p><a href="https://download.csdn.net/download/qq_42428700/15044707">CSDN下载代码</a></p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#the-soil-moisture-sensor-i-use">The soil moisture sensor I use</a></li>
+<li><a href="#pin-details-as-shown-in-the-figure">Pin details as shown in the figure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</a></li>
+<li><a href="#what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins * AO, GND and VCC * are connected</a></li>
+<li><a href="#next-is-the-code-section">Next is the code section：</a></li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
