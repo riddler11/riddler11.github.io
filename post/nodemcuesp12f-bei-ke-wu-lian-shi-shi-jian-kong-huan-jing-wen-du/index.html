@@ -2,26 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>nodemcu/ESP12F贝壳物联实时监控环境温度 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633783650459">
+<title> Real-time monitoring of ambient temperature base on Nodemcu / ESP12F | Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633785589009">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="nodemcu/ESP12F贝壳物联实时监控环境温度 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title=" Real-time monitoring of ambient temperature base on Nodemcu / ESP12F | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="nodemcu/ESP12F贝壳物联实时监控环境温度
-贝壳物联效果图如下：
-实现思路
+    <meta name="description" content="nodemcu/ESP12F Real-time monitoring of ambient temperature.
+Bigiot renderings are as follows：
+Realization idea
 
-先联网
-连上贝壳物联
-定时发送信息
-
-
-我本人查找了很多资料，没有发现实际有效的资料能够辅助我完成。
-于是我自己看文档借助贝壳物联的控制代码进行改造成传..." />
+Firstly,..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -31,7 +25,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633783650459" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633785589009" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -84,7 +78,7 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              nodemcu/ESP12F贝壳物联实时监控环境温度
+               Real-time monitoring of ambient temperature base on Nodemcu / ESP12F
             </h2>
             <div class="post-info">
               <span>
@@ -98,38 +92,39 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="nodemcuesp12f贝壳物联实时监控环境温度">nodemcu/ESP12F贝壳物联实时监控环境温度</h2>
-<p>贝壳物联效果图如下：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图" loading="lazy"></p>
-<h2 id="实现思路">实现思路</h2>
+                <h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
+<p>Bigiot renderings are as follows：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The effect is as follows" loading="lazy"></p>
+<h2 id="realization-idea">Realization idea</h2>
 <ol>
-<li>先联网</li>
-<li>连上贝壳物联</li>
-<li>定时发送信息</li>
+<li>Firstly,connect the device to the internet.</li>
+<li>Connect the BIGIOT net.</li>
+<li>Send information regularly.</li>
 </ol>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="实际硬件图" loading="lazy"></figure>
-<h3 id="我本人查找了很多资料没有发现实际有效的资料能够辅助我完成">我本人查找了很多资料，没有发现实际有效的资料能够辅助我完成。</h3>
-<p>于是我自己看文档借助贝壳物联的控制代码进行改造成传信息的代码。<br>
-可能是全网首创非lua的C语言代码。</p>
-<h2 id="关键代码">关键代码：</h2>
-<pre><code>//上传信息到接口关键代码
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Actual hardware diagram" loading="lazy"></figure>
+<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</h3>
+<p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
+This may be the first non Lua but C language code in the whole network.</p>
+<h2 id="critical-code">critical code：</h2>
+<pre><code>//Upload information to the interface
  String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
  client.print(msg1);
 </code></pre>
-<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">代码详解视频</a></p>
-<p><a href="https://download.csdn.net/download/qq_42428700/15364861">点击前往CSDN下载代码</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
+<p>This article is also written in CSDN.</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#nodemcuesp12f%E8%B4%9D%E5%A3%B3%E7%89%A9%E8%81%94%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%8E%AF%E5%A2%83%E6%B8%A9%E5%BA%A6">nodemcu/ESP12F贝壳物联实时监控环境温度</a></li>
-<li><a href="#%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF">实现思路</a>
+<li><a href="#nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</a></li>
+<li><a href="#realization-idea">Realization idea</a>
 <ul>
-<li><a href="#%E6%88%91%E6%9C%AC%E4%BA%BA%E6%9F%A5%E6%89%BE%E4%BA%86%E5%BE%88%E5%A4%9A%E8%B5%84%E6%96%99%E6%B2%A1%E6%9C%89%E5%8F%91%E7%8E%B0%E5%AE%9E%E9%99%85%E6%9C%89%E6%95%88%E7%9A%84%E8%B5%84%E6%96%99%E8%83%BD%E5%A4%9F%E8%BE%85%E5%8A%A9%E6%88%91%E5%AE%8C%E6%88%90">我本人查找了很多资料，没有发现实际有效的资料能够辅助我完成。</a></li>
+<li><a href="#i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</a></li>
 </ul>
 </li>
-<li><a href="#%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81">关键代码：</a></li>
+<li><a href="#critical-code">critical code：</a></li>
 </ul>
 </li>
 </ul>
@@ -139,6 +134,15 @@
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+              <h3 class="post-title">
+                Remote control car base on MCS 51 
+              </h3>
+            </a>
+          </div>
         
 
         

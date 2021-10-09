@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-09T12:47:34.853Z</updated>
+    <updated>2021-10-09T13:20:08.916Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,70 +10,6 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
-        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
-        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
-        </link>
-        <updated>2021-10-08T07:57:08.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
-<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
-<p>Try to select the components that control the trolley.<br>
-As the title：<br>
-Main control chip：AT89C52 chip<br>
-A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
-A chip or module that controls a motor：L298/L9110<br>
-Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
-Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
-<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
-<p>You can use your hand or some software to draw, this step is to know what you want.</p>
-<ol>
-<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
-<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
-<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
-such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
-<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
-<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
-</ol>
-<p>####After completing the above steps, you can start drawing PCB</p>
-<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
-<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
-<p>After painting, remember to** check **whether the connection is connected, etc</p>
-<h4 id="proofing">Proofing</h4>
-<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
-After <strong>welding</strong>,then you can debug.</p>
-<h1 id="2code-debug">2.Code debug</h1>
-<p>####Complete the above design<br>
-You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
-This method can simulate the running state of hardware under real conditions.</p>
-<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
-<ol>
-<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
-<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
-<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
-<li>Other part use a multimeter to check whether there is electricity or not 。</li>
-</ol>
-<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
-<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
-The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
-If the module burns out, it is impossible to control it。<br>
-Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
-<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
-In the computer, use the serial port debugging assistant to send the signal of 1<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
-<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
-<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
-   
-                {
-                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
-                  M1=1；
-                }
-
-</code></pre>
-<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
-<p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[ESP8266远程控制台灯]]></title>
         <id>https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/</id>
@@ -545,30 +481,95 @@ void loop() {
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[nodemcu/ESP12F贝壳物联实时监控环境温度]]></title>
+        <title type="html"><![CDATA[ Real-time monitoring of ambient temperature base on Nodemcu / ESP12F]]></title>
         <id>https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
         <link href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
         </link>
         <updated>2021-10-08T07:52:15.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="nodemcuesp12f贝壳物联实时监控环境温度">nodemcu/ESP12F贝壳物联实时监控环境温度</h2>
-<p>贝壳物联效果图如下：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图" loading="lazy"></p>
-<h2 id="实现思路">实现思路</h2>
+        <content type="html"><![CDATA[<h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
+<p>Bigiot renderings are as follows：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The effect is as follows" loading="lazy"></p>
+<h2 id="realization-idea">Realization idea</h2>
 <ol>
-<li>先联网</li>
-<li>连上贝壳物联</li>
-<li>定时发送信息</li>
+<li>Firstly,connect the device to the internet.</li>
+<li>Connect the BIGIOT net.</li>
+<li>Send information regularly.</li>
 </ol>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="实际硬件图" loading="lazy"></figure>
-<h3 id="我本人查找了很多资料没有发现实际有效的资料能够辅助我完成">我本人查找了很多资料，没有发现实际有效的资料能够辅助我完成。</h3>
-<p>于是我自己看文档借助贝壳物联的控制代码进行改造成传信息的代码。<br>
-可能是全网首创非lua的C语言代码。</p>
-<h2 id="关键代码">关键代码：</h2>
-<pre><code>//上传信息到接口关键代码
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Actual hardware diagram" loading="lazy"></figure>
+<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</h3>
+<p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
+This may be the first non Lua but C language code in the whole network.</p>
+<h2 id="critical-code">critical code：</h2>
+<pre><code>//Upload information to the interface
  String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
  client.print(msg1);
 </code></pre>
-<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">代码详解视频</a></p>
-<p><a href="https://download.csdn.net/download/qq_42428700/15364861">点击前往CSDN下载代码</a></p>
+<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
+<p>This article is also written in CSDN.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
+        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
+        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        </link>
+        <updated>2020-12-30T07:57:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
+<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
+<p>Try to select the components that control the trolley.<br>
+As the title：<br>
+Main control chip：AT89C52 chip<br>
+A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
+A chip or module that controls a motor：L298/L9110<br>
+Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
+Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
+<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
+<p>You can use your hand or some software to draw, this step is to know what you want.</p>
+<ol>
+<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
+<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
+<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
+such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
+<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
+<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
+</ol>
+<p>####After completing the above steps, you can start drawing PCB</p>
+<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
+<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
+<p>After painting, remember to** check **whether the connection is connected, etc</p>
+<h4 id="proofing">Proofing</h4>
+<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
+After <strong>welding</strong>,then you can debug.</p>
+<h1 id="2code-debug">2.Code debug</h1>
+<p>####Complete the above design<br>
+You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
+This method can simulate the running state of hardware under real conditions.</p>
+<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
+<ol>
+<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
+<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
+<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
+<li>Other part use a multimeter to check whether there is electricity or not 。</li>
+</ol>
+<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
+<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
+The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
+If the module burns out, it is impossible to control it。<br>
+Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
+<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
+In the computer, use the serial port debugging assistant to send the signal of 1<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
+<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
+<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
+   
+                {
+                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
+                  M1=1；
+                }
+
+</code></pre>
+<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
+<p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
 ]]></content>
     </entry>
 </feed>
