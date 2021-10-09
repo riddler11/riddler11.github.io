@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-08T16:43:45.254Z</updated>
+    <updated>2021-10-09T12:27:04.340Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Trolley base on MCS 51 ]]></title>
+        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
         <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
         <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
         </link>
@@ -33,44 +33,45 @@ Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is
 <li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
 such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
 <li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
-<li>Tips:记得要留+引出<strong>烧写代码的端口</strong>，不然每次烧写代码都要把芯片拆下来烧。（万一是贴片主控就很头疼了）。可以使用<strong>牛角座+STC免冷启动烧写器</strong>（具体烧写器名字我有点忘了，大概这个）进行代码烧写，这样就比较方便。USB转TTL的就需要烧写时候断个电再烧进去。</li>
+<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
 </ol>
-<h4 id="做好上述步骤可以开始绘制pcb">做好上述步骤可以开始绘制PCB</h4>
-<p>个人到现在一直用<strong>DXP</strong>，那就根据自己设计的电路图进行绘制PCB。</p>
-<p>当然DXP提供了可以画电路原理图的东西，原理图库，原理图会用可以直接用</p>
-<p>画好之后记得一定一定要<strong>检查</strong>，检查连线有没连好等</p>
-<h4 id="打样">打样</h4>
-<p>交给公司打样，制作出来自己设计的东西<br>
-<strong>焊接</strong>完成后，再进行调试</p>
-<h1 id="2代码调试">2.代码调试</h1>
-<p>####完成第一部分的电路，并打完样后可以进行实际电路的调试<br>
-如果想同步进行代码调试的话，可以用<strong>仿真</strong>protues<br>
-仿真的作用相信大家都不陌生：模拟真实条件下硬件运行的状态，当然模拟这个不能拼出一辆像样的小车，但是里面选型有马达motor。</p>
-<h4 id="先调试的是让小车能够动起来">先调试的是让小车能够动起来</h4>
+<p>####After completing the above steps, you can start drawing PCB</p>
+<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
+<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
+<p>After painting, remember to** check **whether the connection is connected, etc</p>
+<h4 id="proofing">Proofing</h4>
+<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
+After <strong>welding</strong>,then you can debug.</p>
+<h1 id="2code-debug">2.Code debug</h1>
+<p>####Complete the above design<br>
+You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
+This method can simulate the running state of hardware under real conditions.</p>
+<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
 <ol>
-<li>小车能动起来，首先证明小车马达没问题，才能有后面的控制环节。</li>
-<li>小车若不能动，那就进行问题排查  <strong>或许是马达问题</strong> <strong>或许是L298出现问题</strong> <strong>也可能是电路板电路一些问题</strong> 这时候召唤一下<strong>万用表</strong></li>
-<li>马达很简单，用块电池正负一接就可以看它会不会动（最好也串个电阻，万一电流过大，这检测过程可能也会烧马达）</li>
-<li>其它用万用表测一下有没电什么的【测电流是串进电路（测电流最好也并个电阻，反正我本人就烧过万用表），电压是并联就行】</li>
+<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
+<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
+<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
+<li>Other part use a multimeter to check whether there is electricity or not 。</li>
 </ol>
-<h4 id="下一步是进行控制代码调试">下一步是进行控制代码调试</h4>
-<p>设计中是用NRF24L01来控制，那么<strong>注意电压</strong><br>
-51单片机的电压是5V，这个模块是3.3V<br>
-模块烧掉了就不可能控制<br>
-假设电脑进行控制，则<strong>电脑是信息发送端，单片机是信息接收端</strong></p>
-<p>先进行单一控制（如前进，P2.0口是0，P2.1口是1，单片机接收信号“1”）<br>
-在电脑用串口调试助手，发送1的信号<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="串口调试助手例图" loading="lazy"></p>
-<h5 id="单片机的关键代码示例">单片机的关键代码示例</h5>
-<pre><code>    if(	rece_buf[1]=='1') 	 		//第1位以后是收到的命令数据，rece_buf[0]是数据位数长度
+<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
+<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
+The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
+If the module burns out, it is impossible to control it。<br>
+Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
+<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
+In the computer, use the serial port debugging assistant to send the signal of 1<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
+<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
+<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
+   
                 {
                   M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
                   M1=1；
                 }
 
 </code></pre>
-<h4 id="前进调试成功后就进行下一步举一反三">前进调试成功后就进行下一步举一反三</h4>
-<p>通过相同方式完成后退，停止，左转，右转控制</p>
+<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
+<p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
 ]]></content>
     </entry>
     <entry>
