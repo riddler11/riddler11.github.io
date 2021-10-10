@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-10T05:38:58.694Z</updated>
+    <updated>2021-10-10T10:59:52.317Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -286,63 +286,63 @@ void sayToClient(String client_id, String content){
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[AD绘制arduino，含原理图及自己遇过的坑]]></title>
+        <title type="html"><![CDATA[Draws Arduino with AD, including schematic diagram and challenge I met]]></title>
         <id>https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/</id>
         <link href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
         </link>
         <updated>2021-10-08T07:56:21.000Z</updated>
-        <content type="html"><![CDATA[<p>####本人使用的是AD15<br>
-####绘制的是arduino uno板<br>
-####含四个大电路（供电电路，比较电路，usb烧写下载电路和AVR单片机电路）</p>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="供电电路" loading="lazy"></figure>
-<p>####比较电路是我觉得是最有意思的部分。通过LM358对USB供电与DC供电相比较，选择有电的那一边<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较电路" loading="lazy"></p>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="usb烧写下载电路" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR单片机电路" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最终绘制完的效果" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="焊接完成烧入程序测试效果" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="arduinoIDE串口观测的结果" loading="lazy"></figure>
-<p>由于身边刚好有个DHT11温湿度传感器，于是决定写一段小代码测试一下</p>
-<pre><code>#include &lt;dht11.h&gt;//温湿度头文件，要去下载这个头文件
+        <content type="html"><![CDATA[<h4 id="i-use-altium-designer15">I use Altium Designer15.</h4>
+<h4 id="drawing-is-the-arduino-uno-board">Drawing is the Arduino uno board.</h4>
+<h4 id="including-four-part-circuitspower-supply-circuit-comparison-circuit-usb-download-circuit-and-avr-single-chip-microcomputer-circuit">Including four part circuits（Power supply circuit, Comparison circuit, USB Download circuit and AVR single chip microcomputer circuit）</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Power supply circuit" loading="lazy"></figure>
+<h4 id="the-comparison-circuit-is-the-most-interesting-part-i-think-compare-the-usb-power-supply-with-dc-power-supply-through-lm358-and-select-the-power-side">The comparison circuit is the most interesting part I think. Compare the USB power supply with DC power supply through lm358, and select the power side.</h4>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Comparison circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="USB Download circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR single chip microcomputer circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The final drawn effect" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="After welding, download the program to test the effect" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Serial port observation results in arduinoIDE" loading="lazy"></figure>
+<p>Because there happened to be a DHT11 temperature and humidity sensor nearby, I decided to write a small code to test it.</p>
+<pre><code>#include &lt;dht11.h&gt;//Temperature and humidity head file. You have to download this head file
 
-#define DHT11PIN 2 //定义D2为数据输出口
+#define DHT11PIN 2 //D2 is defined as the data output port
 dht11 DHT11;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);//定义波特率
+  Serial.begin(9600);//Define baud rate
 
-   pinMode(DHT11PIN,OUTPUT); //设置D2为数据输出
+   pinMode(DHT11PIN,OUTPUT); //Set D2 as data output
  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  temp = analogRead(Aout); //读取A0的模拟数据
+  temp = analogRead(Aout); //Read analog data of A0 pin
   
   String a=String(temp);
-  int chk = DHT11.read(DHT11PIN);                 //将读取到的值赋给chk
-int tem=(float)DHT11.temperature;               //将温度值赋值给tem
-int hum=(float)DHT11.humidity;                   //将湿度值赋给hum
-Serial.print(&quot;Tempeature:&quot;);                        //打印出Tempeature:
-Serial.print(tem);                                     //打印温度结果
+  int chk = DHT11.read(DHT11PIN);                 //Assign the read value to chk
+int tem=(float)DHT11.temperature;               //Assign the temperature value to tem
+int hum=(float)DHT11.humidity;                   //Assign humidity value to hum
+Serial.print(&quot;Tempeature:&quot;);                        //Print out the Temperature:
+Serial.print(tem);                                     //Print temperature results
 Serial.println(&quot;°c&quot;); 
-Serial.print(&quot;Humidity:&quot;);                            //打印出Humidity:
-Serial.print(hum);                                     //打印出湿度结果
-Serial.println(&quot;%&quot;);                                  //打印出%
+Serial.print(&quot;Humidity:&quot;);                            //Print out Humidity:
+Serial.print(hum);                                     //Print out humidity results
+Serial.println(&quot;%&quot;);                                  //Print out%
 Serial.println(&quot;&quot;); 
 
-  delay(500);  //延时500毫秒
+  delay(500);  //500 ms delay
 
 }
 </code></pre>
-<p>###遇到的坑</p>
+<p>###Difficulties encountered</p>
 <ol>
-<li>AMS1117-5.0V会降压，DC005用错适配器供电就会使得只有5V电压导致最终只有3.25V（万用表亲测，是电源适配器的问题）。DC005该换用7-12V的供电再使用</li>
-<li>用DC002可以把AMS1117-5.0V芯片去掉，或者用DC005适配器是5V的时候亦可以把芯片去掉</li>
-<li>绘制原理图库与封装图库，原理图引脚必须要与封装图库里元件引脚相对应，在这基础上要以实际元件的封装引脚对应（就是你要购买的元件）</li>
+<li>Ams1117-5.0v will reduce the voltage, and dc005 will be less than 5V when powered by the wrong adapter(I measured it myself with a multimeter)It is better to use a 7-12V power adapter.<br>
+2.Ams1117-5.0v chip can be removed if you use dc002, or when power adapter is 5V, the chip can also be removed.</li>
+<li>When drawing the schematic diagram library and package diagram library, the schematic pin must correspond to the component pin in the package diagram library. On this basis, it should correspond to the package pin of the actual component.（If you don't do this, the wiring of the designed circuit will go wrong）</li>
 </ol>
-<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">最最重要的文件下载地址，点击这里去gitee下载</a></p>
+<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></p>
 ]]></content>
     </entry>
     <entry>
