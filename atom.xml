@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-10T16:12:13.401Z</updated>
+    <updated>2021-10-10T16:14:54.208Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -11,63 +11,152 @@
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Draws Arduino with AD, including schematic diagram and challenge I met]]></title>
-        <id>https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/</id>
-        <link href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
+        <title type="html"><![CDATA[ Real-time monitoring of ambient temperature base on Nodemcu / ESP12F]]></title>
+        <id>https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
         </link>
-        <updated>2021-10-08T07:56:21.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="i-use-altium-designer15">I use Altium Designer15.</h4>
-<h4 id="drawing-is-the-arduino-uno-board">Drawing is the Arduino uno board.</h4>
-<h4 id="including-four-part-circuitspower-supply-circuit-comparison-circuit-usb-download-circuit-and-avr-single-chip-microcomputer-circuit">Including four part circuits（Power supply circuit, Comparison circuit, USB Download circuit and AVR single chip microcomputer circuit）</h4>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Power supply circuit" loading="lazy"></figure>
-<h4 id="the-comparison-circuit-is-the-most-interesting-part-i-think-compare-the-usb-power-supply-with-dc-power-supply-through-lm358-and-select-the-power-side">The comparison circuit is the most interesting part I think. Compare the USB power supply with DC power supply through lm358, and select the power side.</h4>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Comparison circuit" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="USB Download circuit" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR single chip microcomputer circuit" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The final drawn effect" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="After welding, download the program to test the effect" loading="lazy"></figure>
-<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Serial port observation results in arduinoIDE" loading="lazy"></figure>
-<p>Because there happened to be a DHT11 temperature and humidity sensor nearby, I decided to write a small code to test it.</p>
-<pre><code>#include &lt;dht11.h&gt;//Temperature and humidity head file. You have to download this head file
-
-#define DHT11PIN 2 //D2 is defined as the data output port
-dht11 DHT11;
+        <updated>2021-02-19T01:52:15.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
+<p>Bigiot renderings are as follows：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The effect is as follows" loading="lazy"></p>
+<h2 id="realization-idea">Realization idea</h2>
+<ol>
+<li>Firstly,connect the device to the internet.</li>
+<li>Connect the BIGIOT net.</li>
+<li>Send information regularly.</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Actual hardware diagram" loading="lazy"></figure>
+<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</h3>
+<p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
+This may be the first non Lua but C language code in the whole network.</p>
+<h2 id="critical-code">critical code：</h2>
+<pre><code>//Upload information to the interface
+ String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
+ client.print(msg1);
+</code></pre>
+<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
+<p>This article is also written in CSDN.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F]]></title>
+        <id>https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
+        </link>
+        <updated>2021-02-04T07:55:04.000Z</updated>
+        <content type="html"><![CDATA[<p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use ** Arduino ide ** to write code.<br>
+Window monitor print real-time effect:<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Window monitor print real-time effect" loading="lazy"></p>
+<p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Hardware diagram" loading="lazy"></p>
+<h4 id="the-soil-moisture-sensor-i-use">The soil moisture sensor I use</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
+<h4 id="pin-details-as-shown-in-the-figure">Pin details as shown in the figure</h4>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Pin details" loading="lazy"></figure>
+<h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Wiring diagram" loading="lazy"></figure>
+<h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins * AO, GND and VCC * are connected</h2>
+<h2 id="next-is-the-code-section">Next is the code section：</h2>
+<pre><code>/**********************************************************************
+author：燊哥仔
+bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
+The code is very simple. You can see the effect by using the serial port monitor of IDE
+Actually connect three pins is OK AO、GND、VCC
+***********************************************************************/
+int sense_Pin = 0; // Soil sensor input connected to analog pin A0
+int value = 0; //initialize variable value
 
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);//Define baud rate
-
-   pinMode(DHT11PIN,OUTPUT); //Set D2 as data output
- 
+  Serial.begin(115200);//Set baud rate to115200
+  Serial.println(&quot;\n&quot;);//Newline
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  temp = analogRead(Aout); //Read analog data of A0 pin
   
-  String a=String(temp);
-  int chk = DHT11.read(DHT11PIN);                 //Assign the read value to chk
-int tem=(float)DHT11.temperature;               //Assign the temperature value to tem
-int hum=(float)DHT11.humidity;                   //Assign humidity value to hum
-Serial.print(&quot;Tempeature:&quot;);                        //Print out the Temperature:
-Serial.print(tem);                                     //Print temperature results
-Serial.println(&quot;°c&quot;); 
-Serial.print(&quot;Humidity:&quot;);                            //Print out Humidity:
-Serial.print(hum);                                     //Print out humidity results
-Serial.println(&quot;%&quot;);                                  //Print out%
-Serial.println(&quot;&quot;); 
-
-  delay(500);  //500 ms delay
-
+  value = analogRead(sense_Pin);//Analog data reading（A0 pin input data）
+  value = value / 10;    //The above value divided by ten is assigned to value
+ 
+  Serial.print(value);
+  Serial.println(&quot;%&quot;);
+ 
+  if (value &lt; 50)//When the value is less than 50, judge the result
+  {
+    
+    Serial.println(&quot;The soil is WET&quot;);//Window monitor print the situation
+  }
+  else
+  {
+  
+    Serial.println(&quot;The soil is dry&quot;);
+  }
+  delay(1000);//Delay1 second. Read every second
 }
 </code></pre>
-<p>###Difficulties encountered</p>
+<p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
+        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
+        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        </link>
+        <updated>2020-12-30T07:57:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
+<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
+<p>Try to select the components that control the trolley.<br>
+As the title：<br>
+Main control chip：AT89C52 chip<br>
+A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
+A chip or module that controls a motor：L298/L9110<br>
+Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
+Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
+<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
+<p>You can use your hand or some software to draw, this step is to know what you want.</p>
 <ol>
-<li>Ams1117-5.0v will reduce the voltage, and dc005 will be less than 5V when powered by the wrong adapter(I measured it myself with a multimeter)It is better to use a 7-12V power adapter.<br>
-2.Ams1117-5.0v chip can be removed if you use dc002, or when power adapter is 5V, the chip can also be removed.</li>
-<li>When drawing the schematic diagram library and package diagram library, the schematic pin must correspond to the component pin in the package diagram library. On this basis, it should correspond to the package pin of the actual component.（If you don't do this, the wiring of the designed circuit will go wrong）</li>
+<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
+<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
+<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
+such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
+<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
+<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
 </ol>
-<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></p>
+<p>####After completing the above steps, you can start drawing PCB</p>
+<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
+<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
+<p>After painting, remember to** check **whether the connection is connected, etc</p>
+<h4 id="proofing">Proofing</h4>
+<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
+After <strong>welding</strong>,then you can debug.</p>
+<h1 id="2code-debug">2.Code debug</h1>
+<p>####Complete the above design<br>
+You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
+This method can simulate the running state of hardware under real conditions.</p>
+<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
+<ol>
+<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
+<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
+<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
+<li>Other part use a multimeter to check whether there is electricity or not 。</li>
+</ol>
+<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
+<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
+The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
+If the module burns out, it is impossible to control it。<br>
+Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
+<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
+In the computer, use the serial port debugging assistant to send the signal of 1<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
+<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
+<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
+   
+                {
+                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
+                  M1=1；
+                }
+
+</code></pre>
+<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
+<p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
 ]]></content>
     </entry>
     <entry>
@@ -75,7 +164,7 @@ Serial.println(&quot;&quot;);
         <id>https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/</id>
         <link href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
         </link>
-        <updated>2021-10-08T07:56:01.000Z</updated>
+        <updated>2020-11-03T07:56:01.000Z</updated>
         <content type="html"><![CDATA[<h2 id="the-project-is-purely-software">The project is purely software</h2>
 <p>At present, the drilling of learning ability is realized in the form of ** website **. Its original design purpose is to improve the accuracy of statistics and facilitate the students on duty to watch the clock in every day, thus producing the idea of making this system. It has been put into use</p>
 <h2 id="system-architecture">System architecture</h2>
@@ -145,155 +234,6 @@ However, the actual server is a Linux system. Let's take a look at the server wi
 <figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-bd9045e5556cb842.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信小程序版" loading="lazy"></figure>
 <p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F]]></title>
-        <id>https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
-        <link href="https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
-        </link>
-        <updated>2021-10-08T07:55:04.000Z</updated>
-        <content type="html"><![CDATA[<p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use ** Arduino ide ** to write code.<br>
-Window monitor print real-time effect:<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Window monitor print real-time effect" loading="lazy"></p>
-<p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Hardware diagram" loading="lazy"></p>
-<h4 id="the-soil-moisture-sensor-i-use">The soil moisture sensor I use</h4>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
-<h4 id="pin-details-as-shown-in-the-figure">Pin details as shown in the figure</h4>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Pin details" loading="lazy"></figure>
-<h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Wiring diagram" loading="lazy"></figure>
-<h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins * AO, GND and VCC * are connected</h2>
-<h2 id="next-is-the-code-section">Next is the code section：</h2>
-<pre><code>/**********************************************************************
-author：燊哥仔
-bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
-The code is very simple. You can see the effect by using the serial port monitor of IDE
-Actually connect three pins is OK AO、GND、VCC
-***********************************************************************/
-int sense_Pin = 0; // Soil sensor input connected to analog pin A0
-int value = 0; //initialize variable value
-
-void setup() {
-  Serial.begin(115200);//Set baud rate to115200
-  Serial.println(&quot;\n&quot;);//Newline
-}
-
-void loop() {
-  
-  value = analogRead(sense_Pin);//Analog data reading（A0 pin input data）
-  value = value / 10;    //The above value divided by ten is assigned to value
- 
-  Serial.print(value);
-  Serial.println(&quot;%&quot;);
- 
-  if (value &lt; 50)//When the value is less than 50, judge the result
-  {
-    
-    Serial.println(&quot;The soil is WET&quot;);//Window monitor print the situation
-  }
-  else
-  {
-  
-    Serial.println(&quot;The soil is dry&quot;);
-  }
-  delay(1000);//Delay1 second. Read every second
-}
-</code></pre>
-<p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ Real-time monitoring of ambient temperature base on Nodemcu / ESP12F]]></title>
-        <id>https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
-        <link href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
-        </link>
-        <updated>2021-10-08T07:52:15.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
-<p>Bigiot renderings are as follows：<img src="https://upload-images.jianshu.io/upload_images/24469819-664e1a8487b0c1e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The effect is as follows" loading="lazy"></p>
-<h2 id="realization-idea">Realization idea</h2>
-<ol>
-<li>Firstly,connect the device to the internet.</li>
-<li>Connect the BIGIOT net.</li>
-<li>Send information regularly.</li>
-</ol>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Actual hardware diagram" loading="lazy"></figure>
-<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</h3>
-<p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
-This may be the first non Lua but C language code in the whole network.</p>
-<h2 id="critical-code">critical code：</h2>
-<pre><code>//Upload information to the interface
- String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
- client.print(msg1);
-</code></pre>
-<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
-<p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
-<p>This article is also written in CSDN.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
-        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
-        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
-        </link>
-        <updated>2020-12-30T07:57:08.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
-<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
-<p>Try to select the components that control the trolley.<br>
-As the title：<br>
-Main control chip：AT89C52 chip<br>
-A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
-A chip or module that controls a motor：L298/L9110<br>
-Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
-Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
-<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
-<p>You can use your hand or some software to draw, this step is to know what you want.</p>
-<ol>
-<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
-<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
-<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
-such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
-<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
-<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
-</ol>
-<p>####After completing the above steps, you can start drawing PCB</p>
-<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
-<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
-<p>After painting, remember to** check **whether the connection is connected, etc</p>
-<h4 id="proofing">Proofing</h4>
-<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
-After <strong>welding</strong>,then you can debug.</p>
-<h1 id="2code-debug">2.Code debug</h1>
-<p>####Complete the above design<br>
-You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
-This method can simulate the running state of hardware under real conditions.</p>
-<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
-<ol>
-<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
-<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
-<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
-<li>Other part use a multimeter to check whether there is electricity or not 。</li>
-</ol>
-<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
-<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
-The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
-If the module burns out, it is impossible to control it。<br>
-Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
-<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
-In the computer, use the serial port debugging assistant to send the signal of 1<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
-<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
-<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
-   
-                {
-                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
-                  M1=1；
-                }
-
-</code></pre>
-<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
-<p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
 ]]></content>
     </entry>
     <entry>
@@ -576,6 +516,66 @@ Reference code section：</p>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></p>
 <p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
 <p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Draws Arduino with AD, including schematic diagram and challenge I met]]></title>
+        <id>https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/</id>
+        <link href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
+        </link>
+        <updated>2020-08-18T07:56:21.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="i-use-altium-designer15">I use Altium Designer15.</h4>
+<h4 id="drawing-is-the-arduino-uno-board">Drawing is the Arduino uno board.</h4>
+<h4 id="including-four-part-circuitspower-supply-circuit-comparison-circuit-usb-download-circuit-and-avr-single-chip-microcomputer-circuit">Including four part circuits（Power supply circuit, Comparison circuit, USB Download circuit and AVR single chip microcomputer circuit）</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-2ad821d0658617a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Power supply circuit" loading="lazy"></figure>
+<h4 id="the-comparison-circuit-is-the-most-interesting-part-i-think-compare-the-usb-power-supply-with-dc-power-supply-through-lm358-and-select-the-power-side">The comparison circuit is the most interesting part I think. Compare the USB power supply with DC power supply through lm358, and select the power side.</h4>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-8289c402bed3c3eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Comparison circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-d1caea0a3c97e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="USB Download circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-6400ed3b9f7c8d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AVR single chip microcomputer circuit" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-1b335e7dd8b31689.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The final drawn effect" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-edba84428d98ecac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="After welding, download the program to test the effect" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-d7a0db049d1442a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Serial port observation results in arduinoIDE" loading="lazy"></figure>
+<p>Because there happened to be a DHT11 temperature and humidity sensor nearby, I decided to write a small code to test it.</p>
+<pre><code>#include &lt;dht11.h&gt;//Temperature and humidity head file. You have to download this head file
+
+#define DHT11PIN 2 //D2 is defined as the data output port
+dht11 DHT11;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);//Define baud rate
+
+   pinMode(DHT11PIN,OUTPUT); //Set D2 as data output
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  temp = analogRead(Aout); //Read analog data of A0 pin
+  
+  String a=String(temp);
+  int chk = DHT11.read(DHT11PIN);                 //Assign the read value to chk
+int tem=(float)DHT11.temperature;               //Assign the temperature value to tem
+int hum=(float)DHT11.humidity;                   //Assign humidity value to hum
+Serial.print(&quot;Tempeature:&quot;);                        //Print out the Temperature:
+Serial.print(tem);                                     //Print temperature results
+Serial.println(&quot;°c&quot;); 
+Serial.print(&quot;Humidity:&quot;);                            //Print out Humidity:
+Serial.print(hum);                                     //Print out humidity results
+Serial.println(&quot;%&quot;);                                  //Print out%
+Serial.println(&quot;&quot;); 
+
+  delay(500);  //500 ms delay
+
+}
+</code></pre>
+<p>###Difficulties encountered</p>
+<ol>
+<li>Ams1117-5.0v will reduce the voltage, and dc005 will be less than 5V when powered by the wrong adapter(I measured it myself with a multimeter)It is better to use a 7-12V power adapter.<br>
+2.Ams1117-5.0v chip can be removed if you use dc002, or when power adapter is 5V, the chip can also be removed.</li>
+<li>When drawing the schematic diagram library and package diagram library, the schematic pin must correspond to the component pin in the package diagram library. On this basis, it should correspond to the package pin of the actual component.（If you don't do this, the wiring of the designed circuit will go wrong）</li>
+</ol>
+<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></p>
 ]]></content>
     </entry>
 </feed>
