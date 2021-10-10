@@ -2,30 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ESP8266远程控制台灯 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633879290931">
+<title>Remote control desk lamp based on ESP8266 | Leo&#39;s Blog</title>
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1633882055521">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="ESP8266远程控制台灯 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="Remote control desk lamp based on ESP8266 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="硬件
+    <meta name="description" content="Hardware
 micro USB
-USB母座
-继电器
-电阻电容若干
+USB JACKS
+relay
+Some of resistance and capacitance
 ESP8266-12F
 CH340C
-硬件电路
-####USB转UART一键下载电路
-
-####5V转3.3V电路（降压、供电）
-
-####ESP8266-12F主控电路
-
-###..." />
+Hardware circuit
+USB to UART on..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -35,7 +29,7 @@ CH340C
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633879290931" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1633882055521" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -88,59 +82,66 @@ CH340C
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              ESP8266远程控制台灯
+              Remote control desk lamp based on ESP8266
             </h2>
             <div class="post-info">
               <span>
-                2021-10-08
+                2020-09-21
               </span>
               <span>
-                10 min read
+                12 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <h2 id="硬件">硬件</h2>
+                <h2 id="hardware">Hardware</h2>
 <p>micro USB</p>
-<p>USB母座</p>
-<p>继电器</p>
-<p>电阻电容若干</p>
+<p>USB JACKS</p>
+<p>relay</p>
+<p>Some of resistance and capacitance</p>
 <p>ESP8266-12F</p>
 <p>CH340C</p>
-<h2 id="硬件电路">硬件电路</h2>
-<p>####USB转UART一键下载电路<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-7af4fa842b3649e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CH340C的电路设计" loading="lazy"></p>
-<p>####5V转3.3V电路（降压、供电）</p>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-9260f8db2dd30164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5V转3.3V" loading="lazy"></figure>
-<p>####ESP8266-12F主控电路</p>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-78cd55e6ee1d8b73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最小系统" loading="lazy"></figure>
-<p>####key电路<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-b466c78c8baafa79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></p>
-<p>####继电器电路<br>
-此处设计为了给USB供电充足，避免供电不足灯频闪，加了个电容，利用电容充放电来提供充足电压（这是我个人的想法，不知正确否，实际测试过才行，也欢迎各位读者批评指正）<br>
+<h2 id="hardware-circuit">Hardware circuit</h2>
+<h4 id="usb-to-uart-one-button-download-circuit">USB to UART one button download circuit</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-7af4fa842b3649e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CH340C的电路设计" loading="lazy"></figure>
+<h4 id="5v-to-33v-circuit-voltage-reduction-power-supply">5V to 3.3V circuit (voltage reduction, power supply)</h4>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-9260f8db2dd30164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5V转3.3V" loading="lazy"></figure>
+<h4 id="esp8266-12f-main-control-circuit">Esp8266-12f main control circuit</h4>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-78cd55e6ee1d8b73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最小系统" loading="lazy"></figure>
+<h4 id="key-circuit">Key circuit</h4>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-b466c78c8baafa79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></figure>
+<h4 id="relay-circuit">Relay circuit</h4>
+<p>In order to supply sufficient power to USB and avoid the stroboscopic light due to insufficient power supply, a capacitor is added and used to charge and discharge the capacitor to provide sufficient voltage (this is my personal idea. I don't know whether it is correct or not. It can only be tested in practice. Readers are also welcome to criticize and correct).<br>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-118c7ceaca18a6ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="继电器电路" loading="lazy"></p>
-<p>####总电路原理图<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></p>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
-<p>###2020.8.28翻车部分<br>
-  <strong>板子到了焊接，第一块板在所有焊接完成后，发现CH340C的芯片有问题。早上单独焊接了烧写的电路CH340C，在新版上的烧写电路是没问题的，电脑也能成功识别<br>
-  由于过于自信，没有多买元件，使得第一板哪里有错误难以检查，而且没有好好核对原理图，买少了元件导致没得焊三个电阻，虽然有最小系统，但是烧录固件ESP12F呈现了十分奇怪的一直闪灯，但不走进程的状态</strong><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="左边为焊好的板，由于检查到CH340C的损坏所以把它焊下来了。右边为对比检测，下载电路是没问题的" loading="lazy"><br>
-  <strong>更多分析可以观看B站同步分享的视频</strong><br>
-<a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">B站同步的分析视频</a></p>
-<p>###2020.8.31成功控制台灯<br>
-<a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">B站观看效果点击这里</a><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="通过自己写的APP点亮台灯图片" loading="lazy"><br>
- 自己设计的这块板子理论上能够控制所有采用USB 5V供电的设备</p>
-<h2 id="硬件代码部分">硬件代码部分</h2>
-<p>1.  先为ESP8266-12F刷入固件（可先刷AT固件，接着刷入nodemcu固件，避免出现错误）</p>
+<h4 id="general-circuit-schematic-diagram">General circuit schematic diagram</h4>
+<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
+<p>###2020.8.28 Challenge part<br>
+  When the board was welded, the first board was found to have a problem with the chip of ch340c after all the welding was completed. In the morning, the burning circuit ch340c was welded separately. The burning circuit in the new version is no problem, and the computer can recognize it successfully<br>
+  Because they were too confident and didn't buy more components, it was difficult to check where there were errors in the first board, and they didn't check the schematic diagram well. Buying fewer components resulted in not having to weld three resistors. Although there was a minimum system, the downloaded firmware esp12f showed a very strange state of flashing all the time, but didn't run normally.<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="On the left is the welded plate. It was welded down because of the damage of ch340c. On the right is contrast detection. The download circuit is OK" loading="lazy"><br>
+  <strong>For more analysis, you can watch the video shared synchronously by BiliBili</strong><br>
+<a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">BiliBili synchronized analysis video</a></p>
+<p>###2020.8.31 Control desk lamp successfully<br>
+<a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">Click here to view the effect in bilibili</a><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Light up the table lamp picture through the app written by myself" loading="lazy"><br>
+ The board designed by myself can theoretically control all devices powered by USB 5V.</p>
+<h2 id="hardware-code-part">Hardware code part</h2>
+<p>1.  Download firmware for esp8266-12f first（You can download <strong>AT firmware</strong> first, and then overwrite and download <strong>nodemcu firmware</strong> to avoid errors）</p>
 <ol start="2">
-<li>接着写代码，可以用esplorer用lua写代码，或者用arduinoIDE用C语言写代码，本人用C语言比较多，且用arduinoIDE比较多因此选择arduinoIDE</li>
+<li>Then write code. You can use esplorer to write code with Lua, or use arduinoIDE to write code in C language. I use C language more and use arduinoIDE more, so I choose arduinoIDE.</li>
 </ol>
-<p>代码思路，先连接WIFI，连上网后连上物联网平台（这里我使用贝壳物联，进行内网穿透，使得外网发信息能够收到），接着写控制代码（这里贝壳物联有demo，再对demo进行修改）</p>
+<p>Code idea: first connect to WiFi, after that connect to the Internet, and then connect to IOT platform（Here I use BIGIOIT platform to conduct intranet penetration, so that the information sent by the external network can be received）. Then write the control code（There is a demo in BIGIOT, so it's easy to modify the demo then to achieve what I need.）</p>
 <pre><code>/*
+This file needs to be supported by Arduino esp8266 development environment. For environment construction, you can see in: http://www.bigiot.net/talk/237.html
+
+This program can be used to control two relays
+Esp8266 burns into this program directly and uses the high and low electric frequency control optocoupler relay to control the electric lamp
+By default, my relay is turned on at high power frequency, so it is initialized to low level during initialization. Play turns on d5 and stop turns off the light on D5.ESP8266 as a prompt light .
+Code based :https://github.com/bigiot/bigiotArduino/blob/master/examples/ESP8266/kaiguan/kaiguan.ino
+Adjust the code on. This code can be directly burned into nodemcu module. I hope it will be helpful for you to share the code (2020.9.7)
     此文件需安装Arduino esp8266开发环境支持，环境搭建参见：http://www.bigiot.net/talk/237.html
     本程序可以用来控制两路继电器
     ESP8266烧入此程序直接，使用高低电频控制光耦继电器来控制电灯
@@ -152,15 +153,15 @@ CH340C
 #include &lt;ESP8266WiFi.h&gt;
 #include &lt;aJSON.h&gt;
 
-//=============  此处必须修该============
-String DEVICEID=&quot;***&quot;; // 你的设备编号   ==
-String  APIKEY = &quot;***&quot;; // 设备密码==//贝壳物联申请一下
+//=============  It must be modified here============
+String DEVICEID=&quot;***&quot;; // Your equipment number   ==
+String  APIKEY = &quot;***&quot;; // Device password==//BIGIOT information
 //=======================================
-unsigned long lastCheckInTime = 0; //记录上次报到时间
-const unsigned long postingInterval = 40000; // 每隔40秒向服务器报到一次
+unsigned long lastCheckInTime = 0; //Record the last check-in time
+const unsigned long postingInterval = 40000; // Report to the server every 40 seconds
 
-const char* ssid     = &quot;***&quot;;//无线名称
-const char* password = &quot;***&quot;;//无线密码
+const char* ssid     = &quot;***&quot;;//Wifi name
+const char* password = &quot;***&quot;;//Wifi password
 
 const char* host = &quot;www.bigiot.net&quot;;
 const int httpPort = 8181;
@@ -176,7 +177,7 @@ void setup() {
   delay(1000);
   
   WiFi.begin(ssid, password);
-  //默认输出关闭电频
+  //The default output turns off the electrical frequency
   pinMode(ELed,OUTPUT);
   pinMode(SW,OUTPUT);
   pinMode(SW1,OUTPUT);
@@ -238,21 +239,21 @@ void processMessage(aJsonObject *msg){
       String F_C_ID = client_id-&gt;valuestring;
       if(C == &quot;sw1&quot;){
 
-        digitalWrite(ELed,LOW); //ESP8266上的灯亮
-        digitalWrite(SW,HIGH);//D5口通电
+        digitalWrite(ELed,LOW); //The light on ESP8266 is on
+        digitalWrite(SW,HIGH);//D5 port is powered on
         sayToClient(F_C_ID,&quot;LED All on!&quot;);    
       }else if(C == &quot;stop1&quot;){
 
-        digitalWrite(ELed,HIGH);//ESP8266上的灯灭
-        digitalWrite(SW,LOW);//D5口断电
-        sayToClient(F_C_ID,&quot;LED All off!&quot;); //贝壳平台可以看到这句提示   
+        digitalWrite(ELed,HIGH);//The light on ESP8266 is off
+        digitalWrite(SW,LOW);//D5 port is powered off
+        sayToClient(F_C_ID,&quot;LED All off!&quot;); // You  can see this hint in Bigiot
       }else if(C==&quot;sw2&quot;){
          digitalWrite(ELed,LOW);
-        digitalWrite(SW1,HIGH);//D6通电
+        digitalWrite(SW1,HIGH);//D6 port is powered on
         sayToClient(F_C_ID,&quot;SW2 ON!&quot;);
         }else if(C==&quot;stop2&quot;){
          digitalWrite(ELed,HIGH);
-        digitalWrite(SW1,LOW);//D6断电
+        digitalWrite(SW1,LOW);//D6 port is powered off
         sayToClient(F_C_ID,&quot;SW2 OFF!&quot;);
         }
         
@@ -272,11 +273,11 @@ void sayToClient(String client_id, String content){
   lastCheckInTime = millis();
 }
 </code></pre>
-<h2 id="控制软件">控制软件</h2>
-<p>自己开发个app或者使用贝壳物联提供的app<br>
-这里我用HbuilderX自己开发的app，5+app。简单来说是网站式的app<br>
-参考代码部分：</p>
-<pre><code>//2020.9.15更新
+<h2 id="control-software">control software</h2>
+<p>Develop an app yourself or use the app provided by bigiot<br>
+Here I use the app developed by Hbuilderx, 5 + app. In short, it is a website app.<br>
+Reference code section：</p>
+<pre><code>//2020.9.15 update
 &lt;!DOCTYPE html&gt;
 &lt;html &gt;
 &lt;head &gt;
@@ -292,7 +293,7 @@ void sayToClient(String client_id, String content){
 &lt;/head&gt;
 
 &lt;body&gt;
-&lt;div class=&quot;abg&quot;&gt;//这里class是自己写的一个背景图片css样式
+&lt;div class=&quot;abg&quot;&gt;//Here class is a CSS style background picture written by myself.
 	&lt;br&gt;
 	&lt;div style=&quot;margin: auto;text-align: center;font-size: x-large;color: white;font:;&quot;&gt;&lt;label&gt;宿舍台灯控制&lt;/label&gt;&lt;/div&gt;
 	
@@ -319,7 +320,7 @@ void sayToClient(String client_id, String content){
 			//var lb = document.getElementById(&quot;lb2&quot;)
 			ws.onopen = function() {
 				
-				mui.toast(&quot;连接成功&quot;)//软件界面显示连接成功
+				mui.toast(&quot;连接成功&quot;)//The software interface shows that the connection is successful
 			};
 			ws.onmessage = function(evt) {
 				var received_msg = evt.data;
@@ -327,14 +328,14 @@ void sayToClient(String client_id, String content){
 				console.log(received_msg);
 				var obj = JSON.parse(received_msg)
 				if (obj.M == &quot;WELCOME TO BIGIOT&quot;) {
-					ws.send('{&quot;M&quot;:&quot;checkin&quot;,&quot;ID&quot;:&quot;设备ID&quot;,&quot;K&quot;:&quot;APIKEY&quot;}')//发送连接设备
+					ws.send('{&quot;M&quot;:&quot;checkin&quot;,&quot;ID&quot;:&quot;设备ID&quot;,&quot;K&quot;:&quot;APIKEY&quot;}')//Send connection device
 				}
 				if(obj.M==&quot;checkinok&quot;){
-					mui.toast(&quot;服务器连接成功！可以进行控制&quot;)//这里是判断贝壳物联有没返回成功连接信息
+					mui.toast(&quot;服务器连接成功！可以进行控制&quot;)//Here is to judge whether BIGIOT has returned successful connection information
 				}
-				if (obj.M == &quot;ping&quot;) //判断是否收到心跳包
+				if (obj.M == &quot;ping&quot;) //Determine whether the heartbeat packet is received
 				{
-					ws.send('{&quot;M&quot;:&quot;beat&quot;}') //发送心跳包数据
+					ws.send('{&quot;M&quot;:&quot;beat&quot;}') //Send heartbeat packet data
 				}
 			};
 			document.getElementById(&quot;mySwitch&quot;).addEventListener(&quot;toggle&quot;, function(event) {
@@ -365,20 +366,30 @@ void sayToClient(String client_id, String content){
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>##最后附上软件界面<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="软件界面效果图" loading="lazy"></p>
-<p>文件已开源（2020.9.15），码云gitee下载地址:https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
-<p>（2020.9.21）在运用到控制台灯上，有些灯会出现频闪的问题。初步分析是由于里面元器件会分压到最后没能达到额定电压导致不能正常工作，需要对电路进行分析计算，以解决这个问题</p>
+<p>##Finally, the software interface is attached<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></p>
+<p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
+<p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%A1%AC%E4%BB%B6">硬件</a></li>
-<li><a href="#%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF">硬件电路</a></li>
-<li><a href="#%E7%A1%AC%E4%BB%B6%E4%BB%A3%E7%A0%81%E9%83%A8%E5%88%86">硬件代码部分</a></li>
-<li><a href="#%E6%8E%A7%E5%88%B6%E8%BD%AF%E4%BB%B6">控制软件</a></li>
+<li><a href="#hardware">Hardware</a></li>
+<li><a href="#hardware-circuit">Hardware circuit</a><br>
+*
+<ul>
+<li><a href="#usb-to-uart-one-button-download-circuit">USB to UART one button download circuit</a></li>
+<li><a href="#5v-to-33v-circuit-voltage-reduction-power-supply">5V to 3.3V circuit (voltage reduction, power supply)</a></li>
+<li><a href="#esp8266-12f-main-control-circuit">Esp8266-12f main control circuit</a></li>
+<li><a href="#key-circuit">Key circuit</a></li>
+<li><a href="#relay-circuit">Relay circuit</a></li>
+<li><a href="#general-circuit-schematic-diagram">General circuit schematic diagram</a></li>
+</ul>
+</li>
+<li><a href="#hardware-code-part">Hardware code part</a></li>
+<li><a href="#control-software">control software</a></li>
 </ul>
 </li>
 </ul>
@@ -388,15 +399,6 @@ void sayToClient(String client_id, String content){
           </article>
         </div>
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
-              <h3 class="post-title">
-                Draws Arduino with AD, including schematic diagram and challenge I met
-              </h3>
-            </a>
-          </div>
         
 
         
