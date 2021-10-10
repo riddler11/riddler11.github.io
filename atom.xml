@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-10T10:59:52.317Z</updated>
+    <updated>2021-10-10T15:21:37.580Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -346,80 +346,79 @@ Serial.println(&quot;&quot;);
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[学习强国打卡系统]]></title>
+        <title type="html"><![CDATA[Clock-in Statistics System for “Xuexi Qiangguo”]]></title>
         <id>https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/</id>
         <link href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
         </link>
         <updated>2021-10-08T07:56:01.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="该项目纯软件">该项目纯软件</h2>
-<p>目前是一个<strong>网站的形式</strong>来实现学习强国打卡，当初设计是为了提高统计的准确性，以及方便每周值日的同学观看打卡情况，产生做这个系统的想法，目前已经投入使用</p>
-<p>##系统架构<br>
-系统架构是基于MVC开发模式拓展的，包括database数据层、model模型层、dao数据持久层、service业务逻辑层、controller/servlet控制器，各层次分工明确，降低层次耦合度。</p>
-<h4 id="显示层-view">显示层 (View)</h4>
-<p>本系统采用B/S模式。多以jsp/html为主要的显示页面，为了满足页面UI的展示，AJAX数据交换为JSON格式。此层与控制层结合比较紧密，需要二者结合起来协同工作。</p>
-<h2 id="控制层">控制层</h2>
-<p>Controller层负责具体的业务模块流程的控制，这样不仅使程序结构变得清晰，也大大减少了代码量。</p>
-<p>控制层主要用于响应客户端请求，每当请求到系统时，控制层就会调用对应的业务逻辑。请求分多种，如AJAX的数据请求、页面请求、文件上传、文件下载，控制层便会对应地做出相应的数据返回、页面跳转、流返回行为。</p>
-<h2 id="数据持久层">数据持久层</h2>
-<p>DAO层主要是做数据持久层的工作，负责与数据库进行联络的一些任务都封装在此，DAO层的设计首先是设计DAO的接口，然后设计实现类。</p>
-<p>##各层联系<br>
-DAO层，可以单独开发，互相的耦合度很低，完全可以独立进行，这样的一种模式在开发大项目的过程中尤其有优势，Controller，View层因为耦合度比较高，因而要结合在一起开发，但是也可以看作一个整体独立于前两个层进行开发。这样，在层与层之间我们只需要知道接口的定义，调用接口即可完成所需要的逻辑单元应用，一切显得非常清晰简单。</p>
-<p>####下图为目前网站功能架构</p>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-6922a2d72dee42ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="目前网站的架构" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-2d3437085ecd86cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="登录界面效果图" loading="lazy"></figure>
-<p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">码云下载地址，直接点击这里</a>，这个代码还是之前有<strong>bug</strong>时候的代码，看懂里面代码并作相应的修改就会有很大的成长。</p>
-<p><strong>这里代码是使用以下软件来进行开发的</strong>：开发工具：MyEclipse10，数据库：MySQL 5.1.32-community，图形化界面数据库操作：navicat，Java环境：jdk1.8.0_131（实际可能是jdk6，MyEclipse创建项目时候最高版本）</p>
-<p><strong>后来我用eclipse来开发</strong>，在myeclipse里那个jdk6换成高版本，一堆叉叉，不换高版本jdk图像处理那里请求的file类那些又没有（具体没有哪些类我忘记了，idea没用过所以没有用），反正看着就很不爽。或者两种jdk存在，导致部分代码出bug；像不执行识别代码什么的。</p>
-<h5 id="上述bug">上述bug</h5>
+        <content type="html"><![CDATA[<h2 id="the-project-is-purely-software">The project is purely software</h2>
+<p>At present, the drilling of learning ability is realized in the form of ** website **. Its original design purpose is to improve the accuracy of statistics and facilitate the students on duty to watch the clock in every day, thus producing the idea of making this system. It has been put into use</p>
+<h2 id="system-architecture">System architecture</h2>
+<p>The system architecture is expanded based on MVC development mode, including database data layer, model layer, Dao data persistence layer, service business logic layer and controller / servlet controller. The division of labor at each level is clear and the coupling degree of levels is reduced.</p>
+<h4 id="view-layer">View layer</h4>
+<p>The system adopts B / S mode. Most display pages are JSP / HTML. In order to meet the display of page UI, ajax data exchange is in JSON format. This layer is closely combined with the control layer, and they need to work together.</p>
+<h2 id="controller-layer">Controller layer</h2>
+<p>The controller layer is responsible for the control of specific business module processes, which not only makes the program structure clear, but also greatly reduces the amount of code.<br>
+The control layer is mainly used to respond to client requests. Whenever a request is sent to the system, the control layer will call the corresponding business logic. There are many kinds of requests, such as ajax data request, page request, file upload and file download. The control layer will make corresponding data return, page Jump and stream return.</p>
+<h2 id="data-persistence-layer">Data persistence layer</h2>
+<p>The Dao layer mainly does the work of the data persistence layer, and some tasks responsible for contacting the database are encapsulated here. The design of the Dao layer first designs the Dao interface, and then designs the implementation class.</p>
+<h2 id="contact-of-each-layer">Contact of each layer</h2>
+<p>The Dao layer can be developed independently with low mutual coupling, and can be carried out independently. Such a mode has particular advantages in the process of developing large projects. The controller and view layers need to be developed together because of their high coupling, but they can also be developed as a whole independent of the first two layers. In this way, we only need to know the definition of the interface between layers, and call the interface to complete the required logical unit application. Everything is very clear and simple.</p>
+<h4 id="the-following-figure-shows-the-current-website-functional-architecture">The following figure shows the current website functional architecture</h4>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-6922a2d72dee42ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Current website architecture" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-2d3437085ecd86cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Effect drawing of login interface" loading="lazy"></figure>
+<p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">Gitee download address, click here directly</a>，This code is still the code with * * bug * * before. Understanding the code and making corresponding modifications will make great progress.</p>
+<p><strong>The code here is developed using the following software</strong>：Development tool：MyEclipse10，Database：MySQL 5.1.32-community，Graphical interface database operation：navicat，Java environment：jdk1.8.0_131.</p>
+<p><strong>Later, I used eclipse to develop</strong>，When JDK6 is changed to a higher version in MyEclipse, some errors will occur in MyEclipse. There is no file class requested by image processing. Anyway, if two jdk version exist, it will causing some code bugs; Like not executing identification codes or something.</p>
+<h5 id="bug-in-the-orignal-project">Bug in the orignal project</h5>
 <ul>
-<li>打卡天数，到达99天的时候，加到100，就一直查99天的数据进行修改</li>
+<li>The number of clocking days is increased to 100 when it reaches 99 days, and the data of 99 days is checked and modified all the time.</li>
 </ul>
-<h5 id="打卡天数的流程及实现思路">打卡天数的流程及实现思路</h5>
+<h5 id="the-process-and-realization-of-clock-in-days">The process and Realization of clock in days</h5>
 <ul>
-<li>在积分录入界面，填好分数那些，或者上传图片等待识别，输入框有内容后，点击上传，打卡天数自增</li>
-<li>打卡天数，个人设计是通过时间的比较来进行实现的，注册时候会自动记录注册时间，接着打卡就通过与注册时间作比较来计算打卡天数</li>
+<li>In the point entry interface, fill in the scores, or upload pictures for identification. After there is content in the input box, click upload, and the clock in days will increase automatically.</li>
+<li>The personal design is realized by comparing the time. The registration time will be automatically recorded during registration, and then the clock in days will be calculated by comparing with the registration time.</li>
 </ul>
-<p>三种情况：</p>
+<p>Three cases：</p>
 <ol>
-<li>注册当天打卡</li>
-<li>注册当天没打卡</li>
-<li>注册后打过卡</li>
+<li>Clock in on the day of registration</li>
+<li>Didn't clock in on the day of registration</li>
+<li>Clock in after registration</li>
 </ol>
 <ul>
-<li>具体应结合代码进行看</li>
+<li>The details should be combined with the code</li>
 </ul>
-<p>bug出现的原因是当时设计数据库打卡天数时候，数据类型是varchar（255），然后大家到99天的时候，代码总是判断99为最大的天数。我也懒得改数据库那里设计了，我个人解决这个bug的思路是（判断里面的最新的打卡编号，因为打卡编号自增且数据类型为int）。写到这里，想到支部打卡天数的貌似也是varchar类型，这个我有空再改吧<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="心情" loading="lazy"></p>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-4a86633ca9568bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="积分录入界面" loading="lazy"></figure>
-<p>##部署在服务器上的bug就精彩多了</p>
+<p>The reason for the bug is when designing the database，The data type is varchar(255), And then on day 99, The code always judges 99 as the maximum number of days. My personal idea to solve this bug is(Judge the latest clock in number, because the clock in number increases automatically and the data type is int).When I write here, I suddenly remember that the number of branch days seems to be of varchar type. I'll change this when I'm free.<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="mood" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-4a86633ca9568bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Points entry interface" loading="lazy"></figure>
+<h2 id="when-the-project-is-uploaded-to-the-server-and-run-the-bugs-are-more-interesting">When the project is uploaded to the server and run, the bugs are more interesting.</h2>
 <ol>
 <li>
-<p>本地入数据库没问题，服务器上传中文入数据库就乱码（db.properties里面加useUnicode=true&amp;characterEncoding=UTF-8，解决问题）<a href="https://blog.csdn.net/weixin_30765577/article/details/99580949?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">问题解决链接</a></p>
+<p>No problem with local database entry. But when the server uploads Chinese into the database, it is garbled.（Add <strong>useunicode = true &amp; characterencoding = UTF-8</strong> in <strong>db.properties</strong> to solve the problem）<a href="https://blog.csdn.net/weixin_30765577/article/details/99580949?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">Problem solving link</a></p>
 </li>
 <li>
-<p>tomcat7版本 jdk只有1.7，图像处理的那些算法不能用，如图报错<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-3af03fc398c40a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="出现请求错误图" loading="lazy"></p>
+<p>The JDK of Tomcat 7 version is only 1.7. The algorithms of image processing cannot be used. As shown in the figure, an error will be reported<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-3af03fc398c40a1d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Request error graph" loading="lazy"></p>
 </li>
 <li>
-<p>tomacat8版本终于可以了jdk1.8，结果录入的感想全 <em>？？？？？</em>（乱码），一查发现tomcat8直接帮你处理好字符的问题 直接默认UTF-8，而我里面的方法为了tomcat7版本转码成ISO-8859-1。后面我决定不改代码，因为懒，太多代码要删删改改调试，于是决定直接浪费tomcat8的美意，把编码改成ISO-8859-1。<a href="https://blog.csdn.net/lzl_avery/article/details/87348937">问题解决链接</a></p>
+<p>The tomacat 8 version is finally ready for JDK1.8, and the feelings entered in the result are all  <em>？？？？？</em>（garbled），Check the data on the Internet and find that tomcat8 can directly help you deal with the problem of characters. It defaults to UTF-8. My method transcodes the tomcat7 version into iso-8859-1. In order not to cause great changes, I changed the code to ISO-8859-1。<a href="https://blog.csdn.net/lzl_avery/article/details/87348937">Problem solving link</a></p>
 </li>
 </ol>
-<p>4.最精彩部分莫过于这个了。我开发用windows系统，存储目录路径如图 是正斜杠“\”<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-436ab64fdf7dd4cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="存储目录路径" loading="lazy"><br>
-然而实际的服务器是Linux系统（怪我看在Linux系统占服务器空间小，所以选择了Linux，否则就不会出现这么精彩的问题了），先看看不改代码放服务器的情况（可看下图） <em>img\学号\图片名</em> （惊喜加意外，就新建了一个奇奇怪怪的文件夹还不能访问），接下来来看服务器实际存储路径 如图 是反斜杠“/”，如此一来存储就出现问题，<strong>解决方法改成正斜杠改成反斜杠</strong><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-94d96b7c79c9536e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="不改代码存图的路径" loading="lazy"><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-9b26d297b5569c41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="服务器存储路径" loading="lazy"></p>
-<p>##待提升的地方<br>
-积分界面，关于打卡天数可加一个<strong>应打卡天数</strong>来进行与实际打卡天数作对比。这部分代码方法其实我个人写了，但实际写在前端的时候出现了一点点小问题，现在还不怎么想解决，先凉拌着（不知道咋解决）。<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-e43088944d0c82e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="积分界面图" loading="lazy"></p>
-<p>这个网站其实可以转化为<strong>微信小程序的形式</strong>进行打卡，有能力的同学或者想要拥有这能力的同学可以借鉴我后端写的数据库结构、代码啥的，或者直接将后端的方法链接微信小程序的界面来实现。<strong>大佬可以忽略，直接按需开发</strong></p>
-<p>图像处理我这里实现是使用别人提供的api，图片数据根据支部的一些图片还有自己实际手机的截图，识别准确率我个人觉得其实可以，识别速率写了延迟3s请求，真正体验有时需要反复上传几次才能识别出来（说实话我还是挺不满意的，<strong>没有识别出来会返回上一位识别成功的同学的数据，这是由于我用了个中间变量来存储数据，也算个bug待解决。当时写到崩溃，终于解决识别存数据不入库的方法，后面就有点懒不想写清空上位识别成功数据的代码</strong>）</p>
-<p>图像处理这部分，<strong>有能力其实可以自己写，自己训练识别字库，来提升识别率和准确率（这部分是我目前不具备的能力）</strong>，<em>现在有些用户用了自己的字体识别不出来，由于是用api，所以并不能解决这个问题</em></p>
-<p><strong>可以加上会议签到等功能</strong>，考勤汇总什么的就没有那么辛苦，本人不是很想一个人完成这些所有功能，实在太累了，就交给后面的大佬来实现了</p>
-<p>#####最后附上当时想做成小程序的供需分析<br>
-（我分析了然后，为什么自己不做呢，是由于，我还不想花时间去研究get/post请求与小程序界面的链接，决定简化自己操作，用自己已知大部分的知识缩短开发时间，所以就写了个网站）<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-bd9045e5556cb842.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信小程序版" loading="lazy"></p>
-<p>上述书于2020.11.03，若有补充后续再说<br>
+<p>4.The best bug is nothing more than this. I developed this project using the windows operating system. The storage directory path is shown as the forward slash“\”<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-436ab64fdf7dd4cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Storage directory path" loading="lazy"><br>
+However, the actual server is a Linux system. Let's take a look at the server without changing the code（See the figure below） <em>img\学号\图片名</em> (Surprise, it has created a strange folder that can't be accessed yet). Next, let's look at the actual storage path of the server. As shown in the figure, the backslash &quot;/&quot; is used for storage.As a result, storage problems arise，<strong>The solution is to change the forward slash to the backslash</strong><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-94d96b7c79c9536e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Do not change the path of code storage diagram" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-9b26d297b5569c41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Server storage path" loading="lazy"></p>
+<h2 id="places-to-be-promoted">Places to be promoted</h2>
+<p>In the points interface, you can add * * number of days to punch * * to compare with the actual number of days to punch.In fact, I wrote this part of the code method myself, but there were a few small problems when I actually wrote it on the front end, and I don't have time to solve them yet.<br>
+<img src="https://upload-images.jianshu.io/upload_images/24469819-e43088944d0c82e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Integral interface diagram" loading="lazy"></p>
+<p>This website can actually be converted into ** wechat applet ** to clock in，Capable students or students who want to have this ability can learn from the database structure and code written by my back-end and use them to achieve.<br>
+<strong>Genius can be ignored and developed directly on demand.</strong></p>
+<p>I implement image processing here by using the API provided by others. Low recognition rate is a problem<strong>This is also the knowledge what I lack</strong></p>
+<p>** You can add functions such as meeting sign in**. Make the software more rich and humanized</p>
+<h5 id="finally-i-attached-the-supply-and-demand-analysis-of-the-small-program-i-wanted-to-make-at-that-time">Finally, I attached the supply and demand analysis of the small program I wanted to make at that time</h5>
+<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-bd9045e5556cb842.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信小程序版" loading="lazy"></figure>
+<p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-acab8586da67e47e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
