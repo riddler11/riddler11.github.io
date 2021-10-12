@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-12T14:35:03.291Z</updated>
+    <updated>2021-10-12T14:44:54.314Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -23,7 +23,7 @@
         width: 100%; 
         height: 100%; 
         left: 0; top: 0;" 
-        src="//player.bilibili.com/player.html?aid=80181162&bvid=BV1qJ41147r7&cid=137214952&page=1&high_quality=1" 
+        src="//player.bilibili.com/player.html?aid=847220411bvid=BV1L54y1E7RQ&cid=385215083&page=1&high_quality=1" 
         scrolling="no" 
         border="0" 
         frameborder="no" 
