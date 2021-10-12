@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-11T00:00:47.595Z</updated>
+    <updated>2021-10-12T10:24:02.915Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -157,6 +157,23 @@ In the computer, use the serial port debugging assistant to send the signal of 1
 </code></pre>
 <h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
 <p>Reverse, stop, left turn and right turn control are completed in the same way.Then complete the project.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Building Elevator System Based on 51 Single-chip Microcomputer]]></title>
+        <id>https://riddler11.github.io/post/building-elevator-system-based-on-51-single-chip-microcomputer/</id>
+        <link href="https://riddler11.github.io/post/building-elevator-system-based-on-51-single-chip-microcomputer/">
+        </link>
+        <updated>2020-11-04T10:15:17.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="project-forecast">Project forecast</h1>
+<h4 id="this-project-is-a-pure-hardware-project">This project is a pure hardware project.</h4>
+<p>Project composition: AT89C52 controller. 0.36 inch Nixie Tube. 3.0mm 8*8LED dot matrix. JQ8400FL10P voice broadcast. Other component design drawings are marked.</p>
+<p>This project will only give PcbDoc files, so as not to draw hands or copy, paste and modify them.</p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/img_convert/7536f07c06d94bafc80735391705ab1c.png" alt="PCB design" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/img_convert/fd2a907af86dd017f129e2dbff517fde.png" alt="Actual circuit board" loading="lazy"></figure>
+<p>Because it is a course design done before, this one also has a simulation design Proteus file, and the Proteus version is 8.6.<br>
+<img src="https://img-blog.csdnimg.cn/img_convert/e4ccfa048af1e76f763c64c8c822741b.png" alt="Simulation code running effect." loading="lazy"></p>
+<h2 id="please-look-forward-to-it-and-i-will-upload-it-when-im-free20201104">Please look forward to it and I will upload it when I'm free.（2020.11.04）</h2>
 ]]></content>
     </entry>
     <entry>
