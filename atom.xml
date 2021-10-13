@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-13T09:25:01.146Z</updated>
+    <updated>2021-10-13T09:38:22.362Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -218,7 +218,7 @@ In the computer, use the serial port debugging assistant to send the signal of 1
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Clock-in Statistics System for “Xuexi Qiangguo”]]></title>
+        <title type="html"><![CDATA[Punch-in Statistics System for “Xuexi Qiangguo”]]></title>
         <id>https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/</id>
         <link href="https://riddler11.github.io/post/xue-xi-qiang-guo-da-qia-xi-tong/">
         </link>
