@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-12T15:40:16.759Z</updated>
+    <updated>2021-10-13T09:14:31.936Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -11,12 +11,14 @@
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Bilibili Video test]]></title>
+        <title type="html"><![CDATA[How to link Bilibili Video in your article(如何在你文章中链接哔哩哔哩视频)]]></title>
         <id>https://riddler11.github.io/post/test/</id>
         <link href="https://riddler11.github.io/post/test/">
         </link>
         <updated>2021-10-12T11:40:46.000Z</updated>
-        <content type="html"><![CDATA[<div style="position: relative; padding: 30% 45%;">
+        <content type="html"><![CDATA[<p>Video link effect in my article. (在我文章里链接的视频具体效果)<br>
+This is my video about Java sparse array in Bilibili. (这是我在B站关于Java稀疏数组的视频)</p>
+<div style="position: relative; padding: 30% 45%;">
     <iframe style="
         position: absolute; 
         width: 100%; 
@@ -30,6 +32,23 @@
         allowfullscreen="true">
     </iframe>
 </div>
+<p>Key code segment. Other tools that support markdown may also be used.(关键代码段，其它支持markdown语法的工具也许同样能使用)</p>
+<pre><code>&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
+    &lt;iframe style=&quot;
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0; top: 0;&quot; 
+        src=&quot;//player.bilibili.com/player.html?aid=847220411&amp;bvid=BV1L54y1E7RQ&amp;cid=385215083&amp;page=1&amp;high_quality=1&quot; 
+        scrolling=&quot;no&quot; 
+        border=&quot;0&quot; 
+        frameborder=&quot;no&quot; 
+        framespacing=&quot;0&quot; 
+        allowfullscreen=&quot;true&quot;&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</code></pre>
 ]]></content>
     </entry>
     <entry>
