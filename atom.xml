@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-13T12:26:29.527Z</updated>
+    <updated>2021-10-14T00:59:11.182Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Wireless transmission of RFID identification information to server based on ESP8266.（基于ESP8266无线传输射频识别识别信息到服务器）]]></title>
+        <id>https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
+        <link href="https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/">
+        </link>
+        <updated>2021-10-13T12:26:33.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="this-is-project-i-did-a-long-time-ago-because-of-this-project-i-learn-a-lot-of-things-not-only-academically-but-also-the-attitude-of-dealing-with-people">This is project I did a long time ago. Because of this project, I learn a lot of things. (Not only academically, but also the attitude of dealing with people.)</h3>
+<p>First, look back the board I designed in the past.</p>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634129991464.png" alt="the board" loading="lazy"></figure>
+<p>As we all know practice makes prefect. This is the design when I just learned how to use AD software.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to link Bilibili Video in your article(如何在你文章中链接哔哩哔哩视频)]]></title>
         <id>https://riddler11.github.io/post/test/</id>
