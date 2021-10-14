@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-14T00:59:11.182Z</updated>
+    <updated>2021-10-14T01:01:56.750Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -93,7 +93,7 @@ This is my video about Java sparse array in Bilibili. (这是我在B站关于Jav
 <li>Send information regularly.</li>
 </ol>
 <figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-b3efff66bade4e00?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Actual hardware diagram" loading="lazy"></figure>
-<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-completing">I have searched a lot of data, but I have not found any actual and effective data to assist me in completing.</h3>
+<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-implementation">I have searched a lot of data, but I have not found any actual and effective data to assist me in implementation.</h3>
 <p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
 This may be the first non Lua but C language code in the whole network.</p>
 <h2 id="critical-code">critical code：</h2>
