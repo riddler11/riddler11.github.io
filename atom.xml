@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-16T15:26:34.119Z</updated>
+    <updated>2021-10-16T15:34:23.120Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -152,6 +152,20 @@ It is divided into three parts: Server part, multithreading part, and display da
 <p>Implementation effect<br>
 <img src="https://riddler11.github.io/post-images/1634184937995.jpg" alt="Display" loading="lazy"><br>
 <img src="https://riddler11.github.io/post-images/1634185294288.jpg" alt="Display2" loading="lazy"></p>
+<div style="position: relative; padding: 30% 45%;">
+    <iframe style="
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0; top: 0;" 
+        src="//player.bilibili.com/player.html?aid=293520085&bvid=BV18f4y177BF&cid=426004138&page=1&high_quality=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
 ]]></content>
     </entry>
     <entry>
