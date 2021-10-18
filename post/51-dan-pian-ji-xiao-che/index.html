@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Remote control car base on MCS 51  | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634399908874">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634575260278">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Remote control car base on MCS 51  | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
@@ -23,7 +23,7 @@ Try to select the components that control the trolle..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634399908874" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634575260278" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -143,8 +143,8 @@ The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
 If the module burns out, it is impossible to control it。<br>
 Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
 <p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
-In the computer, use the serial port debugging assistant to send the signal of 1<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-5bc19ca12b76e704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Example diagram of serial port debugging assistant" loading="lazy"></p>
+In the computer, use the serial port debugging assistant to send the signal of 1</p>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552895547.jpg" alt="Example diagram of serial port debugging assistant" loading="lazy"></figure>
 <h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
 <pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
    

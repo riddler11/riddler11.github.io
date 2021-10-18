@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634399908874">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634575260278">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
@@ -21,7 +21,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634399908874" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634575260278" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -98,15 +98,15 @@
               <div class="post-content">
                 <p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use ** Arduino ide ** to write code.<br>
 Window monitor print real-time effect:<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-62434c37876f9461.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Window monitor print real-time effect" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634551404833.jpg" alt="Window monitor print real-time effect" loading="lazy"></p>
 <p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8d7266d9304658b1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Hardware diagram" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634551586090.jpg" alt="Hardware diagram" loading="lazy"></p>
 <h4 id="the-soil-moisture-sensor-i-use">The soil moisture sensor I use</h4>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-113606ca00fbf968.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634551753967.jpg" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
 <h4 id="pin-details-as-shown-in-the-figure">Pin details as shown in the figure</h4>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-dc9c68f93adeca54.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Pin details" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634551807338.jpg" alt="Pin details" loading="lazy"></figure>
 <h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-df984bf09e0d9c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Wiring diagram" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://riddler11.github.io/post-images/1634551853966.jpg" alt="Wiring diagram" loading="lazy"></figure>
 <h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins * AO, GND and VCC * are connected</h2>
 <h2 id="next-is-the-code-section">Next is the code section：</h2>
 <pre><code>/**********************************************************************
