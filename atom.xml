@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-19T04:23:58.921Z</updated>
+    <updated>2021-10-19T04:34:06.154Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -336,7 +336,7 @@ such as：How does L298 work and so on.<strong>In this step you can figure out h
 <li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
 <li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
 </ol>
-<p>####After completing the above steps, you can start drawing PCB</p>
+<h4 id="after-completing-the-above-steps-you-can-start-drawing-pcb">After completing the above steps, you can start drawing PCB</h4>
 <p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
 <p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
 <p>After painting, remember to** check **whether the connection is connected, etc</p>
@@ -344,8 +344,8 @@ such as：How does L298 work and so on.<strong>In this step you can figure out h
 <p>Send the design drawings to the factory, and the factory will help you proofing.<br>
 After <strong>welding</strong>,then you can debug.</p>
 <h1 id="2code-debug">2.Code debug</h1>
-<p>####Complete the above design<br>
-You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
+<h4 id="complete-the-above-design">Complete the above design</h4>
+<p>You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
 This method can simulate the running state of hardware under real conditions.</p>
 <h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
 <ol>
@@ -414,7 +414,7 @@ The control layer is mainly used to respond to client requests. Whenever a reque
 <h4 id="the-following-figure-shows-the-current-website-functional-architecture">The following figure shows the current website functional architecture</h4>
 <figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552999249.jpg" alt="Current website architecture" loading="lazy"></figure>
 <figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634553047812.jpg" alt="Effect drawing of login interface" loading="lazy"></figure>
-<p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">Gitee download address, click here directly</a>，This code is still the code with * * bug * * before. Understanding the code and making corresponding modifications will make great progress.</p>
+<p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">Gitee download address, click here directly</a>，This code is still the code with <strong>bug</strong> before. Understanding the code and making corresponding modifications will make great progress.</p>
 <p><strong>The code here is developed using the following software</strong>：Development tool：MyEclipse10，Database：MySQL 5.1.32-community，Graphical interface database operation：navicat，Java environment：jdk1.8.0_131.</p>
 <p><strong>Later, I used eclipse to develop</strong>，When JDK6 is changed to a higher version in MyEclipse, some errors will occur in MyEclipse. There is no file class requested by image processing. Anyway, if two jdk version exist, it will causing some code bugs; Like not executing identification codes or something.</p>
 <h5 id="bug-in-the-orignal-project">Bug in the orignal project</h5>
@@ -457,12 +457,12 @@ However, the actual server is a Linux system. Let's take a look at the server wi
 <p><img src="https://riddler11.github.io/post-images/1634575053874.jpg" alt="Do not change the path of code storage diagram" loading="lazy"><br>
 <img src="https://riddler11.github.io/post-images/1634575093675.jpg" alt="Server storage path" loading="lazy"></p>
 <h2 id="places-to-be-promoted">Places to be promoted</h2>
-<p>In the points interface, you can add * * number of days to punch * * to compare with the actual number of days to punch.In fact, I wrote this part of the code method myself, but there were a few small problems when I actually wrote it on the front end, and I don't have time to solve them yet.<br>
+<p>In the points interface, you can add <strong>number of days to punch</strong> to compare with the actual number of days to punch.In fact, I wrote this part of the code method myself, but there were a few small problems when I actually wrote it on the front end, and I don't have time to solve them yet.<br>
 <img src="https://riddler11.github.io/post-images/1634575135899.jpg" alt="Integral interface diagram" loading="lazy"></p>
-<p>This website can actually be converted into ** wechat applet ** to clock in，Capable students or students who want to have this ability can learn from the database structure and code written by my back-end and use them to achieve.<br>
+<p>This website can actually be converted into <strong>wechat applet</strong> to clock in，Capable students or students who want to have this ability can learn from the database structure and code written by my back-end and use them to achieve.<br>
 <strong>Genius can be ignored and developed directly on demand.</strong></p>
 <p>I implement image processing here by using the API provided by others. Low recognition rate is a problem<strong>This is also the knowledge what I lack</strong></p>
-<p>** You can add functions such as meeting sign in**. Make the software more rich and humanized</p>
+<p><strong>You can add functions such as meeting sign in</strong>. Make the software more rich and humanized</p>
 <h5 id="finally-i-attached-the-supply-and-demand-analysis-of-the-small-program-i-wanted-to-make-at-that-time">Finally, I attached the supply and demand analysis of the small program I wanted to make at that time</h5>
 <figure data-type="image" tabindex="4"><img src="https://riddler11.github.io/post-images/1634575180300.jpg" alt="微信小程序版" loading="lazy"></figure>
 <p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
