@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-19T05:47:05.473Z</updated>
+    <updated>2021-10-19T05:52:13.876Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -808,7 +808,7 @@ Serial.println(&quot;&quot;);
 2.Ams1117-5.0v chip can be removed if you use dc002, or when power adapter is 5V, the chip can also be removed.</li>
 <li>When drawing the schematic diagram library and package diagram library, the schematic pin must correspond to the component pin in the package diagram library. On this basis, it should correspond to the package pin of the actual component.（If you don't do this, the wiring of the designed circuit will go wrong）</li>
 </ol>
-<h1 id="the-most-important-file-download-address-click-here-to-gitee-download"><a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></h1>
+<h3 id="the-most-important-file-download-address-click-here-to-gitee-download"><a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></h3>
 ]]></content>
     </entry>
 </feed>
