@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Remote control desk lamp based on ESP8266 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634617051322">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634617092017">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Remote control desk lamp based on ESP8266 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
@@ -29,7 +29,7 @@ USB to UART on..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634617051322" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634617092017" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -118,14 +118,14 @@ USB to UART on..." />
 <h4 id="general-circuit-schematic-diagram">General circuit schematic diagram</h4>
 <figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></figure>
 <figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
-<p>###2020.8.28 Challenge part<br>
-  When the board was welded, the first board was found to have a problem with the chip of ch340c after all the welding was completed. In the morning, the burning circuit ch340c was welded separately. The burning circuit in the new version is no problem, and the computer can recognize it successfully<br>
+<h3 id="2020828-challenge-part">2020.8.28 Challenge part</h3>
+<p>  When the board was welded, the first board was found to have a problem with the chip of ch340c after all the welding was completed. In the morning, the burning circuit ch340c was welded separately. The burning circuit in the new version is no problem, and the computer can recognize it successfully<br>
   Because they were too confident and didn't buy more components, it was difficult to check where there were errors in the first board, and they didn't check the schematic diagram well. Buying fewer components resulted in not having to weld three resistors. Although there was a minimum system, the downloaded firmware esp12f showed a very strange state of flashing all the time, but didn't run normally.<br>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="On the left is the welded plate. It was welded down because of the damage of ch340c. On the right is contrast detection. The download circuit is OK" loading="lazy"><br>
   <strong>For more analysis, you can watch the video shared synchronously by BiliBili</strong><br>
 <a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">BiliBili synchronized analysis video</a></p>
-<p>###2020.8.31 Control desk lamp successfully<br>
-<a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">Click here to view the effect in bilibili</a><br>
+<h3 id="2020831-control-desk-lamp-successfully">2020.8.31 Control desk lamp successfully</h3>
+<p><a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">Click here to view the effect in bilibili</a><br>
 <img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Light up the table lamp picture through the app written by myself" loading="lazy"><br>
  The board designed by myself can theoretically control all devices powered by USB 5V.</p>
 <h2 id="hardware-code-part">Hardware code part</h2>
@@ -366,8 +366,8 @@ Reference code section：</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<p>##Finally, the software interface is attached<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></p>
+<h2 id="finally-the-software-interface-is-attached">Finally, the software interface is attached</h2>
+<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></figure>
 <p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
 <p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
 
@@ -386,10 +386,13 @@ Reference code section：</p>
 <li><a href="#key-circuit">Key circuit</a></li>
 <li><a href="#relay-circuit">Relay circuit</a></li>
 <li><a href="#general-circuit-schematic-diagram">General circuit schematic diagram</a></li>
+<li><a href="#2020828-challenge-part">2020.8.28 Challenge part</a></li>
+<li><a href="#2020831-control-desk-lamp-successfully">2020.8.31 Control desk lamp successfully</a></li>
 </ul>
 </li>
 <li><a href="#hardware-code-part">Hardware code part</a></li>
 <li><a href="#control-software">control software</a></li>
+<li><a href="#finally-the-software-interface-is-attached">Finally, the software interface is attached</a></li>
 </ul>
 </li>
 </ul>
