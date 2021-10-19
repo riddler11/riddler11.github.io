@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-19T06:08:25.466Z</updated>
+    <updated>2021-10-19T15:02:18.563Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -265,12 +265,41 @@ Window monitor print real-time effect:<br>
 <img src="https://riddler11.github.io/post-images/1634551404833.jpg" alt="Window monitor print real-time effect" loading="lazy"></p>
 <p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
 <img src="https://riddler11.github.io/post-images/1634551586090.jpg" alt="Hardware diagram" loading="lazy"></p>
-<h4 id="the-soil-moisture-sensor-i-use">The soil moisture sensor I use</h4>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634551753967.jpg" alt="This is the soil moisture sensor I bought" loading="lazy"></figure>
-<h4 id="pin-details-as-shown-in-the-figure">Pin details as shown in the figure</h4>
-<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634551807338.jpg" alt="Pin details" loading="lazy"></figure>
+<h4 id="the-soil-moisture-sensor-i-use-is-a-resistance-sensor">The soil moisture sensor I use is a resistance sensor.</h4>
+<h4 id="pin-details-are-shown-in-table">Pin details are shown in table.</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">soil moisture sensor</th>
+<th style="text-align:center">Wiring instructions</th>
+<th style="text-align:center">MCU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">VCC</td>
+<td style="text-align:center">&lt;—&gt;</td>
+<td style="text-align:center">3.3V-5V</td>
+</tr>
+<tr>
+<td style="text-align:center">GND</td>
+<td style="text-align:center">&lt;—&gt;</td>
+<td style="text-align:center">GND</td>
+</tr>
+<tr>
+<td style="text-align:center">DO</td>
+<td style="text-align:center">&lt;—&gt;</td>
+<td style="text-align:center">Digital output (0 or 1)</td>
+</tr>
+<tr>
+<td style="text-align:center">AO</td>
+<td style="text-align:center">&lt;—&gt;</td>
+<td style="text-align:center">Voltage analog output.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
-<figure data-type="image" tabindex="3"><img src="https://riddler11.github.io/post-images/1634551853966.jpg" alt="Wiring diagram" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634551853966.jpg" alt="Wiring diagram" loading="lazy"></figure>
 <h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins <strong>AO, GND and VCC</strong> are connected</h2>
 <h2 id="next-is-the-code-section">Next is the code section：</h2>
 <pre><code>/**********************************************************************
@@ -278,7 +307,7 @@ author：燊哥仔
 bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
 The code is very simple. You can see the effect by using the serial port monitor of IDE
 Actually connect three pins is OK AO、GND、VCC
-***********************************************************************/
+**********************************************************************/
 int sense_Pin = 0; // Soil sensor input connected to analog pin A0
 int value = 0; //initialize variable value
 
