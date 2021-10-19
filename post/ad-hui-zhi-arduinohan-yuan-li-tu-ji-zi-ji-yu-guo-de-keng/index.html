@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Draws Arduino with AD, including schematic diagram and challenge I met | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634616539764">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1634617051322">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Draws Arduino with AD, including schematic diagram and challenge I met | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
@@ -23,7 +23,7 @@ Including four part circuits（Power supply circuit, Comparison..." />
       <div class="main-content">
         <div class="site-header">
   <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634616539764" alt="">
+  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1634617051322" alt="">
   </a>
   <h1 class="site-title">
     Leo&#39;s Blog
@@ -139,13 +139,13 @@ Serial.println(&quot;&quot;);
 
 }
 </code></pre>
-<p>###Difficulties encountered</p>
+<h3 id="difficulties-encountered">Difficulties encountered</h3>
 <ol>
 <li>Ams1117-5.0v will reduce the voltage, and dc005 will be less than 5V when powered by the wrong adapter(I measured it myself with a multimeter)It is better to use a 7-12V power adapter.<br>
 2.Ams1117-5.0v chip can be removed if you use dc002, or when power adapter is 5V, the chip can also be removed.</li>
 <li>When drawing the schematic diagram library and package diagram library, the schematic pin must correspond to the component pin in the package diagram library. On this basis, it should correspond to the package pin of the actual component.（If you don't do this, the wiring of the designed circuit will go wrong）</li>
 </ol>
-<p>#<a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></p>
+<h1 id="the-most-important-file-download-address-click-here-to-gitee-download"><a href="https://gitee.com/riddler11/ad_draws_arduino.git">The most important file download address, click here to gitee download</a></h1>
 
               </div>
               <div class="toc-container">
@@ -162,10 +162,12 @@ Serial.println(&quot;&quot;);
 <li><a href="#the-comparison-circuit-is-the-most-interesting-part-i-think-compare-the-usb-power-supply-with-dc-power-supply-through-lm358-and-select-the-power-side">The comparison circuit is the most interesting part I think. Compare the USB power supply with DC power supply through lm358, and select the power side.</a></li>
 </ul>
 </li>
+<li><a href="#difficulties-encountered">Difficulties encountered</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#the-most-important-file-download-address-click-here-to-gitee-download">The most important file download address, click here to gitee download</a></li>
 </ul>
 
               </div>
