@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-10-19T15:02:18.563Z</updated>
+    <updated>2021-12-26T08:51:06.294Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Vocabulary learning]]></title>
+        <id>https://riddler11.github.io/post/vocabulary-learning/</id>
+        <link href="https://riddler11.github.io/post/vocabulary-learning/">
+        </link>
+        <updated>2021-12-26T08:28:03.000Z</updated>
+        <content type="html"><![CDATA[<p>非常：除了very，可以用exceedingly。<br>
+重要的：除了important，可indispensable。<br>
+政府：除了government，其实可以用authority。<br>
+成功：除了success，可以用glory。<br>
+e.g.</p>
+<ol>
+<li>
+<p>English must be pointed out exceedingly indispensable.<br>
+英语必须被指出非常重要的。</p>
+</li>
+<li>
+<p>Authorities should be proposed to adopt action.<br>
+政府应该被建议采取行动。</p>
+</li>
+<li>
+<p>If there exists a dream, glories are supposed to be achieved.<br>
+如果有梦想，就应该会成功。</p>
+</li>
+</ol>
+<p>(2021.12.26)</p>
+<p>To be continued...</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Wireless transmission of RFID identification information to server based on ESP8266.（基于ESP8266无线传输射频识别信息传输到服务器）]]></title>
         <id>https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
