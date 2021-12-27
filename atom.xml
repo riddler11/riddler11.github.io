@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2021-12-27T15:28:46.153Z</updated>
+    <updated>2021-12-27T15:31:17.802Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -53,9 +53,10 @@ e.g.</p>
 这则报道刊登在头版的显著位置。</p>
 </li>
 </ol>
-<p>巨大的：除了huge，可用enormous</p>
-<p>enormous pressure 巨大压力</p>
-<p>(2021.12.27)</p>
+<p>巨大的：除了huge，可用enormous、immense</p>
+<p>enormous pressure 巨大压力<br>
+immense pressure 巨大压力<br>
+(2021.12.27)</p>
 <p>To be continued...</p>
 ]]></content>
     </entry>
