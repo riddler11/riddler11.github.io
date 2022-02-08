@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-06T07:46:21.041Z</updated>
+    <updated>2022-02-08T10:57:43.546Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[大三元观影感受]]></title>
+        <id>https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/</id>
+        <link href="https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/">
+        </link>
+        <updated>2022-02-08T10:05:52.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="电影大三元">电影：大三元</h2>
+<p>主演：张国荣、袁咏仪、刘青云、洪欣等</p>
+<h3 id="先入为主的感受">先入为主的感受：</h3>
+<p>这部片个人感觉上是一部喜剧片，片中的哥哥很帅气，出场的每一帧感觉都能够作为壁纸。<br>
+那时候的美女美得各有特色、洪欣出场确实很惊艳，其它几个美女如果是正常的妆发也是非常能打。</p>
+<p>以下将有几张感觉很prefect很唯美的几帧画面与文字穿插出现**（以下内容可能含有剧透，谨慎观看）**<br>
+<img src="https://riddler11.github.io/post-images/1644316970495.png" alt="" loading="lazy"></p>
+<h3 id="影片概述">影片概述</h3>
+<p>片中张国荣饰演的角色是一位名为钟国强神父，刘青云饰演的是一位拥有中国男足的脚的警察<br>
+围绕作为娱乐界的白板（袁咏仪饰演）以及一众人物展开的救赎故事。最终是一个happy ending。<br>
+<img src="https://riddler11.github.io/post-images/1644316869564.png" alt="" loading="lazy"></p>
+<h3 id="情节发展">情节发展</h3>
+<p>以倒叙进行开端，先把一个重要的画面先铺垫，再进行故事的开展。我个人认为情节的衔接是没有问题的，有时候插入一些搞笑的情节，确实可以一笑，但是由于在B站总是看到这些片段有点小剧透，反而因为知道情节而少了一番风味。<br>
+<img src="https://riddler11.github.io/post-images/1644316876335.png" alt="" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1644316892070.png" alt="" loading="lazy"></p>
+<h3 id="总的个人评价">总的个人评价</h3>
+<p>我个人觉得这部片还可以，演员阵容现在来看无敌，画面很美，喜剧得不够彻底，正经和深刻也不算太到位，这是我个人的一个感受。不过演员表演得都挺到位的。不过故事情节确实耳目一新。有些画面确实可以做成表情包使用🤣。<br>
+<img src="https://riddler11.github.io/post-images/1644317007317.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[看电影感受感悟（可能含有剧透）]]></title>
         <id>https://riddler11.github.io/post/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/</id>
@@ -596,288 +622,6 @@ However, the actual server is a Linux system. Let's take a look at the server wi
 <figure data-type="image" tabindex="4"><img src="https://riddler11.github.io/post-images/1634575180300.jpg" alt="微信小程序版" loading="lazy"></figure>
 <p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
 <img src="https://riddler11.github.io/post-images/1634575232915.jpg" alt="mood" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Remote control desk lamp based on ESP8266]]></title>
-        <id>https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/</id>
-        <link href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
-        </link>
-        <updated>2020-09-21T12:50:42.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="hardware">Hardware</h2>
-<p>micro USB</p>
-<p>USB JACKS</p>
-<p>relay</p>
-<p>Some of resistance and capacitance</p>
-<p>ESP8266-12F</p>
-<p>CH340C</p>
-<h2 id="hardware-circuit">Hardware circuit</h2>
-<h4 id="usb-to-uart-one-button-download-circuit">USB to UART one button download circuit</h4>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-7af4fa842b3649e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CH340C的电路设计" loading="lazy"></figure>
-<h4 id="5v-to-33v-circuit-voltage-reduction-power-supply">5V to 3.3V circuit (voltage reduction, power supply)</h4>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-9260f8db2dd30164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5V转3.3V" loading="lazy"></figure>
-<h4 id="esp8266-12f-main-control-circuit">Esp8266-12f main control circuit</h4>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-78cd55e6ee1d8b73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最小系统" loading="lazy"></figure>
-<h4 id="key-circuit">Key circuit</h4>
-<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-b466c78c8baafa79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></figure>
-<h4 id="relay-circuit">Relay circuit</h4>
-<p>In order to supply sufficient power to USB and avoid the stroboscopic light due to insufficient power supply, a capacitor is added and used to charge and discharge the capacitor to provide sufficient voltage (this is my personal idea. I don't know whether it is correct or not. It can only be tested in practice. Readers are also welcome to criticize and correct).<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-118c7ceaca18a6ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="继电器电路" loading="lazy"></p>
-<h4 id="general-circuit-schematic-diagram">General circuit schematic diagram</h4>
-<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
-<h3 id="2020828-challenge-part">2020.8.28 Challenge part</h3>
-<p>  When the board was welded, the first board was found to have a problem with the chip of ch340c after all the welding was completed. In the morning, the burning circuit ch340c was welded separately. The burning circuit in the new version is no problem, and the computer can recognize it successfully<br>
-  Because they were too confident and didn't buy more components, it was difficult to check where there were errors in the first board, and they didn't check the schematic diagram well. Buying fewer components resulted in not having to weld three resistors. Although there was a minimum system, the downloaded firmware esp12f showed a very strange state of flashing all the time, but didn't run normally.<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="On the left is the welded plate. It was welded down because of the damage of ch340c. On the right is contrast detection. The download circuit is OK" loading="lazy"><br>
-  <strong>For more analysis, you can watch the video shared synchronously by BiliBili</strong><br>
-<a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">BiliBili synchronized analysis video</a></p>
-<h3 id="2020831-control-desk-lamp-successfully">2020.8.31 Control desk lamp successfully</h3>
-<p><a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">Click here to view the effect in bilibili</a><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Light up the table lamp picture through the app written by myself" loading="lazy"><br>
- The board designed by myself can theoretically control all devices powered by USB 5V.</p>
-<h2 id="hardware-code-part">Hardware code part</h2>
-<p>1.  Download firmware for esp8266-12f first（You can download <strong>AT firmware</strong> first, and then overwrite and download <strong>nodemcu firmware</strong> to avoid errors）</p>
-<ol start="2">
-<li>Then write code. You can use esplorer to write code with Lua, or use arduinoIDE to write code in C language. I use C language more and use arduinoIDE more, so I choose arduinoIDE.</li>
-</ol>
-<p>Code idea: first connect to WiFi, after that connect to the Internet, and then connect to IOT platform（Here I use BIGIOIT platform to conduct intranet penetration, so that the information sent by the external network can be received）. Then write the control code（There is a demo in BIGIOT, so it's easy to modify the demo then to achieve what I need.）</p>
-<pre><code>/*
-This file needs to be supported by Arduino esp8266 development environment. For environment construction, you can see in: http://www.bigiot.net/talk/237.html
-
-This program can be used to control two relays
-Esp8266 burns into this program directly and uses the high and low electric frequency control optocoupler relay to control the electric lamp
-By default, my relay is turned on at high power frequency, so it is initialized to low level during initialization. Play turns on d5 and stop turns off the light on D5.ESP8266 as a prompt light .
-Code based :https://github.com/bigiot/bigiotArduino/blob/master/examples/ESP8266/kaiguan/kaiguan.ino
-Adjust the code on. This code can be directly burned into nodemcu module. I hope it will be helpful for you to share the code (2020.9.7)
-    此文件需安装Arduino esp8266开发环境支持，环境搭建参见：http://www.bigiot.net/talk/237.html
-    本程序可以用来控制两路继电器
-    ESP8266烧入此程序直接，使用高低电频控制光耦继电器来控制电灯
-    我的继电器默认高电频开启，所以在初始化时都初始化为低电平，play开启D5，stop关闭D5.ESP8266上的灯作为提示灯
-    代码基于https://github.com/bigiot/bigiotArduino/blob/master/examples/ESP8266/kaiguan/kaiguan.ino
-    上的代码进行调整，此代码可以直接烧入到nodemcu模块，分享代码希望对大家有帮助（2020.9.7）
-*/
-
-#include &lt;ESP8266WiFi.h&gt;
-#include &lt;aJSON.h&gt;
-
-//=============  It must be modified here============
-String DEVICEID=&quot;***&quot;; // Your equipment number   ==
-String  APIKEY = &quot;***&quot;; // Device password==//BIGIOT information
-//=======================================
-unsigned long lastCheckInTime = 0; //Record the last check-in time
-const unsigned long postingInterval = 40000; // Report to the server every 40 seconds
-
-const char* ssid     = &quot;***&quot;;//Wifi name
-const char* password = &quot;***&quot;;//Wifi password
-
-const char* host = &quot;www.bigiot.net&quot;;
-const int httpPort = 8181;
-
-int ELed=D4;
-
-int SW=D5;
-int SW1=D6;
-//int arr_len = sizeof(pins)/sizeof(pins[0]);
-
-void setup() {
-  Serial.begin(115200);
-  delay(1000);
-  
-  WiFi.begin(ssid, password);
-  //The default output turns off the electrical frequency
-  pinMode(ELed,OUTPUT);
-  pinMode(SW,OUTPUT);
-  pinMode(SW1,OUTPUT);
-  digitalWrite(ELed,HIGH);
-  digitalWrite(SW,LOW);
-  digitalWrite(SW1,LOW);
-
-  
-}
-
-WiFiClient client;
-
-void loop() {
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.print(&quot;.&quot;);
-  }
-
-  // Use WiFiClient class to create TCP connections
-  if (!client.connected()) {
-    if (!client.connect(host, httpPort)) {
-      Serial.println(&quot;connection failed&quot;);
-      delay(5000);
-      return;
-    }
-  }
-
-  if(millis() - lastCheckInTime &gt; postingInterval || lastCheckInTime==0) {
-    checkIn();
-  }
-  
-  // Read all the lines of the reply from server and print them to Serial
-  if (client.available()) {
-    String inputString = client.readStringUntil('\n');
-    inputString.trim();
-    Serial.println(inputString);
-    int len = inputString.length()+1;
-    if(inputString.startsWith(&quot;{&quot;) &amp;&amp; inputString.endsWith(&quot;}&quot;)){
-      char jsonString[len];
-      inputString.toCharArray(jsonString,len);
-      aJsonObject *msg = aJson.parse(jsonString);
-      processMessage(msg);
-      aJson.deleteItem(msg);          
-    }
-  }
-}
-
-void processMessage(aJsonObject *msg){
-  aJsonObject* method = aJson.getObjectItem(msg, &quot;M&quot;);
-  aJsonObject* content = aJson.getObjectItem(msg, &quot;C&quot;);     
-  aJsonObject* client_id = aJson.getObjectItem(msg, &quot;ID&quot;);
-  if (!method) {
-    return;
-  }
-    String M = method-&gt;valuestring;
-    if(M == &quot;say&quot;){
-      String C = content-&gt;valuestring;
-      String F_C_ID = client_id-&gt;valuestring;
-      if(C == &quot;sw1&quot;){
-
-        digitalWrite(ELed,LOW); //The light on ESP8266 is on
-        digitalWrite(SW,HIGH);//D5 port is powered on
-        sayToClient(F_C_ID,&quot;LED All on!&quot;);    
-      }else if(C == &quot;stop1&quot;){
-
-        digitalWrite(ELed,HIGH);//The light on ESP8266 is off
-        digitalWrite(SW,LOW);//D5 port is powered off
-        sayToClient(F_C_ID,&quot;LED All off!&quot;); // You  can see this hint in Bigiot
-      }else if(C==&quot;sw2&quot;){
-         digitalWrite(ELed,LOW);
-        digitalWrite(SW1,HIGH);//D6 port is powered on
-        sayToClient(F_C_ID,&quot;SW2 ON!&quot;);
-        }else if(C==&quot;stop2&quot;){
-         digitalWrite(ELed,HIGH);
-        digitalWrite(SW1,LOW);//D6 port is powered off
-        sayToClient(F_C_ID,&quot;SW2 OFF!&quot;);
-        }
-        
-
-    }
-}
-
-void checkIn() {
-    String msg = &quot;{\&quot;M\&quot;:\&quot;checkin\&quot;,\&quot;ID\&quot;:\&quot;&quot; + DEVICEID + &quot;\&quot;,\&quot;K\&quot;:\&quot;&quot; + APIKEY + &quot;\&quot;}\n&quot;;
-    client.print(msg);
-    lastCheckInTime = millis(); 
-}
-
-void sayToClient(String client_id, String content){
-  String msg = &quot;{\&quot;M\&quot;:\&quot;say\&quot;,\&quot;ID\&quot;:\&quot;&quot; + client_id + &quot;\&quot;,\&quot;C\&quot;:\&quot;&quot; + content + &quot;\&quot;}\n&quot;;
-  client.print(msg);
-  lastCheckInTime = millis();
-}
-</code></pre>
-<h2 id="control-software">control software</h2>
-<p>Develop an app yourself or use the app provided by bigiot<br>
-Here I use the app developed by Hbuilderx, 5 + app. In short, it is a website app.<br>
-Reference code section：</p>
-<pre><code>//2020.9.15 update
-&lt;!DOCTYPE html&gt;
-&lt;html &gt;
-&lt;head &gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot; /&gt;
-    &lt;title&gt;&lt;/title&gt;
-    &lt;script src=&quot;js/mui.min.js&quot;&gt;&lt;/script&gt;
-	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/1.css&quot;/&gt;
-    &lt;link href=&quot;css/mui.min.css&quot; rel=&quot;stylesheet&quot;/&gt;
-    &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;
-      	mui.init();
-    &lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div class=&quot;abg&quot;&gt;//Here class is a CSS style background picture written by myself.
-	&lt;br&gt;
-	&lt;div style=&quot;margin: auto;text-align: center;font-size: x-large;color: white;font:;&quot;&gt;&lt;label&gt;宿舍台灯控制&lt;/label&gt;&lt;/div&gt;
-	
-	
-			&lt;br&gt;
-			&lt;div class=&quot;bod&quot;&gt;
-			&lt;div style=&quot;display: flex;color: white;&quot;&gt;&lt;label&gt;开关1：&lt;/label&gt;
-				&lt;div class=&quot;mui-switch &quot; id=&quot;mySwitch&quot;&gt;
-					&lt;div class=&quot;mui-switch-handle&quot;&gt;&lt;/div&gt;
-				&lt;/div&gt;
-				&lt;div style=&quot;display: flex; color: white;&quot;&gt;&lt;label&gt;&amp;nbsp;&amp;nbsp;开关2：&lt;/label&gt;
-					&lt;div class=&quot;mui-switch &quot; id=&quot;mySwitch1&quot;&gt;
-						&lt;div class=&quot;mui-switch-handle&quot;&gt;&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-			
-	
-			
-			
-&lt;/div&gt;
-	&lt;script type=&quot;text/javascript&quot;&gt;
-			var ws = new WebSocket(&quot;ws://www.bigiot.net:8383&quot;);
-			//var lb = document.getElementById(&quot;lb2&quot;)
-			ws.onopen = function() {
-				
-				mui.toast(&quot;连接成功&quot;)//The software interface shows that the connection is successful
-			};
-			ws.onmessage = function(evt) {
-				var received_msg = evt.data;
-				//lb.innerText = received_msg
-				console.log(received_msg);
-				var obj = JSON.parse(received_msg)
-				if (obj.M == &quot;WELCOME TO BIGIOT&quot;) {
-					ws.send('{&quot;M&quot;:&quot;checkin&quot;,&quot;ID&quot;:&quot;设备ID&quot;,&quot;K&quot;:&quot;APIKEY&quot;}')//Send connection device
-				}
-				if(obj.M==&quot;checkinok&quot;){
-					mui.toast(&quot;服务器连接成功！可以进行控制&quot;)//Here is to judge whether BIGIOT has returned successful connection information
-				}
-				if (obj.M == &quot;ping&quot;) //Determine whether the heartbeat packet is received
-				{
-					ws.send('{&quot;M&quot;:&quot;beat&quot;}') //Send heartbeat packet data
-				}
-			};
-			document.getElementById(&quot;mySwitch&quot;).addEventListener(&quot;toggle&quot;, function(event) {
-				if (event.detail.isActive) {
-					mui.toast(&quot;打开开关1&quot;)
-					console.log(&quot;你启动了开关&quot;);
-					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;sw1&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')//D+设备ID,D代表设备。D+ID代表要发送信息到我们的esp8266设备
-				} else {
-					mui.toast(&quot;关闭开关1&quot;)
-					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;stop1&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')//这里发送的命令要跟ESP8266的判断的命令相匹配才会产生效果
-					console.log(&quot;你关闭了开关&quot;);
-				}
-			})
-			document.getElementById(&quot;mySwitch1&quot;).addEventListener(&quot;toggle&quot;, function(event) {
-				if (event.detail.isActive) {
-					mui.toast(&quot;打开开关2&quot;)
-					console.log(&quot;你启动了开关&quot;);
-					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;sw2&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')
-				} else {
-					mui.toast(&quot;关闭开关2&quot;)
-					ws.send('{&quot;M&quot;: &quot;say&quot;,&quot;ID&quot;: &quot;D+设备ID&quot;,&quot;C&quot;: &quot;stop2&quot;,&quot;SIGN&quot;: &quot;xx3&quot;}')
-					console.log(&quot;你关闭了开关&quot;);
-					
-				}
-			})
-			
-		&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h2 id="finally-the-software-interface-is-attached">Finally, the software interface is attached</h2>
-<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></figure>
-<p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
-<p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
 ]]></content>
     </entry>
 </feed>
