@@ -1,58 +1,140 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>MCS 51 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644324641604">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="It&#39;s what you do in the dark, that puts you in the light.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644325857428">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="MCS 51 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-  <meta name="description" content="It's what you do in the dark, that puts you in the light." />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644324641604" alt="">
-  </a>
-  <h1 class="site-title">
-    Leo&#39;s Blog
-  </h1>
-  <p class="site-description">
-    It's what you do in the dark, that puts you in the light.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          about
-        </a>
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://riddler11.github.io">
+        <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644325857428" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://riddler11.github.io">
+        <h1 class="site-title">Leo&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            about
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> MCS 51
+          </h2> 
+        </div>
+
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        <h2 class="post-title">Remote control car base on MCS 51 </h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2020-12-30</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://riddler11.github.io/tag/ELDszEtnV/">
+                iot
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://riddler11.github.io/tag/lYx2T_j2A/">
+                MCS 51
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+      <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+        <div class="feature-container" style="background-image: url('https://riddler11.github.io/post-images/51-dan-pian-ji-xiao-che.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+
+<div class="pagination-container">
+  
+  
+</div>
+
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">It's what you do in the dark, that puts you in the light.</div>
   <div class="social-container">
     
       
@@ -66,60 +148,26 @@
       
     
   </div>
+   | <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：# MCS 51
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
-        <h2 class="post-title">Remote control car base on MCS 51 </h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-12-30
-        </span>
-        <span>
-          5 min read
-        </span>
-        
-          <a href="https://riddler11.github.io/tag/ELDszEtnV/" class="post-tag">
-            # iot
-          </a>
-        
-          <a href="https://riddler11.github.io/tag/lYx2T_j2A/" class="post-tag">
-            # MCS 51
-          </a>
-        
-      </div>
-      
-        <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/" class="post-feature-image" style="background-image: url('https://riddler11.github.io/post-images/51-dan-pian-ji-xiao-che.jpg')">
-        </a>
-      
-      <div class="post-abstract">
-        
-      </div>
-    </article>
-  
-</div>
 
-        <div class="pagination-container">
-  
-  
-</div>
-
-        <div class="site-footer">
-  
-  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
-
-      </div>
     </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>

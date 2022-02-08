@@ -1,99 +1,102 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Punch-in Statistics System for “Xuexi Qiangguo” | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644324641604">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="It&#39;s what you do in the dark, that puts you in the light.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644325857428">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Punch-in Statistics System for “Xuexi Qiangguo” | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="The project is purely software
-At present, the drilling of learning ability is realized in the form of ** website **. It..." />
-    <meta name="keywords" content="javaweb" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644324641604" alt="">
-  </a>
-  <h1 class="site-title">
-    Leo&#39;s Blog
-  </h1>
-  <p class="site-description">
-    It's what you do in the dark, that puts you in the light.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          about
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://riddler11.github.io">
+        <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644325857428" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://riddler11.github.io">
+        <h1 class="site-title">Leo&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            about
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Punch-in Statistics System for “Xuexi Qiangguo”
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-11-03
-              </span>
-              <span>
-                8 min read
-              </span>
-              
-                <a href="https://riddler11.github.io/tag/6VBb7iLP0/" class="post-tag">
-                  # javaweb
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">Punch-in Statistics System for “Xuexi Qiangguo”</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-11-03</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="the-project-is-purely-software">The project is purely software</h2>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://riddler11.github.io/tag/6VBb7iLP0/">
+                    javaweb
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="the-project-is-purely-software">The project is purely software</h2>
 <p>At present, the drilling of learning ability is realized in the form of ** website **. Its original design purpose is to improve the accuracy of statistics and facilitate the students on duty to watch the clock in every day, thus producing the idea of making this system. It has been put into use</p>
 <h2 id="system-architecture">System architecture</h2>
 <p>The system architecture is expanded based on MVC development mode, including database data layer, model layer, Dao data persistence layer, service business logic layer and controller / servlet controller. The division of labor at each level is clear and the coupling degree of levels is reduced.</p>
@@ -163,107 +166,57 @@ However, the actual server is a Linux system. Let's take a look at the server wi
 <p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
 <img src="https://riddler11.github.io/post-images/1634575232915.jpg" alt="mood" loading="lazy"></p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#the-project-is-purely-software">The project is purely software</a></li>
-<li><a href="#system-architecture">System architecture</a><br>
-*
-<ul>
-<li><a href="#view-layer">View layer</a></li>
-</ul>
-</li>
-<li><a href="#controller-layer">Controller layer</a></li>
-<li><a href="#data-persistence-layer">Data persistence layer</a></li>
-<li><a href="#contact-of-each-layer">Contact of each layer</a><br>
-*
-<ul>
-<li><a href="#the-following-figure-shows-the-current-website-functional-architecture">The following figure shows the current website functional architecture</a>
-<ul>
-<li><a href="#bug-in-the-orignal-project">Bug in the orignal project</a></li>
-<li><a href="#the-process-and-realization-of-clock-in-days">The process and Realization of clock in days</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#when-the-project-is-uploaded-to-the-server-and-run-the-bugs-are-more-interesting">When the project is uploaded to the server and run, the bugs are more interesting.</a></li>
-<li><a href="#places-to-be-promoted">Places to be promoted</a><br>
-*<br>
-*<br>
-* <a href="#finally-i-attached-the-supply-and-demand-analysis-of-the-small-program-i-wanted-to-make-at-that-time">Finally, I attached the supply and demand analysis of the small program I wanted to make at that time</a></li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
+            <a class="purple-link" href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/">
               <h3 class="post-title">
-                Remote control desk lamp based on ESP8266
+                下一篇：Remote control desk lamp based on ESP8266
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  
-  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">It's what you do in the dark, that puts you in the light.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

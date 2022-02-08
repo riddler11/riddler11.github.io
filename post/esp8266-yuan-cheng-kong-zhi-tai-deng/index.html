@@ -1,102 +1,92 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Remote control desk lamp based on ESP8266 | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644324641604">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="It&#39;s what you do in the dark, that puts you in the light.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644325857428">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Remote control desk lamp based on ESP8266 | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="Hardware
-micro USB
-USB JACKS
-relay
-Some of resistance and capacitance
-ESP8266-12F
-CH340C
-Hardware circuit
-USB to UART on..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644324641604" alt="">
-  </a>
-  <h1 class="site-title">
-    Leo&#39;s Blog
-  </h1>
-  <p class="site-description">
-    It's what you do in the dark, that puts you in the light.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          about
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://riddler11.github.io">
+        <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644325857428" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://riddler11.github.io">
+        <h1 class="site-title">Leo&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            about
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Remote control desk lamp based on ESP8266
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-09-21
-              </span>
-              <span>
-                12 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">Remote control desk lamp based on ESP8266</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-09-21</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h2 id="hardware">Hardware</h2>
+          </div>
+          <div class="post-content">
+            <h2 id="hardware">Hardware</h2>
 <p>micro USB</p>
 <p>USB JACKS</p>
 <p>relay</p>
@@ -371,99 +361,57 @@ Reference code section：</p>
 <p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
 <p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#hardware">Hardware</a></li>
-<li><a href="#hardware-circuit">Hardware circuit</a><br>
-*
-<ul>
-<li><a href="#usb-to-uart-one-button-download-circuit">USB to UART one button download circuit</a></li>
-<li><a href="#5v-to-33v-circuit-voltage-reduction-power-supply">5V to 3.3V circuit (voltage reduction, power supply)</a></li>
-<li><a href="#esp8266-12f-main-control-circuit">Esp8266-12f main control circuit</a></li>
-<li><a href="#key-circuit">Key circuit</a></li>
-<li><a href="#relay-circuit">Relay circuit</a></li>
-<li><a href="#general-circuit-schematic-diagram">General circuit schematic diagram</a></li>
-<li><a href="#2020828-challenge-part">2020.8.28 Challenge part</a></li>
-<li><a href="#2020831-control-desk-lamp-successfully">2020.8.31 Control desk lamp successfully</a></li>
-</ul>
-</li>
-<li><a href="#hardware-code-part">Hardware code part</a></li>
-<li><a href="#control-software">control software</a></li>
-<li><a href="#finally-the-software-interface-is-attached">Finally, the software interface is attached</a></li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
+            <a class="purple-link" href="https://riddler11.github.io/post/ad-hui-zhi-arduinohan-yuan-li-tu-ji-zi-ji-yu-guo-de-keng/">
               <h3 class="post-title">
-                Draws Arduino with AD, including schematic diagram and challenge I met
+                下一篇：Draws Arduino with AD, including schematic diagram and challenge I met
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  
-  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">It's what you do in the dark, that puts you in the light.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

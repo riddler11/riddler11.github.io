@@ -1,103 +1,109 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644324641604">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="It&#39;s what you do in the dark, that puts you in the light.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644325857428">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="First, attach the effect drawing. In order to facilitate debugging and writing code, I use Arduino ide to write code.
-Wi..." />
-    <meta name="keywords" content="iot,Nodemcu/ESP12F" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644324641604" alt="">
-  </a>
-  <h1 class="site-title">
-    Leo&#39;s Blog
-  </h1>
-  <p class="site-description">
-    It's what you do in the dark, that puts you in the light.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          about
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://riddler11.github.io">
+        <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644325857428" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://riddler11.github.io">
+        <h1 class="site-title">Leo&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            about
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F
-            </h2>
-            <div class="post-info">
-              <span>
-                2021-02-04
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://riddler11.github.io/tag/ELDszEtnV/" class="post-tag">
-                  # iot
-                </a>
-              
-                <a href="https://riddler11.github.io/tag/U5fEp0-hzR/" class="post-tag">
-                  # Nodemcu/ESP12F
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-02-04</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use <strong>Arduino ide</strong> to write code.<br>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://riddler11.github.io/tag/ELDszEtnV/">
+                    iot
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://riddler11.github.io/tag/U5fEp0-hzR/">
+                    Nodemcu/ESP12F
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use <strong>Arduino ide</strong> to write code.<br>
 Window monitor print real-time effect:<br>
 <img src="https://riddler11.github.io/post-images/1634551404833.jpg" alt="Window monitor print real-time effect" loading="lazy"></p>
 <p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
@@ -176,95 +182,57 @@ void loop() {
 </code></pre>
 <p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#the-soil-moisture-sensor-i-use-is-a-resistance-sensor">The soil moisture sensor I use is a resistance sensor.</a></li>
-<li><a href="#pin-details-are-shown-in-table">Pin details are shown in table.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</a></li>
-<li><a href="#what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins <strong>AO, GND and VCC</strong> are connected</a></li>
-<li><a href="#next-is-the-code-section">Next is the code section：</a></li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
+            <a class="purple-link" href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
               <h3 class="post-title">
-                Remote control car base on MCS 51 
+                下一篇：Remote control car base on MCS 51 
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  
-  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">It's what you do in the dark, that puts you in the light.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>

@@ -1,107 +1,102 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>几部电影感受感悟（可能含有剧透） | Leo&#39;s Blog</title>
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644324641604">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="It&#39;s what you do in the dark, that puts you in the light.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644325857428">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="几部电影感受感悟（可能含有剧透） | Leo&#39;s Blog - Atom Feed" href="https://riddler11.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="最近看了以下几部电影，以下皆是个人观影感受，个人看法，不喜勿喷。
-电影名字（电影排序暗观看顺序）
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-新洗冤录
-闪灵
-断头谷
-扬名立万
-抓鬼敢死队
-天下无贼
-龙珠Z：弗利萨复活
-羞羞的铁拳
 
-新洗冤录
-这部电影貌似除了欧阳震华，其余演员好像都..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://riddler11.github.io">
-  <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644324641604" alt="">
-  </a>
-  <h1 class="site-title">
-    Leo&#39;s Blog
-  </h1>
-  <p class="site-description">
-    It's what you do in the dark, that puts you in the light.
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          Home
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          Archives
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          Tags
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          about
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://riddler11.github.io">
+        <img class="avatar" src="https://riddler11.github.io/images/avatar.png?v=1644325857428" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://riddler11.github.io">
+        <h1 class="site-title">Leo&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            about
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              几部电影感受感悟（可能含有剧透）
-            </h2>
-            <div class="post-info">
-              <span>
-                2022-02-06
-              </span>
-              <span>
-                6 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">几部电影感受感悟（可能含有剧透）</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-02-06</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>最近看了以下几部电影，以下皆是个人观影感受，个人看法，不喜勿喷。</p>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://riddler11.github.io/tag/I2GL5SlDs/">
+                    film
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>最近看了以下几部电影，以下皆是个人观影感受，个人看法，不喜勿喷。</p>
 <h2 id="电影名字电影排序暗观看顺序">电影名字（电影排序暗观看顺序）</h2>
 <ol>
 <li>新洗冤录</li>
@@ -142,95 +137,57 @@
 </ol>
 <p>（2022.2.6 update）</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%94%B5%E5%BD%B1%E5%90%8D%E5%AD%97%E7%94%B5%E5%BD%B1%E6%8E%92%E5%BA%8F%E6%9A%97%E8%A7%82%E7%9C%8B%E9%A1%BA%E5%BA%8F">电影名字（电影排序暗观看顺序）</a>
-<ul>
-<li><a href="#%E6%96%B0%E6%B4%97%E5%86%A4%E5%BD%95">新洗冤录</a></li>
-<li><a href="#%E9%97%AA%E7%81%B5">闪灵</a></li>
-<li><a href="#%E6%96%AD%E5%A4%B4%E8%B0%B7">断头谷</a></li>
-<li><a href="#%E6%89%AC%E5%90%8D%E7%AB%8B%E4%B8%87">扬名立万</a></li>
-<li><a href="#%E6%8A%93%E9%AC%BC%E6%95%A2%E6%AD%BB%E9%98%9F">抓鬼敢死队</a></li>
-<li><a href="#%E5%A4%A9%E4%B8%8B%E6%97%A0%E8%B4%BC">天下无贼</a></li>
-<li><a href="#%E9%BE%99%E7%8F%A0z%E5%BC%97%E5%88%A9%E8%90%A8%E5%A4%8D%E6%B4%BB">龙珠Z：弗利萨复活</a></li>
-<li><a href="#%E7%BE%9E%E7%BE%9E%E7%9A%84%E9%93%81%E6%8B%B3">羞羞的铁拳</a></li>
-<li><a href="#%E8%BF%99%E5%87%A0%E9%83%A8%E7%89%87%E5%9C%A8%E6%88%91%E5%BF%83%E4%B8%AD%E7%9A%84%E6%8E%92%E5%90%8D">这几部片在我心中的排名</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://riddler11.github.io/post/vocabulary-learning/">
+            <a class="purple-link" href="https://riddler11.github.io/post/vocabulary-learning/">
               <h3 class="post-title">
-                Vocabulary learning
+                下一篇：Vocabulary learning
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  
-  <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">It's what you do in the dark, that puts you in the light.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
