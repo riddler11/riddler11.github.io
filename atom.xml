@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-11T06:25:59.976Z</updated>
+    <updated>2022-02-12T07:24:16.970Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
+        <id>https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
+        <link href="https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
+        </link>
+        <updated>2022-02-12T06:31:03.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
+<p>域名？ 二级域名？DNS解析 这貌似是计算机基础知识，现在已经忘记得差不多了<br>
+接下来就是学习以及用自己的语言进行解释出来。</p>
+<p>翻箱底找出了计算机网络教程书籍。（2022.2.12）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Reading]]></title>
         <id>https://riddler11.github.io/reading/</id>
@@ -555,23 +567,6 @@ In the computer, use the serial port debugging assistant to send the signal of 1
 </code></pre>
 <h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
 <p>Reverse, stop, left turn and right turn control are completed in the same way.Then implementation the project.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Building Elevator System Based on 51 Single-chip Microcomputer]]></title>
-        <id>https://riddler11.github.io/building-elevator-system-based-on-51-single-chip-microcomputer/</id>
-        <link href="https://riddler11.github.io/building-elevator-system-based-on-51-single-chip-microcomputer/">
-        </link>
-        <updated>2020-11-04T10:15:17.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="project-forecast">Project forecast</h1>
-<h4 id="this-project-is-a-pure-hardware-project">This project is a pure hardware project.</h4>
-<p>Project composition: AT89C52 controller. 0.36 inch Nixie Tube. 3.0mm 8*8LED dot matrix. JQ8400FL10P voice broadcast. Other component design drawings are marked.</p>
-<p>This project will only give PcbDoc files, so as not to draw hands or copy, paste and modify them.</p>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634482106343.jpg" alt="PCB design" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634482138156.jpg" alt="Actual circuit board" loading="lazy"></figure>
-<p>Because it is a course design done before, this one also has a simulation design Proteus file, and the Proteus version is 8.6.<br>
-<img src="https://riddler11.github.io/post-images/1634482484002.jpg" alt="Simulation code running effect." loading="lazy"></p>
-<h2 id="please-look-forward-to-it-and-i-will-upload-it-when-im-free20201104">Please look forward to it and I will upload it when I'm free.（2020.11.04）</h2>
 ]]></content>
     </entry>
 </feed>
