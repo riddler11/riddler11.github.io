@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-12T07:24:16.970Z</updated>
+    <updated>2022-02-12T07:27:35.949Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -43,7 +43,10 @@
 <p>TensorFlow</p>
 </li>
 <li>
-<p>C#程序设计</p>
+<p>C#程序设计（以上是2022.2.9添加）</p>
+</li>
+<li>
+<p>计算机网络教程（2022.2.12添加）</p>
 <p>希望一天进行一点阅读，写相应的读后感或者总结。</p>
 </li>
 </ol>
