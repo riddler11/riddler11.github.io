@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-13T09:17:50.181Z</updated>
+    <updated>2022-02-13T09:30:32.527Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -335,6 +335,7 @@ It is divided into three parts: Server part, multithreading part, and display da
         allowfullscreen="true">
     </iframe>
 </div>
+<p><a href="https://github.com/riddler11/Wireless-RFID-ESP8266-Server">Now you can download some code on github, just click here.</a></p>
 ]]></content>
     </entry>
     <entry>
@@ -419,6 +420,7 @@ This may be the first non Lua but C language code in the whole network.</p>
 </code></pre>
 <p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
 <p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
+<p><a href="https://github.com/riddler11/Nodemcu-Communicate-Bigiot">Click here to go to github to download the code</a></p>
 <p>This article is also written in CSDN.</p>
 ]]></content>
     </entry>
