@@ -6,7 +6,7 @@
 
 <title>Remote control desk lamp based on ESP8266 | Leo&#39;s Blog</title>
 
-<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644742158483">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1644743029934">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1644742158483" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1644743029934" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -107,32 +107,32 @@
 <p>CH340C</p>
 <h2 id="hardware-circuit">Hardware circuit</h2>
 <h4 id="usb-to-uart-one-button-download-circuit">USB to UART one button download circuit</h4>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/24469819-7af4fa842b3649e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="CH340C的电路设计" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1644742581318.jpg" alt="CH340C的电路设计" loading="lazy"></figure>
 <h4 id="5v-to-33v-circuit-voltage-reduction-power-supply">5V to 3.3V circuit (voltage reduction, power supply)</h4>
-<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/24469819-9260f8db2dd30164.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5V转3.3V" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1644742621575.jpg" alt="5V转3.3V" loading="lazy"></figure>
 <h4 id="esp8266-12f-main-control-circuit">Esp8266-12f main control circuit</h4>
-<figure data-type="image" tabindex="3"><img src="https://upload-images.jianshu.io/upload_images/24469819-78cd55e6ee1d8b73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最小系统" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://riddler11.github.io/post-images/1644742657465.jpg" alt="最小系统" loading="lazy"></figure>
 <h4 id="key-circuit">Key circuit</h4>
-<figure data-type="image" tabindex="4"><img src="https://upload-images.jianshu.io/upload_images/24469819-b466c78c8baafa79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://riddler11.github.io/post-images/1644742695171.jpg" alt="手动复位等，万一自动下载不工作就靠这个" loading="lazy"></figure>
 <h4 id="relay-circuit">Relay circuit</h4>
 <p>In order to supply sufficient power to USB and avoid the stroboscopic light due to insufficient power supply, a capacitor is added and used to charge and discharge the capacitor to provide sufficient voltage (this is my personal idea. I don't know whether it is correct or not. It can only be tested in practice. Readers are also welcome to criticize and correct).<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-118c7ceaca18a6ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="继电器电路" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1644742732267.jpg" alt="继电器电路" loading="lazy"></p>
 <h4 id="general-circuit-schematic-diagram">General circuit schematic diagram</h4>
-<figure data-type="image" tabindex="5"><img src="https://upload-images.jianshu.io/upload_images/24469819-5725242dadfa7caf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="总原理图" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://upload-images.jianshu.io/upload_images/24469819-861d320360992db3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PCB 3D效果图" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://riddler11.github.io/post-images/1644742769857.jpg" alt="总原理图" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://riddler11.github.io/post-images/1644742812821.jpg" alt="PCB 3D效果图" loading="lazy"></figure>
 <h3 id="2020828-challenge-part">2020.8.28 Challenge part</h3>
 <p>  When the board was welded, the first board was found to have a problem with the chip of ch340c after all the welding was completed. In the morning, the burning circuit ch340c was welded separately. The burning circuit in the new version is no problem, and the computer can recognize it successfully<br>
   Because they were too confident and didn't buy more components, it was difficult to check where there were errors in the first board, and they didn't check the schematic diagram well. Buying fewer components resulted in not having to weld three resistors. Although there was a minimum system, the downloaded firmware esp12f showed a very strange state of flashing all the time, but didn't run normally.<br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-300b20bccdbb2214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="On the left is the welded plate. It was welded down because of the damage of ch340c. On the right is contrast detection. The download circuit is OK" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1644742869035.jpg" alt="On the left is the welded plate. It was welded down because of the damage of ch340c. On the right is contrast detection. The download circuit is OK" loading="lazy"><br>
   <strong>For more analysis, you can watch the video shared synchronously by BiliBili</strong><br>
 <a href="https://www.bilibili.com/video/BV17K411K79i?pop_share=1">BiliBili synchronized analysis video</a></p>
 <h3 id="2020831-control-desk-lamp-successfully">2020.8.31 Control desk lamp successfully</h3>
 <p><a href="https://www.bilibili.com/video/BV1Ci4y1M7DL?pop_share=1">Click here to view the effect in bilibili</a><br>
-<img src="https://upload-images.jianshu.io/upload_images/24469819-8a2c5539244e3546.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Light up the table lamp picture through the app written by myself" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1644742934905.jpg" alt="Light up the table lamp picture through the app written by myself" loading="lazy"><br>
  The board designed by myself can theoretically control all devices powered by USB 5V.</p>
 <h2 id="hardware-code-part">Hardware code part</h2>
 <p>1.  Download firmware for esp8266-12f first（You can download <strong>AT firmware</strong> first, and then overwrite and download <strong>nodemcu firmware</strong> to avoid errors）</p>
-<ol start="2">
+<ol>
 <li>Then write code. You can use esplorer to write code with Lua, or use arduinoIDE to write code in C language. I use C language more and use arduinoIDE more, so I choose arduinoIDE.</li>
 </ol>
 <p>Code idea: first connect to WiFi, after that connect to the Internet, and then connect to IOT platform（Here I use BIGIOIT platform to conduct intranet penetration, so that the information sent by the external network can be received）. Then write the control code（There is a demo in BIGIOT, so it's easy to modify the demo then to achieve what I need.）</p>
@@ -369,7 +369,7 @@ Reference code section：</p>
 &lt;/html&gt;
 </code></pre>
 <h2 id="finally-the-software-interface-is-attached">Finally, the software interface is attached</h2>
-<figure data-type="image" tabindex="7"><img src="https://upload-images.jianshu.io/upload_images/24469819-0ad4360f6346f5db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Software interface renderings" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://riddler11.github.io/post-images/1644743021361.jpg" alt="Software interface renderings" loading="lazy"></figure>
 <p>The file is open source（2020.9.15），Gitee download address: https://gitee.com/riddler11/esp8266-control-desk-lamp/tree/master/</p>
 <p>（2020.9.21）When applied to control desk lamps, some lamps will have stroboscopic problems. The preliminary analysis is that the internal components will divide the voltage and fail to reach the rated voltage, resulting in failure to work normally. It is necessary to analyze and calculate the circuit to solve this problem.</p>
 
