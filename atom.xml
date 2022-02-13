@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-13T08:42:55.257Z</updated>
+    <updated>2022-02-13T08:47:11.020Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -526,17 +526,17 @@ Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is
 <h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
 <p>You can use your hand or some software to draw, this step is to know what you want.</p>
 <ol>
-<li><strong>The minimum system</strong>is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
+<li><strong>The minimum system</strong> is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
 <li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
 <li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
-such as：How does L298 work and so on.<strong>In this step you can figure out how the components work</strong></li>
-<li>Next is to<strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
+such as：How does L298 work and so on. <strong>In this step you can figure out how the components work</strong></li>
+<li>Next is to <strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
 <li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
 </ol>
 <h4 id="after-completing-the-above-steps-you-can-start-drawing-pcb">After completing the above steps, you can start drawing PCB</h4>
 <p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
 <p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
-<p>After painting, remember to** check **whether the connection is connected, etc</p>
+<p>After painting, remember to <strong>check</strong> whether the connection is connected, etc</p>
 <h4 id="proofing">Proofing</h4>
 <p>Send the design drawings to the factory, and the factory will help you proofing.<br>
 After <strong>welding</strong>,then you can debug.</p>
@@ -547,15 +547,15 @@ This method can simulate the running state of hardware under real conditions.</p
 <h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
 <ol>
 <li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
-<li>If the car can't move, check the problem **maybe the motor problem****maybe the L298 problem <strong>or some problems with the</strong> circuit board **be good at using <strong>multimeter</strong> at this time.</li>
+<li>If the car can't move, check the problem <strong>maybe the motor problem</strong> , <strong>maybe the L298 problem</strong> or some problems with the <strong>circuit board</strong> be good at using <strong>multimeter</strong> at this time.</li>
 <li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
 <li>Other part use a multimeter to check whether there is electricity or not 。</li>
 </ol>
 <h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
-<p>NRF24L01 is used to control in the design, so** pay attention to the voltage**<br>
+<p>NRF24L01 is used to control in the design, so <strong>pay attention to the voltage</strong><br>
 The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
 If the module burns out, it is impossible to control it。<br>
-Assuming that the computer controls, the ** computer is the information sending end and the single chip microcomputer is the information receiving end**</p>
+Assuming that the computer controls, the <strong>computer is the information sending end and the single chip microcomputer is the information receiving end</strong></p>
 <p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
 In the computer, use the serial port debugging assistant to send the signal of 1</p>
 <figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552895547.jpg" alt="Example diagram of serial port debugging assistant" loading="lazy"></figure>
