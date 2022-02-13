@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-13T10:53:39.601Z</updated>
+    <updated>2022-02-13T10:57:13.660Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
-        <id>https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
-        <link href="https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
+        <id>https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
+        <link href="https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
         </link>
         <updated>2022-02-12T06:31:03.000Z</updated>
         <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
@@ -24,8 +24,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Reading]]></title>
-        <id>https://riddler11.github.io/reading/</id>
-        <link href="https://riddler11.github.io/reading/">
+        <id>https://riddler11.github.io/post/reading/</id>
+        <link href="https://riddler11.github.io/post/reading/">
         </link>
         <updated>2022-02-09T09:28:33.000Z</updated>
         <content type="html"><![CDATA[<h2 id="book-list">book list:</h2>
@@ -54,8 +54,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[电影大三元观影感受]]></title>
-        <id>https://riddler11.github.io/da-san-yuan-guan-ying-gan-shou/</id>
-        <link href="https://riddler11.github.io/da-san-yuan-guan-ying-gan-shou/">
+        <id>https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/</id>
+        <link href="https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/">
         </link>
         <updated>2022-02-08T10:05:52.000Z</updated>
         <content type="html"><![CDATA[<h2 id="电影大三元以下内容可能含有剧透谨慎观看">电影：大三元（以下内容可能含有剧透，谨慎观看）</h2>
@@ -80,8 +80,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[几部电影感受感悟（可能含有剧透）]]></title>
-        <id>https://riddler11.github.io/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/</id>
-        <link href="https://riddler11.github.io/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/">
+        <id>https://riddler11.github.io/post/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/</id>
+        <link href="https://riddler11.github.io/post/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/">
         </link>
         <updated>2022-02-06T05:46:57.000Z</updated>
         <content type="html"><![CDATA[<p>最近看了以下几部电影，以下皆是个人观影感受，个人看法，不喜勿喷。</p>
@@ -128,8 +128,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Vocabulary learning]]></title>
-        <id>https://riddler11.github.io/vocabulary-learning/</id>
-        <link href="https://riddler11.github.io/vocabulary-learning/">
+        <id>https://riddler11.github.io/post/vocabulary-learning/</id>
+        <link href="https://riddler11.github.io/post/vocabulary-learning/">
         </link>
         <updated>2021-12-26T08:28:03.000Z</updated>
         <content type="html"><![CDATA[<p>非常：除了very，可以用exceedingly。<br>
@@ -180,8 +180,8 @@ immense pressure 巨大压力<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[Wireless transmission of RFID identification information to server based on ESP8266.（基于ESP8266无线传输射频识别信息传输到服务器）]]></title>
-        <id>https://riddler11.github.io/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
-        <link href="https://riddler11.github.io/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/">
+        <id>https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
+        <link href="https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/">
         </link>
         <updated>2021-10-13T12:26:33.000Z</updated>
         <content type="html"><![CDATA[<h3 id="this-is-project-i-did-a-long-time-ago-because-of-this-project-i-learn-a-lot-of-things-not-only-academically-but-also-the-attitude-of-dealing-with-people">This is project I did a long time ago. Because of this project, I learn a lot of things. (Not only academically, but also the attitude of dealing with people.)</h3>
@@ -340,8 +340,8 @@ It is divided into three parts: Server part, multithreading part, and display da
     </entry>
     <entry>
         <title type="html"><![CDATA[How to link Bilibili Video in your article(如何在你文章中链接哔哩哔哩视频)]]></title>
-        <id>https://riddler11.github.io/test/</id>
-        <link href="https://riddler11.github.io/test/">
+        <id>https://riddler11.github.io/post/test/</id>
+        <link href="https://riddler11.github.io/post/test/">
         </link>
         <updated>2021-10-12T11:40:46.000Z</updated>
         <content type="html"><![CDATA[<p>Video link effect in my article. (在我文章里链接的视频具体效果)<br>
@@ -396,8 +396,8 @@ This is my video about Java sparse array in Bilibili. (这是我在B站关于Jav
     </entry>
     <entry>
         <title type="html"><![CDATA[ Real-time monitoring of ambient temperature base on Nodemcu / ESP12F]]></title>
-        <id>https://riddler11.github.io/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
-        <link href="https://riddler11.github.io/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
+        <id>https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
         </link>
         <updated>2021-02-19T01:52:15.000Z</updated>
         <content type="html"><![CDATA[<h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
@@ -426,8 +426,8 @@ This may be the first non Lua but C language code in the whole network.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F]]></title>
-        <id>https://riddler11.github.io/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
-        <link href="https://riddler11.github.io/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
+        <id>https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
+        <link href="https://riddler11.github.io/post/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
         </link>
         <updated>2021-02-04T07:55:04.000Z</updated>
         <content type="html"><![CDATA[<p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use <strong>Arduino ide</strong> to write code.<br>
@@ -512,8 +512,8 @@ void loop() {
     </entry>
     <entry>
         <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
-        <id>https://riddler11.github.io/51-dan-pian-ji-xiao-che/</id>
-        <link href="https://riddler11.github.io/51-dan-pian-ji-xiao-che/">
+        <id>https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/</id>
+        <link href="https://riddler11.github.io/post/51-dan-pian-ji-xiao-che/">
         </link>
         <updated>2020-12-30T07:57:08.000Z</updated>
         <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
