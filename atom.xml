@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-19T12:33:17.133Z</updated>
+    <updated>2022-02-19T16:12:31.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Excel表格转成markdown表格（其它JSON、SQL、HTML等格式也可参考本文）]]></title>
+        <id>https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
+        <link href="https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/">
+        </link>
+        <updated>2022-02-19T12:33:50.000Z</updated>
+        <content type="html"><![CDATA[<p>因为上一篇文章电影院观影记录，出现的一些小问题，使得出现了这一篇的文章<br>
+用Excel表格会比较好进行排序，特别是一些没有按时间顺序录入的东西<br>
+这时候转换成markdown表格就是一个问题了</p>
+<h2 id="首先要将文件保存为csv格式该格式是utf-8编码">首先要将文件保存为CSV格式（该格式是UTF-8编码）</h2>
+<p>Excel默认格式是 .xlsx<br>
+选择文件——&gt;另存为——&gt;接着选择CSV格式（详见下图）<br>
+<img src="https://riddler11.github.io/post-images/1645285524382.jpg" alt="" loading="lazy"></p>
+<h2 id="接着打开下面的转换网址链接">接着打开下面的转换网址链接</h2>
+<p><a href="https://tableconvert.com/csv-to-json">转换网址链接</a><br>
+接着点击upload CSV<br>
+选择刚刚的文件 点击打开<br>
+出现图片中这个提示，导入成功<br>
+<img src="https://riddler11.github.io/post-images/1645285775169.jpg" alt="" loading="lazy"></p>
+<h2 id="接下来在table-generator-可以选择想要的各种格式">接下来在Table Generator 可以选择想要的各种格式</h2>
+<p>由于这篇文章是转换为markdown，所以是以下图片的效果<br>
+<img src="https://riddler11.github.io/post-images/1645285944286.jpg" alt="" loading="lazy"></p>
+<p>如有不懂可观看以下视频</p>
+<div style="position: relative; padding: 30% 45%;">
+    <iframe style="
+        position: absolute; 
+        width: 100%; 
+        height: 100%; 
+        left: 0; top: 0;" 
+        src="//player.bilibili.com/player.html?aid=847220411&bvid=BV1L54y1E7RQ&cid=385215083&page=1&high_quality=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+    </iframe>
+</div>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[电影院观影记录]]></title>
         <id>https://riddler11.github.io/dian-ying-yuan-guan-ying-ji-lu/</id>
@@ -611,92 +650,6 @@ This may be the first non Lua but C language code in the whole network.</p>
 <p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
 <p><a href="https://github.com/riddler11/Nodemcu-Communicate-Bigiot">Click here to go to github to download the code</a></p>
 <p>This article is also written in CSDN.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F]]></title>
-        <id>https://riddler11.github.io/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/</id>
-        <link href="https://riddler11.github.io/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie/">
-        </link>
-        <updated>2021-02-04T07:55:04.000Z</updated>
-        <content type="html"><![CDATA[<p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use <strong>Arduino ide</strong> to write code.<br>
-Window monitor print real-time effect:<br>
-<img src="https://riddler11.github.io/post-images/1634551404833.jpg" alt="Window monitor print real-time effect" loading="lazy"></p>
-<p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
-<img src="https://riddler11.github.io/post-images/1634551586090.jpg" alt="Hardware diagram" loading="lazy"></p>
-<h4 id="the-soil-moisture-sensor-i-use-is-a-resistance-sensor">The soil moisture sensor I use is a resistance sensor.</h4>
-<h4 id="pin-details-are-shown-in-table">Pin details are shown in table.</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">soil moisture sensor</th>
-<th style="text-align:center">Wiring instructions</th>
-<th style="text-align:center">MCU</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">VCC</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">3.3V-5V</td>
-</tr>
-<tr>
-<td style="text-align:center">GND</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">GND</td>
-</tr>
-<tr>
-<td style="text-align:center">DO</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">Digital output (0 or 1)</td>
-</tr>
-<tr>
-<td style="text-align:center">AO</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">Voltage analog output.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634551853966.jpg" alt="Wiring diagram" loading="lazy"></figure>
-<h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins <strong>AO, GND and VCC</strong> are connected</h2>
-<h2 id="next-is-the-code-section">Next is the code section：</h2>
-<pre><code>/**********************************************************************
-author：燊哥仔
-bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
-The code is very simple. You can see the effect by using the serial port monitor of IDE
-Actually connect three pins is OK AO、GND、VCC
-**********************************************************************/
-int sense_Pin = 0; // Soil sensor input connected to analog pin A0
-int value = 0; //initialize variable value
-
-void setup() {
-  Serial.begin(115200);//Set baud rate to115200
-  Serial.println(&quot;\n&quot;);//Newline
-}
-
-void loop() {
-  
-  value = analogRead(sense_Pin);//Analog data reading（A0 pin input data）
-  value = value / 10;    //The above value divided by ten is assigned to value
- 
-  Serial.print(value);
-  Serial.println(&quot;%&quot;);
- 
-  if (value &lt; 50)//When the value is less than 50, judge the result
-  {
-    
-    Serial.println(&quot;The soil is WET&quot;);//Window monitor print the situation
-  }
-  else
-  {
-  
-    Serial.println(&quot;The soil is dry&quot;);
-  }
-  delay(1000);//Delay1 second. Read every second
-}
-</code></pre>
-<p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
 ]]></content>
     </entry>
 </feed>
