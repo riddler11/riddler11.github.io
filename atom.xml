@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-13T13:29:57.767Z</updated>
+    <updated>2022-02-19T12:33:17.133Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,195 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[电影院观影记录]]></title>
+        <id>https://riddler11.github.io/dian-ying-yuan-guan-ying-ji-lu/</id>
+        <link href="https://riddler11.github.io/dian-ying-yuan-guan-ying-ji-lu/">
+        </link>
+        <updated>2022-02-19T09:50:43.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">电影名</th>
+<th style="text-align:center">观影时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">惊天魔盗团2</td>
+<td style="text-align:center">2016-07-17</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">异形：契约</td>
+<td style="text-align:center">2017-06-19</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">神奇女侠</td>
+<td style="text-align:center">2017-06-19</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">加勒比海盗5：死无对证</td>
+<td style="text-align:center">2017-06-20</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">变形金刚5：最后的骑士</td>
+<td style="text-align:center">2017-06-23</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">京城81号Ⅱ</td>
+<td style="text-align:center">2017-07-06</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">神偷奶爸3</td>
+<td style="text-align:center">2017-07-07</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">战狼2</td>
+<td style="text-align:center">2017-08-07</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">极盗车神</td>
+<td style="text-align:center">2017-08-25</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">星际特工：千星之城</td>
+<td style="text-align:center">2017-09-05</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">敦刻尔克</td>
+<td style="text-align:center">2017-09-07</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">正义联盟</td>
+<td style="text-align:center">2017-11-19</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">抓妖记2</td>
+<td style="text-align:center">2018-02-26</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">唐人街探案2</td>
+<td style="text-align:center">2018-02-26</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">黑豹</td>
+<td style="text-align:center">2018-03-10</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">我不是药神</td>
+<td style="text-align:center">2018-07-17</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">西虹市首富</td>
+<td style="text-align:center">2018-08-06</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">憨豆特工3</td>
+<td style="text-align:center">2018-11-24</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">无名之辈</td>
+<td style="text-align:center">2018-11-24</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">海王</td>
+<td style="text-align:center">2018-12-26</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">蜘蛛侠：平行宇宙</td>
+<td style="text-align:center">2018-12-30</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">密室逃生</td>
+<td style="text-align:center">2019-01-29</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">疯狂的外星人</td>
+<td style="text-align:center">2019-02-17</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">雷霆沙赞！</td>
+<td style="text-align:center">2019-04-06</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">蜘蛛侠：英雄远征</td>
+<td style="text-align:center">2019-06-29</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">哪吒之魔童降世</td>
+<td style="text-align:center">2019-08-16</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">误杀</td>
+<td style="text-align:center">2020-01-04</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">八佰</td>
+<td style="text-align:center">2020-08-25</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">姜子牙</td>
+<td style="text-align:center">2020-10-06</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">怒火重案</td>
+<td style="text-align:center">2021-08-21</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">失控玩家</td>
+<td style="text-align:center">2021-08-28</td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td style="text-align:center">沙丘</td>
+<td style="text-align:center">2021-11-14</td>
+</tr>
+<tr>
+<td style="text-align:center">33</td>
+<td style="text-align:center">007无暇赴死</td>
+<td style="text-align:center">2021-11-15</td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td style="text-align:center">反贪风暴5</td>
+<td style="text-align:center">2022-01-06</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
         <id>https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
@@ -508,70 +697,6 @@ void loop() {
 }
 </code></pre>
 <p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Remote control car base on MCS 51 ]]></title>
-        <id>https://riddler11.github.io/51-dan-pian-ji-xiao-che/</id>
-        <link href="https://riddler11.github.io/51-dan-pian-ji-xiao-che/">
-        </link>
-        <updated>2020-12-30T07:57:08.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1circuit-design">1.Circuit Design</h1>
-<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
-<p>Try to select the components that control the trolley.<br>
-As the title：<br>
-Main control chip：AT89C52 chip<br>
-A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
-A chip or module that controls a motor：L298/L9110<br>
-Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
-Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
-<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
-<p>You can use your hand or some software to draw, this step is to know what you want.</p>
-<ol>
-<li><strong>The minimum system</strong> is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
-<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
-<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
-such as：How does L298 work and so on. <strong>In this step you can figure out how the components work</strong></li>
-<li>Next is to <strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
-<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
-</ol>
-<h4 id="after-completing-the-above-steps-you-can-start-drawing-pcb">After completing the above steps, you can start drawing PCB</h4>
-<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
-<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
-<p>After painting, remember to <strong>check</strong> whether the connection is connected, etc</p>
-<h4 id="proofing">Proofing</h4>
-<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
-After <strong>welding</strong>,then you can debug.</p>
-<h1 id="2code-debug">2.Code debug</h1>
-<h4 id="complete-the-above-design">Complete the above design</h4>
-<p>You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
-This method can simulate the running state of hardware under real conditions.</p>
-<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
-<ol>
-<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
-<li>If the car can't move, check the problem <strong>maybe the motor problem</strong> , <strong>maybe the L298 problem</strong> or some problems with the <strong>circuit board</strong> be good at using <strong>multimeter</strong> at this time.</li>
-<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
-<li>Other part use a multimeter to check whether there is electricity or not 。</li>
-</ol>
-<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
-<p>NRF24L01 is used to control in the design, so <strong>pay attention to the voltage</strong><br>
-The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
-If the module burns out, it is impossible to control it。<br>
-Assuming that the computer controls, the <strong>computer is the information sending end and the single chip microcomputer is the information receiving end</strong></p>
-<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
-In the computer, use the serial port debugging assistant to send the signal of 1</p>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552895547.jpg" alt="Example diagram of serial port debugging assistant" loading="lazy"></figure>
-<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
-<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
-   
-                {
-                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
-                  M1=1；
-                }
-
-</code></pre>
-<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
-<p>Reverse, stop, left turn and right turn control are completed in the same way.Then implementation the project.</p>
 ]]></content>
     </entry>
 </feed>
