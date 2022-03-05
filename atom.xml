@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-02-21T04:44:16.330Z</updated>
+    <updated>2022-03-05T01:43:54.740Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,122 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[AD操作（2021.10.15）]]></title>
+        <id>https://riddler11.github.io/ad-cao-zuo-20211015/</id>
+        <link href="https://riddler11.github.io/ad-cao-zuo-20211015/">
+        </link>
+        <updated>2022-03-05T01:08:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="画图顺序">画图顺序</h2>
+<ol>
+<li>主控芯片</li>
+<li>电源</li>
+<li>下载烧写电路</li>
+<li>引脚引出</li>
+</ol>
+<h2 id="元件注意事项">元件注意事项</h2>
+<p>引脚按照官方的顺序排列<br>
+关于电容放置尽量放近元件</p>
+<h2 id="布线注意事项">布线注意事项：</h2>
+<p>信号线8-10mil<br>
+电源线30-50mil<br>
+GND 铺铜</p>
+<h2 id="pcb注意事项">PCB注意事项</h2>
+<ol>
+<li>主控芯片，相关芯片，电源</li>
+<li>尽量走顶层</li>
+<li>有天线的地方一定要镂空下面不能铺铜</li>
+</ol>
+<h2 id="单位换算">单位换算：</h2>
+<p>1uF=1000nF<br>
+1nF=1000pF<br>
+1mil=0.0254mm</p>
+<h2 id="贴片类型对应功率">贴片类型对应功率</h2>
+<p>0805：1/8w  0603：1/10w 1206 1/4w</p>
+<p>功率计算公式：P=U²/R</p>
+<h2 id="led发光二极管压降及额定电流">LED发光二极管压降及额定电流</h2>
+<p>红色发光二极管的压降为2.0-2.2V<br>
+黄色发光二极管的压降为1.8-2.0V<br>
+绿色发光二极管的压降为3.0-3.2V<br>
+正常发光时额定电流为20mA</p>
+<h2 id="pcb连线步骤">PCB连线步骤：</h2>
+<ol>
+<li>主控线芯片</li>
+<li>体型较大芯片</li>
+<li>电阻电容</li>
+</ol>
+<h2 id="绘制pcb快捷键">绘制PCB快捷键</h2>
+<p>快速放线 P+T<br>
+直接转换单位 Ctrl+q<br>
+改字体 E+N<br>
+看某条线路连接 Ctrl+鼠标左键<br>
+隐藏丝线 N+Hide Connections</p>
+<h2 id="焊盘">焊盘</h2>
+<p>定位焊盘 通孔：130mil XY：170mil</p>
+<p>Minimum Solder Mask sliver 阻焊<br>
+Silk To Solder Mask Clearance 丝印在焊盘上 Electrical 0mil Clearance 最小间隔6mil<br>
+Silk To Silk Clearance 丝印与其它丝印 0mil</p>
+<p>过孔与线距离最小0.152mm（6mil）<br>
+过孔规则：最大0.6mm直径 最小0.3mm孔径<br>
+Width 规则 Min 5mil Max 100mil<br>
+（2021.10.15）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[51 MCU further learning]]></title>
+        <id>https://riddler11.github.io/51-mcu-further-learning/</id>
+        <link href="https://riddler11.github.io/51-mcu-further-learning/">
+        </link>
+        <updated>2022-03-02T03:14:31.000Z</updated>
+        <content type="html"><![CDATA[<p>引言：最近重新回归51单片机的使用，发现自己严重的不足。之前写的代码可以用“垃圾”两字概括。<br>
+代码写得不规范，命名的不规范，以及不写注释。当时还觉得自己很牛。现在一回顾发现自己还缺少很多东西。需要更加深入学习。回归理论，再结合实践来提升自己。</p>
+<h2 id="汇编语言">汇编语言：</h2>
+<p>直接操作单片机内部资源，所以执行效率比C语言快。（优点）<br>
+汇编语言的程序文件使用.asm作为后缀<br>
+缺点也很明显：</p>
+<ol>
+<li>可读性差，需要借助芯片手册或者是寄存器说明等。</li>
+<li>难以移植代码，换不同的mcu，指令可能完全不同，即使相似也难移植。</li>
+<li>由于上述两点，维护困难和修改困难<br>
+（所以个人还是选择用C语言进行书写代码）</li>
+</ol>
+<p>学习数字型芯片要看真值表<br>
+在控制数字芯片的过程中，需要了解芯片的真值表</p>
+<h2 id="中断个人目前很迷糊的点202232">中断（个人目前很迷糊的点2022.3.2）</h2>
+<p>中断和定时是整个单片机的核心内容。所以学习任何款式的芯片要从中断定时入手。<br>
+中断的意思是中间打断。理论上理解：举个不恰当的例子如打游戏，剧情类的游戏，一直在进行主线任务，突然间弹出支线任务。当进入这个支线任务后，要完成任务才能回到主线任务。这个支线任务可以理解为中断。（当然这种触发支线任务要满足一定的条件，如果不触发任务，则不会运行支线任务，会保持在主线任务中。）</p>
+<p>通过写代码加深这部分的理解，如安装了很多软件的电脑，如果不运行软件的时候，待机状态，不会占用很多的运行资源；当运行软件的时候，才会让软件使用运行资源。写代码同理，开机后进入待机状态（可以等同于上电进入主程序），这时候的运行资源不会很高。当要使用到其它功能时，打开软件，启用程序（等同于进入中断）。用完软件后关闭软件，回到待机状态（等同回到主程序）。毕竟电脑运行的时候不会把所有软件都一直在后台跑（所以我们所写的程序也不应该一直在主程序中跑，应该使用中断）。</p>
+<p>这部分主要学习的内容是对寄存器的控制。<br>
+中断源是中断信号的来源。<br>
+单片机并不是所有的信号都会触发中断。</p>
+<p>51单片机中断事件有五个：</p>
+<ol>
+<li>
+<p>INT0 （外部中断0）<br>
+由P3.2管脚作为触发信号的输入</p>
+</li>
+<li>
+<p>T0 定时/计数 (定时计数0)<br>
+定时功能是由内部晶振产生脉冲，作为计数是由P3.4作为脉冲输入</p>
+</li>
+<li>
+<p>INT1 （外部中断1）<br>
+由P3.3管脚作为触发信号的输入</p>
+</li>
+<li>
+<p>T1 定时/计数 (定时计数1)<br>
+定时功能是由内部的晶振产生脉冲，作为计数是由P3.5作为计数脉冲输入</p>
+</li>
+<li>
+<p>RX TX (串口通信中断)<br>
+P3.0 P3.1 作为接口</p>
+</li>
+</ol>
+<p>P3口，在中断寄存器没有设置的时候，作为普通IO口。只有寄存器设置后才能作为中断接口。</p>
+<p>(2022.3.3)<br>
+今天对于中断的理解加深了，中断不仅仅是要优化程序，而且还要保证精确度。中断里面不能放置大量的程序。这样会很不合理，还会因为嵌入过多的程序影响时效。对于大致的结构有了一定的了解。又写了一大堆的垃圾代码。这个是真的要多写多看多听才能有一个好的长进。而且对于一些数据的处理，不能想定义就定义。像16位二进制的数，2的16次方，如果要一位一位的修改定义是65536个，自己定义会写傻自己。虽然现在对于中断的书写还是有些混乱，不过我相信，在自己的努力下一定能够入门慢慢到精通。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Excel表格转成markdown表格（其它JSON、SQL、HTML等格式也可参考本文）]]></title>
         <id>https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
@@ -569,92 +685,6 @@ It is divided into three parts: Server part, multithreading part, and display da
     </iframe>
 </div>
 <p><a href="https://github.com/riddler11/Wireless-RFID-ESP8266-Server">Now you can download some code on github, just click here.</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[How to link Bilibili Video in your article(如何在你文章中链接哔哩哔哩视频)]]></title>
-        <id>https://riddler11.github.io/test/</id>
-        <link href="https://riddler11.github.io/test/">
-        </link>
-        <updated>2021-10-12T11:40:46.000Z</updated>
-        <content type="html"><![CDATA[<p>Video link effect in my article. (在我文章里链接的视频具体效果)<br>
-This is my video about Java sparse array in Bilibili. (这是我在B站关于Java稀疏数组的视频)</p>
-<div style="position: relative; padding: 30% 45%;">
-    <iframe style="
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;" 
-        src="//player.bilibili.com/player.html?aid=847220411&bvid=BV1L54y1E7RQ&cid=385215083&page=1&high_quality=1" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true">
-    </iframe>
-</div>
-<p>Key code segment. Other tools that support markdown may also be used.(关键代码段，其它支持markdown语法的工具也许同样能使用)</p>
-<pre><code>&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
-    &lt;iframe style=&quot;
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;&quot; 
-        src=&quot;//player.bilibili.com/player.html?aid=847220411&amp;bvid=BV1L54y1E7RQ&amp;cid=385215083&amp;page=1&amp;high_quality=1&quot; 
-        scrolling=&quot;no&quot; 
-        border=&quot;0&quot; 
-        frameborder=&quot;no&quot; 
-        framespacing=&quot;0&quot; 
-        allowfullscreen=&quot;true&quot;&gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-</code></pre>
-<h1 id="operation-video-of-this-article-andhow-to-build-a-blog-by-gridea">Operation video of this article andhow to build a blog by Gridea.</h1>
-<div style="position: relative; padding: 30% 45%;">
-    <iframe style="
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        left: 0; top: 0;" 
-        src="//player.bilibili.com/player.html?aid=633622827&bvid=BV1fb4y187r9&cid=424484231&page=1&high_quality=1" 
-        scrolling="no" 
-        border="0" 
-        frameborder="no" 
-        framespacing="0" 
-        allowfullscreen="true">
-    </iframe>
-</div>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ Real-time monitoring of ambient temperature base on Nodemcu / ESP12F]]></title>
-        <id>https://riddler11.github.io/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/</id>
-        <link href="https://riddler11.github.io/nodemcuesp12f-bei-ke-wu-lian-shi-shi-jian-kong-huan-jing-wen-du/">
-        </link>
-        <updated>2021-02-19T01:52:15.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="nodemcuesp12f-real-time-monitoring-of-ambient-temperature">nodemcu/ESP12F Real-time monitoring of ambient temperature.</h2>
-<p>Bigiot renderings are as follows：<br>
-<img src="https://riddler11.github.io/post-images/1634552695779.jpg" alt="The effect is as follows" loading="lazy"></p>
-<h2 id="realization-idea">Realization idea</h2>
-<ol>
-<li>Firstly,connect the device to the internet.</li>
-<li>Connect the BIGIOT net.</li>
-<li>Send information regularly.</li>
-</ol>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552716814.jpg" alt="Actual hardware diagram" loading="lazy"></figure>
-<h3 id="i-have-searched-a-lot-of-data-but-i-have-not-found-any-actual-and-effective-data-to-assist-me-in-implementation">I have searched a lot of data, but I have not found any actual and effective data to assist me in implementation.</h3>
-<p>So I studied and transformed it into a code for transmitting information with the help of bigiot's control code.<br>
-This may be the first non Lua but C language code in the whole network.</p>
-<h2 id="critical-code">critical code：</h2>
-<pre><code>//Upload information to the interface
- String msg1 =&quot;{\&quot;M\&quot;:\&quot;update\&quot;,\&quot;ID\&quot;:\&quot;&quot;+did+&quot;\&quot;,\&quot;V\&quot;:{\&quot;&quot;+inputid+&quot;\&quot;:\&quot;&quot;+value+&quot;\&quot;}}\n&quot;;
- client.print(msg1);
-</code></pre>
-<p><a href="https://www.bilibili.com/video/BV1Yi4y1T7SD/">Code explanation video in chinese</a></p>
-<p><a href="https://download.csdn.net/download/qq_42428700/15364861">Click here to go to CSDN to download the code</a></p>
-<p><a href="https://github.com/riddler11/Nodemcu-Communicate-Bigiot">Click here to go to github to download the code</a></p>
-<p>This article is also written in CSDN.</p>
 ]]></content>
     </entry>
 </feed>
