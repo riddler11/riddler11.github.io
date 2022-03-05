@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-03-05T02:45:05.963Z</updated>
+    <updated>2022-03-05T04:00:33.411Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -26,7 +26,7 @@ usb接口：USB？<br>
 电阻RES：R？<br>
 LED发光二极管：LED？<br>
 排针HEADER：J？<br>
-二极管：D？<br>
+二极管Diode：D？<br>
 按键：KEY？<br>
 极性电容CAP：C？<br>
 电源：PwR</p>
@@ -42,67 +42,6 @@ Description（元件名称介绍等、我写名称，因为设计知道功能）
 空格进行旋转引脚</p>
 <p>shift+鼠标拖拽=复制<br>
 在原理图里可以选择工具栏Design(设计)——》Make Schematic Library（生成原理图库）【这种方式可以将AD软件的自带原理图库复制进入自己的原理图库】</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AD操作（2021.10.15）]]></title>
-        <id>https://riddler11.github.io/ad-cao-zuo-20211015/</id>
-        <link href="https://riddler11.github.io/ad-cao-zuo-20211015/">
-        </link>
-        <updated>2022-03-05T01:08:33.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="画图顺序">画图顺序</h2>
-<ol>
-<li>主控芯片</li>
-<li>电源</li>
-<li>下载烧写电路</li>
-<li>引脚引出</li>
-</ol>
-<h2 id="元件注意事项">元件注意事项</h2>
-<p>引脚按照官方的顺序排列<br>
-关于电容放置尽量放近元件</p>
-<h2 id="布线注意事项">布线注意事项：</h2>
-<p>信号线8-10mil<br>
-电源线30-50mil<br>
-GND 铺铜</p>
-<h2 id="pcb注意事项">PCB注意事项</h2>
-<ol>
-<li>主控芯片，相关芯片，电源</li>
-<li>尽量走顶层</li>
-<li>有天线的地方一定要镂空下面不能铺铜</li>
-</ol>
-<h2 id="单位换算">单位换算：</h2>
-<p>1uF=1000nF<br>
-1nF=1000pF<br>
-1mil=0.0254mm</p>
-<h2 id="贴片类型对应功率">贴片类型对应功率</h2>
-<p>0805：1/8w  0603：1/10w 1206 1/4w</p>
-<p>功率计算公式：P=U²/R</p>
-<h2 id="led发光二极管压降及额定电流">LED发光二极管压降及额定电流</h2>
-<p>红色发光二极管的压降为2.0-2.2V<br>
-黄色发光二极管的压降为1.8-2.0V<br>
-绿色发光二极管的压降为3.0-3.2V<br>
-正常发光时额定电流为20mA</p>
-<h2 id="pcb连线步骤">PCB连线步骤：</h2>
-<ol>
-<li>主控线芯片</li>
-<li>体型较大芯片</li>
-<li>电阻电容</li>
-</ol>
-<h2 id="绘制pcb快捷键">绘制PCB快捷键</h2>
-<p>快速放线 P+T<br>
-直接转换单位 Ctrl+q<br>
-改字体 E+N<br>
-看某条线路连接 Ctrl+鼠标左键<br>
-隐藏丝线 N+Hide Connections</p>
-<h2 id="焊盘">焊盘</h2>
-<p>定位焊盘 通孔：130mil XY：170mil</p>
-<p>Minimum Solder Mask sliver 阻焊<br>
-Silk To Solder Mask Clearance 丝印在焊盘上 Electrical 0mil Clearance 最小间隔6mil<br>
-Silk To Silk Clearance 丝印与其它丝印 0mil</p>
-<p>过孔与线距离最小0.152mm（6mil）<br>
-过孔规则：最大0.6mm直径 最小0.3mm孔径<br>
-Width 规则 Min 5mil Max 100mil<br>
-（2021.10.15）</p>
 ]]></content>
     </entry>
     <entry>
@@ -559,6 +498,67 @@ immense pressure 巨大压力<br>
 <p>play a  pivotal/ crucial/ vital role in … 在……中扮演重要作用<br>
 (2022.1.10)</p>
 <p>To be continued...</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AD操作（2021.10.15）]]></title>
+        <id>https://riddler11.github.io/ad-cao-zuo-20211015/</id>
+        <link href="https://riddler11.github.io/ad-cao-zuo-20211015/">
+        </link>
+        <updated>2021-10-15T01:08:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="画图顺序">画图顺序</h2>
+<ol>
+<li>主控芯片</li>
+<li>电源</li>
+<li>下载烧写电路</li>
+<li>引脚引出</li>
+</ol>
+<h2 id="元件注意事项">元件注意事项</h2>
+<p>引脚按照官方的顺序排列<br>
+关于电容放置尽量放近元件</p>
+<h2 id="布线注意事项">布线注意事项：</h2>
+<p>信号线8-10mil<br>
+电源线30-50mil<br>
+GND 铺铜</p>
+<h2 id="pcb注意事项">PCB注意事项</h2>
+<ol>
+<li>主控芯片，相关芯片，电源</li>
+<li>尽量走顶层</li>
+<li>有天线的地方一定要镂空下面不能铺铜</li>
+</ol>
+<h2 id="单位换算">单位换算：</h2>
+<p>1uF=1000nF<br>
+1nF=1000pF<br>
+1mil=0.0254mm</p>
+<h2 id="贴片类型对应功率">贴片类型对应功率</h2>
+<p>0805：1/8w  0603：1/10w 1206 1/4w</p>
+<p>功率计算公式：P=U²/R</p>
+<h2 id="led发光二极管压降及额定电流">LED发光二极管压降及额定电流</h2>
+<p>红色发光二极管的压降为2.0-2.2V<br>
+黄色发光二极管的压降为1.8-2.0V<br>
+绿色发光二极管的压降为3.0-3.2V<br>
+正常发光时额定电流为20mA</p>
+<h2 id="pcb连线步骤">PCB连线步骤：</h2>
+<ol>
+<li>主控线芯片</li>
+<li>体型较大芯片</li>
+<li>电阻电容</li>
+</ol>
+<h2 id="绘制pcb快捷键">绘制PCB快捷键</h2>
+<p>快速放线 P+T<br>
+直接转换单位 Ctrl+q<br>
+改字体 E+N<br>
+看某条线路连接 Ctrl+鼠标左键<br>
+隐藏丝线 N+Hide Connections</p>
+<h2 id="焊盘">焊盘</h2>
+<p>定位焊盘 通孔：130mil XY：170mil</p>
+<p>Minimum Solder Mask sliver 阻焊<br>
+Silk To Solder Mask Clearance 丝印在焊盘上 Electrical 0mil Clearance 最小间隔6mil<br>
+Silk To Silk Clearance 丝印与其它丝印 0mil</p>
+<p>过孔与线距离最小0.152mm（6mil）<br>
+过孔规则：最大0.6mm直径 最小0.3mm孔径<br>
+Width 规则 Min 5mil Max 100mil<br>
+（2021.10.15）</p>
 ]]></content>
     </entry>
 </feed>
