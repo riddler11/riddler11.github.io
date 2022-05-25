@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-05-18T13:20:35.302Z</updated>
+    <updated>2022-05-25T09:37:12.821Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,42 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[近期的一些读后感、观后感]]></title>
+        <id>https://riddler11.github.io/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/</id>
+        <link href="https://riddler11.github.io/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/">
+        </link>
+        <updated>2022-05-25T08:22:34.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="iot变现-作者大前研一">IOT变现 作者：大前研一</h2>
+<p>看完这本书，首先知道了一些概念，其次对于一些大公司的明确发展路径，而舍弃一些业务，有了一些理解。<br>
+对于未来的一些自动驾驶等的一些普及有了更加深入的理解。西门子的故事还有汽车厂商的故事深入人心。有时需要数据的共享才能进一步推动整个社会的发展<br>
+西门子所重视的大趋势共有五点</p>
+<ol>
+<li>数字化转变</li>
+<li>全球化</li>
+<li>城市化</li>
+<li>人口动态</li>
+<li>气候变化</li>
+</ol>
+<p>以大趋势为基础思考应对方法，是西门子的战略<br>
+将事业卖掉，一定要趁事业还在盈利的时候<br>
+需要模块化和标准化，这个非常关键。<br>
+IOT怎么变现，通过书中的见解，我自己总结要有一个明确的目标，从单纯的销售商品转化为利用IOT提供各种各样的服务转变。像米其林轮胎从单销售轮胎+各种传感器“轮胎维护服务”，赚取利润，新商业模式。不过一定要看ROI，看投入的IOT是不是有效果减少无用功。</p>
+<h2 id="姚明年">姚明年</h2>
+<p>看完姚明年这部纪录片，记录的是他新秀赛季的片段，从一个rookie不被看好，到一步步的赢得人们心中的尊敬。除此之外，还看到他的情商还有对于他人的包容，以及努力适应别人的文化，融入团体，并逐渐给球队带来实际帮助。这些处世之道确实很值得学习。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[电路板问题总结]]></title>
+        <id>https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/</id>
+        <link href="https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/">
+        </link>
+        <updated>2022-05-18T13:50:16.000Z</updated>
+        <content type="html"><![CDATA[<p>钽电容有横杠的那边为正极，接反可能会冒烟，或者是反向电压很大</p>
+<p>短路，万用表正负极一测几mv，然后会响那一档会明明白白</p>
+<p>实在不知道什么问题，低电压高电流烧开就好，不过注意安全。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Altium Designer Learning]]></title>
         <id>https://riddler11.github.io/altium-designer-learning/</id>
@@ -461,119 +497,6 @@ P3.0 P3.1 作为接口</p>
 <li>新洗冤录</li>
 </ol>
 <p>（2022.2.6 update）</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Vocabulary learning]]></title>
-        <id>https://riddler11.github.io/vocabulary-learning/</id>
-        <link href="https://riddler11.github.io/vocabulary-learning/">
-        </link>
-        <updated>2021-12-26T08:28:03.000Z</updated>
-        <content type="html"><![CDATA[<p>非常：除了very，可以用exceedingly。<br>
-重要的：除了important，可indispensable。<br>
-政府：除了government，其实可以用authority。<br>
-成功：除了success，可以用glory。<br>
-e.g.</p>
-<ol>
-<li>
-<p>English must be pointed out exceedingly indispensable.<br>
-英语必须被指出非常重要的。</p>
-</li>
-<li>
-<p>Authorities should be proposed to adopt action.<br>
-政府应该被建议采取行动。</p>
-</li>
-<li>
-<p>If there exists a dream, glories are supposed to be achieved.<br>
-如果有梦想，就应该会成功。</p>
-</li>
-</ol>
-<p>(2021.12.26)</p>
-<p>重要的，杰出的：除了important or well known，可以用 prominent<br>
-该词还有显著的、突出的 意思<br>
-e.g.</p>
-<ol>
-<li>
-<p>He played a prominent part in the campaign.<br>
-他在这次运动中发挥了重要作用。</p>
-</li>
-<li>
-<p>She was prominent in the fashion industry.<br>
-她曾在时装界名噪一时。</p>
-</li>
-<li>
-<p>The story was given a prominent position on the front page.<br>
-这则报道刊登在头版的显著位置。</p>
-</li>
-</ol>
-<p>巨大的：除了huge，可用enormous、immense</p>
-<p>enormous pressure 巨大压力<br>
-immense pressure 巨大压力<br>
-(2021.12.27)</p>
-<p>play a  pivotal/ crucial/ vital role in … 在……中扮演重要作用<br>
-(2022.1.10)</p>
-<p>To be continued...</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[AD操作（2021.10.15）]]></title>
-        <id>https://riddler11.github.io/ad-cao-zuo-20211015/</id>
-        <link href="https://riddler11.github.io/ad-cao-zuo-20211015/">
-        </link>
-        <updated>2021-10-15T01:08:33.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="画图顺序">画图顺序</h2>
-<ol>
-<li>主控芯片</li>
-<li>电源</li>
-<li>下载烧写电路</li>
-<li>引脚引出</li>
-</ol>
-<h2 id="元件注意事项">元件注意事项</h2>
-<p>引脚按照官方的顺序排列<br>
-关于电容放置尽量放近元件</p>
-<h2 id="布线注意事项">布线注意事项：</h2>
-<p>信号线8-10mil<br>
-电源线30-50mil<br>
-GND 铺铜</p>
-<h2 id="pcb注意事项">PCB注意事项</h2>
-<ol>
-<li>主控芯片，相关芯片，电源</li>
-<li>尽量走顶层</li>
-<li>有天线的地方一定要镂空下面不能铺铜</li>
-</ol>
-<h2 id="单位换算">单位换算：</h2>
-<p>1uF=1000nF<br>
-1nF=1000pF<br>
-1mil=0.0254mm</p>
-<h2 id="贴片类型对应功率">贴片类型对应功率</h2>
-<p>0805：1/8w  0603：1/10w 1206 1/4w</p>
-<p>功率计算公式：P=U²/R</p>
-<h2 id="led发光二极管压降及额定电流">LED发光二极管压降及额定电流</h2>
-<p>红色发光二极管的压降为2.0-2.2V<br>
-黄色发光二极管的压降为1.8-2.0V<br>
-绿色发光二极管的压降为3.0-3.2V<br>
-正常发光时额定电流为20mA</p>
-<h2 id="pcb连线步骤">PCB连线步骤：</h2>
-<ol>
-<li>主控线芯片</li>
-<li>体型较大芯片</li>
-<li>电阻电容</li>
-</ol>
-<h2 id="绘制pcb快捷键">绘制PCB快捷键</h2>
-<p>快速放线 P+T<br>
-直接转换单位 Ctrl+q<br>
-改字体 E+N<br>
-看某条线路连接 Ctrl+鼠标左键<br>
-隐藏丝线 N+Hide Connections</p>
-<h2 id="焊盘">焊盘</h2>
-<p>定位焊盘 通孔：130mil XY：170mil</p>
-<p>Minimum Solder Mask sliver 阻焊<br>
-Silk To Solder Mask Clearance 丝印在焊盘上 Electrical 0mil Clearance 最小间隔6mil<br>
-Silk To Silk Clearance 丝印与其它丝印 0mil</p>
-<p>过孔与线距离最小0.152mm（6mil）<br>
-过孔规则：最大0.6mm直径 最小0.3mm孔径<br>
-Width 规则 Min 5mil Max 100mil<br>
-（2021.10.15）</p>
 ]]></content>
     </entry>
 </feed>
