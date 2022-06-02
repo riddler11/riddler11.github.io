@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F | Leo&#39;s Blog</title>
+<title>人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感 | Leo&#39;s Blog</title>
 
 <link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1654139681240">
 
@@ -89,101 +89,23 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F
+                    人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-02-04 ·
+                        · 2022-06-02 ·
                     </time>
-                    
-                        <a href="https://riddler11.github.io/ELDszEtnV/" class="post-tags">
-                            # iot
-                        </a>
-                    
-                        <a href="https://riddler11.github.io/U5fEp0-hzR/" class="post-tags">
-                            # Nodemcu/ESP12F
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>First, attach the effect drawing. In order to facilitate debugging and writing code, I use <strong>Arduino ide</strong> to write code.<br>
-Window monitor print real-time effect:<br>
-<img src="https://riddler11.github.io/post-images/1634551404833.jpg" alt="Window monitor print real-time effect" loading="lazy"></p>
-<p>The hardware circuit diagram is drawn by myself and made by the merchant. The following figure is my actual hardware diagram.<br>
-<img src="https://riddler11.github.io/post-images/1634551586090.jpg" alt="Hardware diagram" loading="lazy"></p>
-<h4 id="the-soil-moisture-sensor-i-use-is-a-resistance-sensor">The soil moisture sensor I use is a resistance sensor.</h4>
-<h4 id="pin-details-are-shown-in-table">Pin details are shown in table.</h4>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">soil moisture sensor</th>
-<th style="text-align:center">Wiring instructions</th>
-<th style="text-align:center">MCU</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">VCC</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">3.3V-5V</td>
-</tr>
-<tr>
-<td style="text-align:center">GND</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">GND</td>
-</tr>
-<tr>
-<td style="text-align:center">DO</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">Digital output (0 or 1)</td>
-</tr>
-<tr>
-<td style="text-align:center">AO</td>
-<td style="text-align:center">&lt;—&gt;</td>
-<td style="text-align:center">Voltage analog output.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="wiring-between-soil-moisture-sensor-and-nodemcuesp12fesp8266-can-also-be-referred">Wiring between soil moisture sensor and nodemcu（ESP12F/ESP8266 can also be referred）</h2>
-<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634551853966.jpg" alt="Wiring diagram" loading="lazy"></figure>
-<h2 id="what-is-read-in-the-code-is-the-analog-signal-value-in-fact-only-three-pins-ao-gnd-and-vcc-are-connected">What is read in the code is the analog signal value. In fact, only three pins <strong>AO, GND and VCC</strong> are connected</h2>
-<h2 id="next-is-the-code-section">Next is the code section：</h2>
-<pre><code>/**********************************************************************
-author：燊哥仔
-bilibili Video Explanation：https://www.bilibili.com/video/BV1Lp4y1s7J4
-The code is very simple. You can see the effect by using the serial port monitor of IDE
-Actually connect three pins is OK AO、GND、VCC
-**********************************************************************/
-int sense_Pin = 0; // Soil sensor input connected to analog pin A0
-int value = 0; //initialize variable value
-
-void setup() {
-  Serial.begin(115200);//Set baud rate to115200
-  Serial.println(&quot;\n&quot;);//Newline
-}
-
-void loop() {
-  
-  value = analogRead(sense_Pin);//Analog data reading（A0 pin input data）
-  value = value / 10;    //The above value divided by ten is assigned to value
- 
-  Serial.print(value);
-  Serial.println(&quot;%&quot;);
- 
-  if (value &lt; 50)//When the value is less than 50, judge the result
-  {
-    
-    Serial.println(&quot;The soil is WET&quot;);//Window monitor print the situation
-  }
-  else
-  {
-  
-    Serial.println(&quot;The soil is dry&quot;);
-  }
-  delay(1000);//Delay1 second. Read every second
-}
-</code></pre>
-<p><a href="https://download.csdn.net/download/qq_42428700/15044707">Download code from CSDN</a></p>
+                    <h2 id="人工智能">人工智能</h2>
+<p>人工智能这部电影讲述的是一个机器人想要得到爱，因此想成为人类的故事。每个人其实都渴望成为唯一，机器人身上出现的人类情绪，单从电影来看，人类塑造的形象有点坏。没能有更深入的共鸣。机器人确实变得挺惨的。这部电影没能让我有很深入的共鸣思考。确实当机器人也有情绪时候这个值得去考量。</p>
+<p>##　沉默的羔羊<br>
+经典老电影，小时候忘记哪个电视台看的，说怎么通过一个罪犯抓住另一个罪犯。电影的一些镜头等光影渲染得非常好，看了弹幕的一些解析，有点道理</p>
+<h2 id="火星人玩转地球">火星人玩转地球</h2>
+<p>这部电影直接是童年噩梦，看完晚上脑子里都是那个bgm，现在发现演员里面有很多熟悉的老面孔震惊，很多大牌明星在里面出演，确实是有点东西的这个对于童年的我来说，6.1回顾了这部电影，对于童年的致敬，看完这电影以至于我在童年对于外星人的印象就记住了这里的画面</p>
+<h2 id="变相怪杰">变相怪杰</h2>
+<p>这部电影看了好像五次了，心要存善良，要有正能量。是我非常喜爱的金凯瑞的影视作品，对于这名演员的演技，面部肌肉的控制真的是佩服。小时候看确实想拥有一样的变身面具哈哈。</p>
 
                 </div>
             </article>
@@ -192,14 +114,14 @@ void loop() {
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://riddler11.github.io/51-dan-pian-ji-xiao-che/" class="post-title gt-a-link">
-                    Remote control car base on MCS 51 
+                <a href="https://riddler11.github.io/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/" class="post-title gt-a-link">
+                    近期的一些读后感、观后感
                 </a>
             </div>
         
 
         
-            <span id="/nodemcuesp12f-tu-rang-shi-du-chuan-gan-qi-shi-yong-xiao-guo-ji-dai-ma-xiang-jie//" class="leancloud_visitors" data-flag-title="Detailed explanation of application effect and code of soil humidity sensor base on nodemcu/ESP12F">
+            <span id="/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan//" class="leancloud_visitors" data-flag-title="人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感">
                 <em class="post-meta-item-text">阅读量 </em>
                 <i class="leancloud-visitors-count">0</i>
             </span>
