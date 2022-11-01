@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-07-12T12:01:53.737Z</updated>
+    <updated>2022-11-01T21:16:10.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[2022.7.12 Reading and Writing]]></title>
+        <id>https://riddler11.github.io/2022712-reading-and-writing/</id>
+        <link href="https://riddler11.github.io/2022712-reading-and-writing/">
+        </link>
+        <updated>2022-07-11T21:58:31.000Z</updated>
+        <content type="html"><![CDATA[<p>first</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感]]></title>
         <id>https://riddler11.github.io/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/</id>
@@ -439,32 +448,6 @@ P3.0 P3.1 作为接口</p>
 <p>希望一天进行一点阅读，写相应的读后感或者总结。</p>
 </li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[电影大三元观影感受]]></title>
-        <id>https://riddler11.github.io/da-san-yuan-guan-ying-gan-shou/</id>
-        <link href="https://riddler11.github.io/da-san-yuan-guan-ying-gan-shou/">
-        </link>
-        <updated>2022-02-08T10:05:52.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="电影大三元以下内容可能含有剧透谨慎观看">电影：大三元（以下内容可能含有剧透，谨慎观看）</h2>
-<p>主演：张国荣、袁咏仪、刘青云、洪欣等</p>
-<h3 id="先入为主的感受">先入为主的感受：</h3>
-<p>这部片个人感觉上是一部喜剧片，片中的哥哥很帅气，出场的每一帧感觉都能够作为壁纸。<br>
-那时候的美女美得各有特色、洪欣出场确实很惊艳，其它几个美女如果是正常的妆发也是非常能打。</p>
-<p>以下将有几张感觉很prefect很唯美的几帧画面与文字穿插出现 <strong>（以下内容可能含有剧透，谨慎观看）</strong><br>
-<img src="https://riddler11.github.io/post-images/1644316970495.png" alt="" loading="lazy"></p>
-<h3 id="影片概述">影片概述</h3>
-<p>片中张国荣饰演的角色是一位名为钟国强神父，刘青云饰演的是一位拥有中国男足的脚的警察<br>
-围绕作为娱乐界的白板（袁咏仪饰演）以及一众人物展开的救赎故事。最终是一个happy ending。<br>
-<img src="https://riddler11.github.io/post-images/1644316869564.png" alt="" loading="lazy"></p>
-<h3 id="情节发展">情节发展</h3>
-<p>以倒叙进行开端，先把一个重要的画面先铺垫，再进行故事的开展。我个人认为情节的衔接是没有问题的，有时候插入一些搞笑的情节，确实可以一笑，但是由于在B站总是看到这些片段有点小剧透，反而因为知道情节而少了一番风味。<br>
-<img src="https://riddler11.github.io/post-images/1644316876335.png" alt="" loading="lazy"><br>
-<img src="https://riddler11.github.io/post-images/1644316892070.png" alt="" loading="lazy"></p>
-<h3 id="总的个人评价">总的个人评价</h3>
-<p>我个人觉得这部片还可以，演员阵容现在来看无敌，画面很美，喜剧得不够彻底，正经和深刻也不算太到位，这是我个人的一个感受。不过演员表演得都挺到位的。不过故事情节确实耳目一新。有些画面确实可以做成表情包使用🤣。<br>
-<img src="https://riddler11.github.io/post-images/1644317007317.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>
