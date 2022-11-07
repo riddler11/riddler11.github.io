@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>Remote control car base on MCS 51  | Leo&#39;s Blog</title>
+<title>人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感 | Leo&#39;s Blog</title>
 
 <link rel="shortcut icon" href="https://www.leoshen.eu.org/favicon.ico?v=1667826889230">
 
@@ -89,79 +89,23 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Remote control car base on MCS 51 
+                    人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-12-30 ·
+                        · 2022-06-02 ·
                     </time>
-                    
-                        <a href="https://www.leoshen.eu.org/tag/ELDszEtnV/" class="post-tags">
-                            # iot
-                        </a>
-                    
-                        <a href="https://www.leoshen.eu.org/tag/lYx2T_j2A/" class="post-tags">
-                            # MCS 51
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <h1 id="1circuit-design">1.Circuit Design</h1>
-<h4 id="before-you-start-determine-the-components-to-use">Before you start, determine the components to use.</h4>
-<p>Try to select the components that control the trolley.<br>
-As the title：<br>
-Main control chip：AT89C52 chip<br>
-A toy car（which have two motor.The front motor controls the left and right, and the rear motor controls the front and rear）<br>
-A chip or module that controls a motor：L298/L9110<br>
-Wireless module：NRF24L01（If you like, you can use ESP8266 networking control or HC05 Bluetooth control）<br>
-Drop-Out Voltage-Regulator module：5V to 3.3V（The voltage used in NRF24L01 is 3.3V）</p>
-<h4 id="the-next-step-is-to-draw-circuit-diagram">The next step is to draw circuit diagram</h4>
-<p>You can use your hand or some software to draw, this step is to know what you want.</p>
-<ol>
-<li><strong>The minimum system</strong> is the core of  the hardware circuit design.Because of this you should design the minimum system first.</li>
-<li>And then  design <strong>the switch and power</strong> .With the power and switch single chip microcomputer can work.</li>
-<li>In China you can not only buy components by using TaoBao, but also use it to see some reference details of the components. For example, the control motor chip on this article, you can see the reference details below Taobao<br>
-such as：How does L298 work and so on. <strong>In this step you can figure out how the components work</strong></li>
-<li>Next is to <strong>connect the chips and modles with the single chip microcomputer</strong>.</li>
-<li>Tips: Remember to <strong>reserve the port to upload the code</strong>.Otherwise, it's a headache if you don't keep the port to upload you have to remove the chip to upload it everytime. You can use a <strong>IDC connector(such as 10pin X9555WV-2X05-6TV01) and a USB TO RS232/485/TTL</strong>to upload your code.</li>
-</ol>
-<h4 id="after-completing-the-above-steps-you-can-start-drawing-pcb">After completing the above steps, you can start drawing PCB</h4>
-<p>Draw PCB according to your own circuit diagram.(I use DXP to draw PCB)</p>
-<p>Of course, DXP provides a tool that can draw circuit schematic diagrams.You can use it directly to draw the schematic diagram and the schematic library.</p>
-<p>After painting, remember to <strong>check</strong> whether the connection is connected, etc</p>
-<h4 id="proofing">Proofing</h4>
-<p>Send the design drawings to the factory, and the factory will help you proofing.<br>
-After <strong>welding</strong>,then you can debug.</p>
-<h1 id="2code-debug">2.Code debug</h1>
-<h4 id="complete-the-above-design">Complete the above design</h4>
-<p>You can <strong>simulation</strong> in protues before you upload the code in the chip.<br>
-This method can simulate the running state of hardware under real conditions.</p>
-<h4 id="the-first-thing-to-do-is-to-let-the-car-move">The first thing to do is to let the car move.</h4>
-<ol>
-<li>When the trolley moves, first prove that the trolley motor is OK, and then there can be a later control activity.</li>
-<li>If the car can't move, check the problem <strong>maybe the motor problem</strong> , <strong>maybe the L298 problem</strong> or some problems with the <strong>circuit board</strong> be good at using <strong>multimeter</strong> at this time.</li>
-<li>The motor test is very simple. Connect it with a battery to see if it will move.（It is better to connect a resistor in series. In case of excessive current, the motor may burn during the detection process。）</li>
-<li>Other part use a multimeter to check whether there is electricity or not 。</li>
-</ol>
-<h4 id="the-next-step-is-to-debug-the-control-code">The next step is to debug the control code</h4>
-<p>NRF24L01 is used to control in the design, so <strong>pay attention to the voltage</strong><br>
-The voltage of 51 single chip microcomputer is 5V, and this module is 3.3V<br>
-If the module burns out, it is impossible to control it。<br>
-Assuming that the computer controls, the <strong>computer is the information sending end and the single chip microcomputer is the information receiving end</strong></p>
-<p>Single control first（such as go forward, P2.0 port is 0, P2.1 port is 1, and the single chip microcomputer receives the signal &quot;1&quot;）<br>
-In the computer, use the serial port debugging assistant to send the signal of 1</p>
-<figure data-type="image" tabindex="1"><img src="https://www.leoshen.eu.org/post-images/1634552895547.jpg" alt="Example diagram of serial port debugging assistant" loading="lazy"></figure>
-<h5 id="key-code-examples-of-single-chip-microcomputer">Key code examples of single chip microcomputer</h5>
-<pre><code>    if(	rece_buf[1]=='1') 	 		//After the first bit is the received command data, rece_buf[0] is the length of data bits.
-   
-                {
-                  M0=0；                        //sbit M0 = P2^0   sbit M1 = P2^1
-                  M1=1；
-                }
-
-</code></pre>
-<h4 id="proceed-to-the-next-step-after-successful-debugging">Proceed to the next step after successful debugging</h4>
-<p>Reverse, stop, left turn and right turn control are completed in the same way.Then implementation the project.</p>
+                    <h2 id="人工智能">人工智能</h2>
+<p>人工智能这部电影讲述的是一个机器人想要得到爱，因此想成为人类的故事。每个人其实都渴望成为唯一，机器人身上出现的人类情绪，单从电影来看，人类塑造的形象有点坏。没能有更深入的共鸣。机器人确实变得挺惨的。这部电影没能让我有很深入的共鸣思考。确实当机器人也有情绪时候这个值得去考量。</p>
+<p>##　沉默的羔羊<br>
+经典老电影，小时候忘记哪个电视台看的，说怎么通过一个罪犯抓住另一个罪犯。电影的一些镜头等光影渲染得非常好，看了弹幕的一些解析，有点道理</p>
+<h2 id="火星人玩转地球">火星人玩转地球</h2>
+<p>这部电影直接是童年噩梦，看完晚上脑子里都是那个bgm，现在发现演员里面有很多熟悉的老面孔震惊，很多大牌明星在里面出演，确实是有点东西的这个对于童年的我来说，6.1回顾了这部电影，对于童年的致敬，看完这电影以至于我在童年对于外星人的印象就记住了这里的画面</p>
+<h2 id="变相怪杰">变相怪杰</h2>
+<p>这部电影看了好像五次了，心要存善良，要有正能量。是我非常喜爱的金凯瑞的影视作品，对于这名演员的演技，面部肌肉的控制真的是佩服。小时候看确实想拥有一样的变身面具哈哈。</p>
 
                 </div>
             </article>
@@ -170,14 +114,14 @@ In the computer, use the serial port debugging assistant to send the signal of 1
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://www.leoshen.eu.org/post/building-elevator-system-based-on-51-single-chip-microcomputer/" class="post-title gt-a-link">
-                    Building Elevator System Based on 51 Single-chip Microcomputer
+                <a href="https://www.leoshen.eu.org/post/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/" class="post-title gt-a-link">
+                    近期的一些读后感、观后感
                 </a>
             </div>
         
 
         
-            <span id="/post/51-dan-pian-ji-xiao-che/" class="leancloud_visitors" data-flag-title="Remote control car base on MCS 51 ">
+            <span id="/post/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/" class="leancloud_visitors" data-flag-title="人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感">
                 <em class="post-meta-item-text">阅读量 </em>
                 <i class="leancloud-visitors-count">0</i>
             </span>
