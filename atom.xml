@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-11-07T02:37:35.619Z</updated>
+    <updated>2022-11-07T02:37:51.484Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -15,8 +15,8 @@
         <id>https://riddler11.github.io/academic-word/</id>
         <link href="https://riddler11.github.io/academic-word/">
         </link>
-        <updated>2022-11-06T18:31:51.000Z</updated>
-        <content type="html"><![CDATA[<p>W</p>
+        <updated>2022-11-06T10:31:51.000Z</updated>
+        <content type="html"><![CDATA[<p>123</p>
 ]]></content>
     </entry>
     <entry>
