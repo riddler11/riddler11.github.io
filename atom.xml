@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-11-07T02:31:20.263Z</updated>
+    <updated>2022-11-07T02:34:58.455Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Academic Word]]></title>
+        <id>https://riddler11.github.io/academic-word/</id>
+        <link href="https://riddler11.github.io/academic-word/">
+        </link>
+        <updated>2022-11-06T18:31:51.000Z</updated>
+        <content type="html"><![CDATA[<p>W</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Plan]]></title>
         <id>https://riddler11.github.io/2022712-reading-and-writing/</id>
@@ -427,36 +436,6 @@ P3.0 P3.1 作为接口</p>
 <p>域名？ 二级域名？DNS解析 这貌似是计算机基础知识，现在已经忘记得差不多了<br>
 接下来就是学习以及用自己的语言进行解释出来。</p>
 <p>翻箱底找出了计算机网络教程书籍。（2022.2.12）</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Reading]]></title>
-        <id>https://riddler11.github.io/reading/</id>
-        <link href="https://riddler11.github.io/reading/">
-        </link>
-        <updated>2022-02-09T09:28:33.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="book-list">book list:</h2>
-<ol>
-<li>
-<p>物理学的进化</p>
-</li>
-<li>
-<p>程序员数学</p>
-</li>
-<li>
-<p>PR CC教程</p>
-</li>
-<li>
-<p>TensorFlow</p>
-</li>
-<li>
-<p>C#程序设计（以上是2022.2.9添加）</p>
-</li>
-<li>
-<p>计算机网络教程（2022.2.12添加）</p>
-<p>希望一天进行一点阅读，写相应的读后感或者总结。</p>
-</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
