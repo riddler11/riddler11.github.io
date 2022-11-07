@@ -6,10 +6,10 @@
 
 <title>Wireless transmission of RFID identification information to server based on ESP8266.（基于ESP8266无线传输射频识别信息传输到服务器） | Leo&#39;s Blog</title>
 
-<link rel="shortcut icon" href="https://www.leoshen.eu.org/favicon.ico?v=1667824949934">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1667825622952">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://www.leoshen.eu.org/styles/main.css">
+<link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1667824949934" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1667825622952" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -100,7 +100,7 @@
                 <div class="post-content">
                     <h3 id="this-is-project-i-did-a-long-time-ago-because-of-this-project-i-learn-a-lot-of-things-not-only-academically-but-also-the-attitude-of-dealing-with-people">This is project I did a long time ago. Because of this project, I learn a lot of things. (Not only academically, but also the attitude of dealing with people.)</h3>
 <p>First, look back the board I designed in the past.</p>
-<figure data-type="image" tabindex="1"><img src="https://www.leoshen.eu.org/post-images/1634129991464.png" alt="the board" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634129991464.png" alt="the board" loading="lazy"></figure>
 <p>As we all know practice makes prefect. This is the design when I just learned how to use AD software. Integrated by three modules. Arduino uno, ESP8266 and PN532.</p>
 <h3 id="i-use-esp8266-to-wirelessly-transmit-the-information-received-by-pn532">I use ESP8266 to wirelessly transmit the information received by PN532.</h3>
 <h2 id="about-esp8266">About ESP8266</h2>
@@ -111,7 +111,7 @@
 <li>STA、AP Both</li>
 </ol>
 <p>The technical part adopts STA mode in this project. Arduino sends AT instruction to initialize the module.<br>
-<img src="https://www.leoshen.eu.org/post-images/1634181047220.jpg" alt="ESP8266" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1634181047220.jpg" alt="ESP8266" loading="lazy"><br>
 But how to <strong>connect</strong> with the module.<br>
 My method is as follows.</p>
 <table>
@@ -151,7 +151,7 @@ My method is as follows.</p>
 </tbody>
 </table>
 <h3 id="on-transmission-communication-of-several-modes-of-pn532">On transmission communication of several modes of PN532.</h3>
-<figure data-type="image" tabindex="2"><img src="https://www.leoshen.eu.org/post-images/1634182188847.jpg" alt="modes of PN532" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634182188847.jpg" alt="modes of PN532" loading="lazy"></figure>
 <p>As you can see, there are three modes to transmit messages.<br>
 HSU、SPI、I2C.</p>
 <p>Used with Arduino UNO:<br>
@@ -159,7 +159,7 @@ In HSU mode, the serial port monitor will have no information (inconvenient for 
 I have never used I2C mode. So I use SPI mode to implementation.<br>
 How to turn on SPI mode? Switch <strong>channel1: OFF, channel2: ON</strong>.</p>
 <p>This is the note I wrote before.<br>
-<img src="https://www.leoshen.eu.org/post-images/1634182979467.png" alt="Notes made before." loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634182979467.png" alt="Notes made before." loading="lazy"></p>
 <p>Module connection</p>
 <table>
 <thead>
@@ -219,7 +219,7 @@ How to turn on SPI mode? Switch <strong>channel1: OFF, channel2: ON</strong>.</p
 </tbody>
 </table>
 <p>Oh my god. What a terrible design. (This is what I made at that time.)<br>
-<img src="https://www.leoshen.eu.org/post-images/1634183636663.png" alt="terrible design" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634183636663.png" alt="terrible design" loading="lazy"></p>
 <h3 id="hardware-running-process">Hardware running process.</h3>
 <ol>
 <li>Arduino power-on startup procedure.</li>
@@ -232,8 +232,8 @@ Database design, Server based on Java.</p>
 <p>Java server code:<br>
 It is divided into three parts: Server part, multithreading part, and display database part (for the convenience of connecting with Android in the back).</p>
 <p>Implementation effect<br>
-<img src="https://www.leoshen.eu.org/post-images/1634184937995.jpg" alt="Display" loading="lazy"><br>
-<img src="https://www.leoshen.eu.org/post-images/1634185294288.jpg" alt="Display2" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634184937995.jpg" alt="Display" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1634185294288.jpg" alt="Display2" loading="lazy"></p>
 <p>Video in bilibili.</p>
 <div style="position: relative; padding: 30% 45%;">
     <iframe style="
@@ -258,7 +258,7 @@ It is divided into three parts: Server part, multithreading part, and display da
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://www.leoshen.eu.org/test/" class="post-title gt-a-link">
+                <a href="https://riddler11.github.io/test/" class="post-title gt-a-link">
                     How to link Bilibili Video in your article(如何在你文章中链接哔哩哔哩视频)
                 </a>
             </div>
@@ -346,7 +346,7 @@ var o=Object.getOwnPropertySymbols,i=Object.prototype.hasOwnProperty,a=Object.pr
     </div>  
    <!-- <div>
         Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.leoshen.eu.org/atom.xml" target="_blank">RSS</a></a>
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a></a>
     </div> -->
 </div>
 
