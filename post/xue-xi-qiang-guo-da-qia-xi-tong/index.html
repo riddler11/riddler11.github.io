@@ -6,10 +6,10 @@
 
 <title>Punch-in Statistics System for “Xuexi Qiangguo” | Leo&#39;s Blog</title>
 
-<link rel="shortcut icon" href="https://www.leoshen.eu.org/favicon.ico?v=1667826889230">
+<link rel="shortcut icon" href="https://riddler11.github.io/favicon.ico?v=1667827073064">
 
 <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://www.leoshen.eu.org/styles/main.css">
+<link rel="stylesheet" href="https://riddler11.github.io/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
@@ -77,7 +77,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1667826889230" action="/search/index.html">
+            <form id="gridea-search-form" style="position: relative" data-update="1667827073064" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
             </form>
@@ -96,7 +96,7 @@
                         · 2020-11-03 ·
                     </time>
                     
-                        <a href="https://www.leoshen.eu.org/tag/6VBb7iLP0/" class="post-tags">
+                        <a href="https://riddler11.github.io/tag/6VBb7iLP0/" class="post-tags">
                             # javaweb
                         </a>
                     
@@ -116,8 +116,8 @@ The control layer is mainly used to respond to client requests. Whenever a reque
 <h2 id="contact-of-each-layer">Contact of each layer</h2>
 <p>The Dao layer can be developed independently with low mutual coupling, and can be carried out independently. Such a mode has particular advantages in the process of developing large projects. The controller and view layers need to be developed together because of their high coupling, but they can also be developed as a whole independent of the first two layers. In this way, we only need to know the definition of the interface between layers, and call the interface to complete the required logical unit application. Everything is very clear and simple.</p>
 <h4 id="the-following-figure-shows-the-current-website-functional-architecture">The following figure shows the current website functional architecture</h4>
-<figure data-type="image" tabindex="1"><img src="https://www.leoshen.eu.org/post-images/1634552999249.jpg" alt="Current website architecture" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://www.leoshen.eu.org/post-images/1634553047812.jpg" alt="Effect drawing of login interface" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://riddler11.github.io/post-images/1634552999249.jpg" alt="Current website architecture" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://riddler11.github.io/post-images/1634553047812.jpg" alt="Effect drawing of login interface" loading="lazy"></figure>
 <p><a href="https://gitee.com/riddler11/clock-in?_from=gitee_search">Gitee download address, click here directly</a>，This code is still the code with <strong>bug</strong> before. Understanding the code and making corresponding modifications will make great progress.</p>
 <p><strong>The code here is developed using the following software</strong>：Development tool：MyEclipse10，Database：MySQL 5.1.32-community，Graphical interface database operation：navicat，Java environment：jdk1.8.0_131.</p>
 <p><strong>Later, I used eclipse to develop</strong>，When JDK6 is changed to a higher version in MyEclipse, some errors will occur in MyEclipse. There is no file class requested by image processing. Anyway, if two jdk version exist, it will causing some code bugs; Like not executing identification codes or something.</p>
@@ -140,8 +140,8 @@ The control layer is mainly used to respond to client requests. Whenever a reque
 <li>The details should be combined with the code</li>
 </ul>
 <p>The reason for the bug is when designing the database，The data type is varchar(255), And then on day 99, The code always judges 99 as the maximum number of days. My personal idea to solve this bug is(Judge the latest clock in number, because the clock in number increases automatically and the data type is int).When I write here, I suddenly remember that the number of branch days seems to be of varchar type. I'll change this when I'm free.<br>
-<img src="https://www.leoshen.eu.org/post-images/1634553135751.jpg" alt="mood" loading="lazy"></p>
-<figure data-type="image" tabindex="3"><img src="https://www.leoshen.eu.org/post-images/1634553199560.jpg" alt="Points entry interface" loading="lazy"></figure>
+<img src="https://riddler11.github.io/post-images/1634553135751.jpg" alt="mood" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://riddler11.github.io/post-images/1634553199560.jpg" alt="Points entry interface" loading="lazy"></figure>
 <h2 id="when-the-project-is-uploaded-to-the-server-and-run-the-bugs-are-more-interesting">When the project is uploaded to the server and run, the bugs are more interesting.</h2>
 <ol>
 <li>
@@ -149,28 +149,28 @@ The control layer is mainly used to respond to client requests. Whenever a reque
 </li>
 <li>
 <p>The JDK of Tomcat 7 version is only 1.7. The algorithms of image processing cannot be used. As shown in the figure, an error will be reported<br>
-<img src="https://www.leoshen.eu.org/post-images/1634574762834.jpg" alt="Request error graph" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634574762834.jpg" alt="Request error graph" loading="lazy"></p>
 </li>
 <li>
 <p>The tomacat 8 version is finally ready for JDK1.8, and the feelings entered in the result are all  <em>？？？？？</em>（garbled），Check the data on the Internet and find that tomcat8 can directly help you deal with the problem of characters. It defaults to UTF-8. My method transcodes the tomcat7 version into iso-8859-1. In order not to cause great changes, I changed the code to ISO-8859-1。<a href="https://blog.csdn.net/lzl_avery/article/details/87348937">Problem solving link</a></p>
 </li>
 </ol>
 <p>4.The best bug is nothing more than this. I developed this project using the windows operating system. The storage directory path is shown as the forward slash“\”<br>
-<img src="https://www.leoshen.eu.org/post-images/1634574812357.jpg" alt="Storage directory path" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1634574812357.jpg" alt="Storage directory path" loading="lazy"><br>
 However, the actual server is a Linux system. Let's take a look at the server without changing the code（See the figure below） <em>img\学号\图片名</em> (Surprise, it has created a strange folder that can't be accessed yet). Next, let's look at the actual storage path of the server. As shown in the figure, the backslash &quot;/&quot; is used for storage.As a result, storage problems arise，<strong>The solution is to change the forward slash to the backslash</strong></p>
-<p><img src="https://www.leoshen.eu.org/post-images/1634575053874.jpg" alt="Do not change the path of code storage diagram" loading="lazy"><br>
-<img src="https://www.leoshen.eu.org/post-images/1634575093675.jpg" alt="Server storage path" loading="lazy"></p>
+<p><img src="https://riddler11.github.io/post-images/1634575053874.jpg" alt="Do not change the path of code storage diagram" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1634575093675.jpg" alt="Server storage path" loading="lazy"></p>
 <h2 id="places-to-be-promoted">Places to be promoted</h2>
 <p>In the points interface, you can add <strong>number of days to punch</strong> to compare with the actual number of days to punch.In fact, I wrote this part of the code method myself, but there were a few small problems when I actually wrote it on the front end, and I don't have time to solve them yet.<br>
-<img src="https://www.leoshen.eu.org/post-images/1634575135899.jpg" alt="Integral interface diagram" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634575135899.jpg" alt="Integral interface diagram" loading="lazy"></p>
 <p>This website can actually be converted into <strong>wechat applet</strong> to clock in，Capable students or students who want to have this ability can learn from the database structure and code written by my back-end and use them to achieve.<br>
 <strong>Genius can be ignored and developed directly on demand.</strong></p>
 <p>I implement image processing here by using the API provided by others. Low recognition rate is a problem<strong>This is also the knowledge what I lack</strong></p>
 <p><strong>You can add functions such as meeting sign in</strong>. Make the software more rich and humanized</p>
 <h5 id="finally-i-attached-the-supply-and-demand-analysis-of-the-small-program-i-wanted-to-make-at-that-time">Finally, I attached the supply and demand analysis of the small program I wanted to make at that time</h5>
-<figure data-type="image" tabindex="4"><img src="https://www.leoshen.eu.org/post-images/1634575180300.jpg" alt="微信小程序版" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://riddler11.github.io/post-images/1634575180300.jpg" alt="微信小程序版" loading="lazy"></figure>
 <p>The above is written on November 3, 2020. If there is any supplement, follow up<br>
-<img src="https://www.leoshen.eu.org/post-images/1634575232915.jpg" alt="mood" loading="lazy"></p>
+<img src="https://riddler11.github.io/post-images/1634575232915.jpg" alt="mood" loading="lazy"></p>
 
                 </div>
             </article>
@@ -179,7 +179,7 @@ However, the actual server is a Linux system. Let's take a look at the server wi
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://www.leoshen.eu.org/post/esp8266-yuan-cheng-kong-zhi-tai-deng/" class="post-title gt-a-link">
+                <a href="https://riddler11.github.io/post/esp8266-yuan-cheng-kong-zhi-tai-deng/" class="post-title gt-a-link">
                     Remote control desk lamp based on ESP8266
                 </a>
             </div>
@@ -267,7 +267,7 @@ var o=Object.getOwnPropertySymbols,i=Object.prototype.hasOwnProperty,a=Object.pr
     </div>  
    <!-- <div>
         Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.leoshen.eu.org/atom.xml" target="_blank">RSS</a></a>
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://riddler11.github.io/atom.xml" target="_blank">RSS</a></a>
     </div> -->
 </div>
 
