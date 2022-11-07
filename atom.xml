@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://riddler11.github.io</id>
+    <id>https://www.leoshen.eu.org</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-11-07T13:12:48.795Z</updated>
+    <updated>2022-11-07T13:13:42.394Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://riddler11.github.io"/>
-    <link rel="self" href="https://riddler11.github.io/atom.xml"/>
+    <link rel="alternate" href="https://www.leoshen.eu.org"/>
+    <link rel="self" href="https://www.leoshen.eu.org/atom.xml"/>
     <subtitle>It&apos;s what you do in the dark, that puts you in the light.</subtitle>
-    <logo>https://riddler11.github.io/images/avatar.png</logo>
-    <icon>https://riddler11.github.io/favicon.ico</icon>
+    <logo>https://www.leoshen.eu.org/images/avatar.png</logo>
+    <icon>https://www.leoshen.eu.org/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[Academic Word]]></title>
-        <id>https://riddler11.github.io/academic-word/</id>
-        <link href="https://riddler11.github.io/academic-word/">
+        <id>https://www.leoshen.eu.org/academic-word/</id>
+        <link href="https://www.leoshen.eu.org/academic-word/">
         </link>
         <updated>2022-11-05T18:31:51.000Z</updated>
         <content type="html"><![CDATA[<p>optical fibre<br>
@@ -23,8 +23,8 @@ silicon photonics</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Plan]]></title>
-        <id>https://riddler11.github.io/2022712-reading-and-writing/</id>
-        <link href="https://riddler11.github.io/2022712-reading-and-writing/">
+        <id>https://www.leoshen.eu.org/2022712-reading-and-writing/</id>
+        <link href="https://www.leoshen.eu.org/2022712-reading-and-writing/">
         </link>
         <updated>2022-07-11T07:58:31.000Z</updated>
         <content type="html"><![CDATA[<ol>
@@ -41,8 +41,8 @@ silicon photonics</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感]]></title>
-        <id>https://riddler11.github.io/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/</id>
-        <link href="https://riddler11.github.io/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/">
+        <id>https://www.leoshen.eu.org/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/</id>
+        <link href="https://www.leoshen.eu.org/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/">
         </link>
         <updated>2022-06-02T02:56:11.000Z</updated>
         <content type="html"><![CDATA[<h2 id="人工智能">人工智能</h2>
@@ -57,8 +57,8 @@ silicon photonics</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[近期的一些读后感、观后感]]></title>
-        <id>https://riddler11.github.io/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/</id>
-        <link href="https://riddler11.github.io/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/">
+        <id>https://www.leoshen.eu.org/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/</id>
+        <link href="https://www.leoshen.eu.org/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/">
         </link>
         <updated>2022-05-25T08:22:34.000Z</updated>
         <content type="html"><![CDATA[<h2 id="iot变现-作者大前研一">IOT变现 作者：大前研一</h2>
@@ -82,8 +82,8 @@ IOT怎么变现，通过书中的见解，我自己总结要有一个明确的�
     </entry>
     <entry>
         <title type="html"><![CDATA[电路板问题总结]]></title>
-        <id>https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/</id>
-        <link href="https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/">
+        <id>https://www.leoshen.eu.org/dian-lu-ban-wen-ti-zong-jie/</id>
+        <link href="https://www.leoshen.eu.org/dian-lu-ban-wen-ti-zong-jie/">
         </link>
         <updated>2022-05-18T13:50:16.000Z</updated>
         <content type="html"><![CDATA[<p>钽电容有横杠的那边为正极，接反可能会冒烟，或者是反向电压很大</p>
@@ -93,8 +93,8 @@ IOT怎么变现，通过书中的见解，我自己总结要有一个明确的�
     </entry>
     <entry>
         <title type="html"><![CDATA[Altium Designer Learning]]></title>
-        <id>https://riddler11.github.io/altium-designer-learning/</id>
-        <link href="https://riddler11.github.io/altium-designer-learning/">
+        <id>https://www.leoshen.eu.org/altium-designer-learning/</id>
+        <link href="https://www.leoshen.eu.org/altium-designer-learning/">
         </link>
         <updated>2022-03-05T01:44:15.000Z</updated>
         <content type="html"><![CDATA[<p>绘制流程：<br>
@@ -130,8 +130,8 @@ Description（元件名称介绍等、我写名称，因为设计知道功能）
     </entry>
     <entry>
         <title type="html"><![CDATA[51 MCU further learning]]></title>
-        <id>https://riddler11.github.io/51-mcu-further-learning/</id>
-        <link href="https://riddler11.github.io/51-mcu-further-learning/">
+        <id>https://www.leoshen.eu.org/51-mcu-further-learning/</id>
+        <link href="https://www.leoshen.eu.org/51-mcu-further-learning/">
         </link>
         <updated>2022-03-02T03:14:31.000Z</updated>
         <content type="html"><![CDATA[<p>引言：最近重新回归51单片机的使用，发现自己严重的不足。之前写的代码可以用“垃圾”两字概括。<br>
@@ -181,14 +181,14 @@ P3.0 P3.1 作为接口</p>
 <p>P3口，在中断寄存器没有设置的时候，作为普通IO口。只有寄存器设置后才能作为中断接口。</p>
 <p>(2022.3.3)<br>
 今天对于中断的理解加深了，中断不仅仅是要优化程序，而且还要保证精确度。中断里面不能放置大量的程序。这样会很不合理，还会因为嵌入过多的程序影响时效。对于大致的结构有了一定的了解。又写了一大堆的垃圾代码。这个是真的要多写多看多听才能有一个好的长进。而且对于一些数据的处理，不能想定义就定义。像16位二进制的数，2的16次方，如果要一位一位的修改定义是65536个，自己定义会写傻自己。虽然现在对于中断的书写还是有些混乱，不过我相信，在自己的努力下一定能够入门慢慢到精通。</p>
-<p><img src="https://riddler11.github.io/post-images/1648036548266.png" alt="" loading="lazy"><br>
+<p><img src="https://www.leoshen.eu.org/post-images/1648036548266.png" alt="" loading="lazy"><br>
 (2022.3.23)</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Excel表格转成markdown表格（其它JSON、SQL、HTML等格式也可参考本文）]]></title>
-        <id>https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
-        <link href="https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/">
+        <id>https://www.leoshen.eu.org/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
+        <link href="https://www.leoshen.eu.org/excel-biao-ge-zhuan-cheng-markdown-biao-ge/">
         </link>
         <updated>2022-02-19T12:33:50.000Z</updated>
         <content type="html"><![CDATA[<p>因为上一篇文章电影院观影记录，出现的一些小问题，使得出现了这一篇的文章<br>
@@ -197,16 +197,16 @@ P3.0 P3.1 作为接口</p>
 <h2 id="首先要将文件保存为csv格式该格式是utf-8编码">首先要将文件保存为CSV格式（该格式是UTF-8编码）</h2>
 <p>Excel默认格式是 .xlsx<br>
 选择文件——&gt;另存为——&gt;接着选择CSV格式（详见下图）<br>
-<img src="https://riddler11.github.io/post-images/1645285524382.jpg" alt="" loading="lazy"></p>
+<img src="https://www.leoshen.eu.org/post-images/1645285524382.jpg" alt="" loading="lazy"></p>
 <h2 id="接着打开下面的转换网址链接">接着打开下面的转换网址链接</h2>
 <p><a href="https://tableconvert.com/csv-to-json">转换网址链接</a><br>
 接着点击upload CSV<br>
 选择刚刚的文件 点击打开<br>
 出现图片中这个提示，导入成功<br>
-<img src="https://riddler11.github.io/post-images/1645285775169.jpg" alt="" loading="lazy"></p>
+<img src="https://www.leoshen.eu.org/post-images/1645285775169.jpg" alt="" loading="lazy"></p>
 <h2 id="接下来在table-generator-可以选择想要的各种格式">接下来在Table Generator 可以选择想要的各种格式</h2>
 <p>由于这篇文章是转换为markdown，所以是以下图片的效果<br>
-<img src="https://riddler11.github.io/post-images/1645285944286.jpg" alt="" loading="lazy"></p>
+<img src="https://www.leoshen.eu.org/post-images/1645285944286.jpg" alt="" loading="lazy"></p>
 <p>如有不懂可观看以下视频，B站P2有字幕版</p>
 <div style="position: relative; padding: 30% 45%;">
     <iframe style="
@@ -226,8 +226,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[电影院观影记录]]></title>
-        <id>https://riddler11.github.io/dian-ying-yuan-guan-ying-ji-lu/</id>
-        <link href="https://riddler11.github.io/dian-ying-yuan-guan-ying-ji-lu/">
+        <id>https://www.leoshen.eu.org/dian-ying-yuan-guan-ying-ji-lu/</id>
+        <link href="https://www.leoshen.eu.org/dian-ying-yuan-guan-ying-ji-lu/">
         </link>
         <updated>2022-02-19T09:50:43.000Z</updated>
         <content type="html"><![CDATA[<table>
@@ -430,8 +430,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
-        <id>https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
-        <link href="https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
+        <id>https://www.leoshen.eu.org/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
+        <link href="https://www.leoshen.eu.org/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
         </link>
         <updated>2022-02-12T06:31:03.000Z</updated>
         <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
