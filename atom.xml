@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2022-11-09T08:23:15.709Z</updated>
+    <updated>2022-11-09T08:24:06.301Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Leo&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Acadmic Word]]></title>
+        <id>https://riddler11.github.io/post/tjMa5C_CA/</id>
+        <link href="https://riddler11.github.io/post/tjMa5C_CA/">
+        </link>
+        <updated>2022-11-09T00:23:30.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>harmonic 谐波</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Academic Word 2022.11.9]]></title>
         <id>https://riddler11.github.io/post/academic-word/</id>
@@ -509,18 +520,6 @@ P3.0 P3.1 作为接口</p>
 </tr>
 </tbody>
 </table>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
-        <id>https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
-        <link href="https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
-        </link>
-        <updated>2022-02-12T06:31:03.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
-<p>域名？ 二级域名？DNS解析 这貌似是计算机基础知识，现在已经忘记得差不多了<br>
-接下来就是学习以及用自己的语言进行解释出来。</p>
-<p>翻箱底找出了计算机网络教程书籍。（2022.2.12）</p>
 ]]></content>
     </entry>
 </feed>
