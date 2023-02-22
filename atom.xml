@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2023-02-22T11:01:15.247Z</updated>
+    <updated>2023-02-22T11:03:26.225Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -11,16 +11,12 @@
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Leo&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[Academic Word]]></title>
+        <title type="html"><![CDATA[Academic Word  2023.2.22]]></title>
         <id>https://riddler11.github.io/post/tjMa5C_CA/</id>
         <link href="https://riddler11.github.io/post/tjMa5C_CA/">
         </link>
-        <updated>2022-11-08T16:23:30.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="20221109">2022.11.09</h2>
-<ol>
-<li>harmonic 谐波</li>
-</ol>
-<h2 id="2023222">2023.2.22</h2>
+        <updated>2022-11-08T00:23:30.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="2023222">2023.2.22</h2>
 <ol>
 <li>decibels 分贝</li>
 <li>budgets 预算</li>
@@ -40,7 +36,7 @@
         <id>https://riddler11.github.io/post/academic-word/</id>
         <link href="https://riddler11.github.io/post/academic-word/">
         </link>
-        <updated>2022-11-03T10:31:51.000Z</updated>
+        <updated>2022-11-02T18:31:51.000Z</updated>
         <content type="html"><![CDATA[<table>
 <thead>
 <tr>
@@ -77,8 +73,8 @@
 </tr>
 <tr>
 <td style="text-align:center">6.</td>
-<td style="text-align:center">slope efficency 斜率效率</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">slope efficency</td>
+<td style="text-align:center">斜率效率</td>
 </tr>
 <tr>
 <td style="text-align:center">7.</td>
@@ -126,6 +122,7 @@
 <li>diverge 分叉</li>
 <li>propagation 传播</li>
 <li>spontaneous 自发的</li>
+<li>harmonic 谐波</li>
 </ol>
 ]]></content>
     </entry>
