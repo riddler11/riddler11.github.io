@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2023-11-17T13:45:19.533Z</updated>
+    <updated>2023-11-17T13:47:20.789Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2023, Leo&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[Academic Word 2022.11.9]]></title>
-        <id>https://riddler11.github.io/post/academic-word/</id>
-        <link href="https://riddler11.github.io/post/academic-word/">
+        <id>https://riddler11.github.io/academic-word/</id>
+        <link href="https://riddler11.github.io/academic-word/">
         </link>
         <updated>2022-11-02T18:31:51.000Z</updated>
         <content type="html"><![CDATA[<table>
@@ -107,8 +107,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[电路板问题总结]]></title>
-        <id>https://riddler11.github.io/post/dian-lu-ban-wen-ti-zong-jie/</id>
-        <link href="https://riddler11.github.io/post/dian-lu-ban-wen-ti-zong-jie/">
+        <id>https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/</id>
+        <link href="https://riddler11.github.io/dian-lu-ban-wen-ti-zong-jie/">
         </link>
         <updated>2022-05-18T13:50:16.000Z</updated>
         <content type="html"><![CDATA[<p>钽电容有横杠的那边为正极，接反可能会冒烟，或者是反向电压很大</p>
@@ -118,8 +118,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Altium Designer Learning]]></title>
-        <id>https://riddler11.github.io/post/altium-designer-learning/</id>
-        <link href="https://riddler11.github.io/post/altium-designer-learning/">
+        <id>https://riddler11.github.io/altium-designer-learning/</id>
+        <link href="https://riddler11.github.io/altium-designer-learning/">
         </link>
         <updated>2022-03-05T01:44:15.000Z</updated>
         <content type="html"><![CDATA[<p>绘制流程：<br>
@@ -155,8 +155,8 @@ Description（元件名称介绍等、我写名称，因为设计知道功能）
     </entry>
     <entry>
         <title type="html"><![CDATA[51 MCU further learning]]></title>
-        <id>https://riddler11.github.io/post/51-mcu-further-learning/</id>
-        <link href="https://riddler11.github.io/post/51-mcu-further-learning/">
+        <id>https://riddler11.github.io/51-mcu-further-learning/</id>
+        <link href="https://riddler11.github.io/51-mcu-further-learning/">
         </link>
         <updated>2022-03-02T03:14:31.000Z</updated>
         <content type="html"><![CDATA[<p>引言：最近重新回归51单片机的使用，发现自己严重的不足。之前写的代码可以用“垃圾”两字概括。<br>
@@ -212,8 +212,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Excel表格转成markdown表格（其它JSON、SQL、HTML等格式也可参考本文）]]></title>
-        <id>https://riddler11.github.io/post/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
-        <link href="https://riddler11.github.io/post/excel-biao-ge-zhuan-cheng-markdown-biao-ge/">
+        <id>https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/</id>
+        <link href="https://riddler11.github.io/excel-biao-ge-zhuan-cheng-markdown-biao-ge/">
         </link>
         <updated>2022-02-19T12:33:50.000Z</updated>
         <content type="html"><![CDATA[<p>因为上一篇文章电影院观影记录，出现的一些小问题，使得出现了这一篇的文章<br>
@@ -251,8 +251,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
-        <id>https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
-        <link href="https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
+        <id>https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
+        <link href="https://riddler11.github.io/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
         </link>
         <updated>2022-02-12T06:31:03.000Z</updated>
         <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
@@ -263,8 +263,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Reading]]></title>
-        <id>https://riddler11.github.io/post/reading/</id>
-        <link href="https://riddler11.github.io/post/reading/">
+        <id>https://riddler11.github.io/reading/</id>
+        <link href="https://riddler11.github.io/reading/">
         </link>
         <updated>2022-02-09T09:28:33.000Z</updated>
         <content type="html"><![CDATA[<h2 id="book-list">book list:</h2>
@@ -293,8 +293,8 @@ P3.0 P3.1 作为接口</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Vocabulary learning]]></title>
-        <id>https://riddler11.github.io/post/vocabulary-learning/</id>
-        <link href="https://riddler11.github.io/post/vocabulary-learning/">
+        <id>https://riddler11.github.io/vocabulary-learning/</id>
+        <link href="https://riddler11.github.io/vocabulary-learning/">
         </link>
         <updated>2021-12-26T08:28:03.000Z</updated>
         <content type="html"><![CDATA[<p>非常：除了very，可以用exceedingly。<br>
@@ -345,8 +345,8 @@ immense pressure 巨大压力<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[AD操作（2021.10.15）]]></title>
-        <id>https://riddler11.github.io/post/ad-cao-zuo-20211015/</id>
-        <link href="https://riddler11.github.io/post/ad-cao-zuo-20211015/">
+        <id>https://riddler11.github.io/ad-cao-zuo-20211015/</id>
+        <link href="https://riddler11.github.io/ad-cao-zuo-20211015/">
         </link>
         <updated>2021-10-15T01:08:33.000Z</updated>
         <content type="html"><![CDATA[<h2 id="画图顺序">画图顺序</h2>
@@ -406,8 +406,8 @@ Width 规则 Min 5mil Max 100mil<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[Wireless transmission of RFID identification information to server based on ESP8266.（基于ESP8266无线传输射频识别信息传输到服务器）]]></title>
-        <id>https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
-        <link href="https://riddler11.github.io/post/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/">
+        <id>https://riddler11.github.io/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/</id>
+        <link href="https://riddler11.github.io/wireless-transmission-of-rfid-identification-information-to-server-based-on-esp8266ji-yu-esp8266-wu-xian-chuan-shu-she-pin-shi-bie-shi-bie-xin-xi-dao-fu-wu-qi/">
         </link>
         <updated>2021-10-13T12:26:33.000Z</updated>
         <content type="html"><![CDATA[<h3 id="this-is-project-i-did-a-long-time-ago-because-of-this-project-i-learn-a-lot-of-things-not-only-academically-but-also-the-attitude-of-dealing-with-people">This is project I did a long time ago. Because of this project, I learn a lot of things. (Not only academically, but also the attitude of dealing with people.)</h3>
