@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://riddler11.github.io</id>
     <title>Leo&apos;s Blog</title>
-    <updated>2023-11-17T13:36:40.642Z</updated>
+    <updated>2023-11-17T13:39:47.254Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://riddler11.github.io"/>
     <link rel="self" href="https://riddler11.github.io/atom.xml"/>
@@ -10,27 +10,6 @@
     <logo>https://riddler11.github.io/images/avatar.png</logo>
     <icon>https://riddler11.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, Leo&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[Academic Word  2023.2.22]]></title>
-        <id>https://riddler11.github.io/post/tjMa5C_CA/</id>
-        <link href="https://riddler11.github.io/post/tjMa5C_CA/">
-        </link>
-        <updated>2023-02-22T03:03:45.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="2023222">2023.2.22</h2>
-<ol>
-<li>decibels 分贝</li>
-<li>budgets 预算</li>
-<li>margin 余量</li>
-<li>extensively 广泛的</li>
-<li>alternative 可供选择的</li>
-<li>ratio 比例</li>
-<li>exploit 充分利用</li>
-<li>multiplication 乘法</li>
-<li>estimate 估计</li>
-<li></li>
-</ol>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Academic Word 2022.11.9]]></title>
         <id>https://riddler11.github.io/post/academic-word/</id>
@@ -124,65 +103,6 @@
 <li>spontaneous 自发的</li>
 <li>harmonic 谐波</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Plan]]></title>
-        <id>https://riddler11.github.io/post/2022712-reading-and-writing/</id>
-        <link href="https://riddler11.github.io/post/2022712-reading-and-writing/">
-        </link>
-        <updated>2022-07-11T07:58:31.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>早睡</li>
-<li>早起</li>
-<li>总结acadmic word</li>
-<li>optical fibre作业</li>
-<li>laser学习</li>
-<li>实验预习</li>
-<li>lab report</li>
-<li>silicon photonics学习</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[人工智能、沉默的羔羊、火星人玩转地球、变相怪杰观后感]]></title>
-        <id>https://riddler11.github.io/post/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/</id>
-        <link href="https://riddler11.github.io/post/ren-gong-zhi-neng-chen-mo-de-gao-yang-huo-xing-ren-wan-zhuan-di-qiu-bian-xiang-guai-jie-guan-hou-gan/">
-        </link>
-        <updated>2022-06-02T02:56:11.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="人工智能">人工智能</h2>
-<p>人工智能这部电影讲述的是一个机器人想要得到爱，因此想成为人类的故事。每个人其实都渴望成为唯一，机器人身上出现的人类情绪，单从电影来看，人类塑造的形象有点坏。没能有更深入的共鸣。机器人确实变得挺惨的。这部电影没能让我有很深入的共鸣思考。确实当机器人也有情绪时候这个值得去考量。</p>
-<p>##　沉默的羔羊<br>
-经典老电影，小时候忘记哪个电视台看的，说怎么通过一个罪犯抓住另一个罪犯。电影的一些镜头等光影渲染得非常好，看了弹幕的一些解析，有点道理</p>
-<h2 id="火星人玩转地球">火星人玩转地球</h2>
-<p>这部电影直接是童年噩梦，看完晚上脑子里都是那个bgm，现在发现演员里面有很多熟悉的老面孔震惊，很多大牌明星在里面出演，确实是有点东西的这个对于童年的我来说，6.1回顾了这部电影，对于童年的致敬，看完这电影以至于我在童年对于外星人的印象就记住了这里的画面</p>
-<h2 id="变相怪杰">变相怪杰</h2>
-<p>这部电影看了好像五次了，心要存善良，要有正能量。是我非常喜爱的金凯瑞的影视作品，对于这名演员的演技，面部肌肉的控制真的是佩服。小时候看确实想拥有一样的变身面具哈哈。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[近期的一些读后感、观后感]]></title>
-        <id>https://riddler11.github.io/post/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/</id>
-        <link href="https://riddler11.github.io/post/jin-qi-de-yi-xie-du-hou-gan-guan-hou-gan/">
-        </link>
-        <updated>2022-05-25T08:22:34.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="iot变现-作者大前研一">IOT变现 作者：大前研一</h2>
-<p>看完这本书，首先知道了一些概念，其次对于一些大公司的明确发展路径，而舍弃一些业务，有了一些理解。<br>
-对于未来的一些自动驾驶等的一些普及有了更加深入的理解。西门子的故事还有汽车厂商的故事深入人心。有时需要数据的共享才能进一步推动整个社会的发展<br>
-西门子所重视的大趋势共有五点</p>
-<ol>
-<li>数字化转变</li>
-<li>全球化</li>
-<li>城市化</li>
-<li>人口动态</li>
-<li>气候变化</li>
-</ol>
-<p>以大趋势为基础思考应对方法，是西门子的战略<br>
-将事业卖掉，一定要趁事业还在盈利的时候<br>
-需要模块化和标准化，这个非常关键。<br>
-IOT怎么变现，通过书中的见解，我自己总结要有一个明确的目标，从单纯的销售商品转化为利用IOT提供各种各样的服务转变。像米其林轮胎从单销售轮胎+各种传感器“轮胎维护服务”，赚取利润，新商业模式。不过一定要看ROI，看投入的IOT是不是有效果减少无用功。</p>
-<h2 id="姚明年">姚明年</h2>
-<p>看完姚明年这部纪录片，记录的是他新秀赛季的片段，从一个rookie不被看好，到一步步的赢得人们心中的尊敬。除此之外，还看到他的情商还有对于他人的包容，以及努力适应别人的文化，融入团体，并逐渐给球队带来实际帮助。这些处世之道确实很值得学习。</p>
 ]]></content>
     </entry>
     <entry>
@@ -330,207 +250,171 @@ P3.0 P3.1 作为接口</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[电影院观影记录]]></title>
-        <id>https://riddler11.github.io/post/dian-ying-yuan-guan-ying-ji-lu/</id>
-        <link href="https://riddler11.github.io/post/dian-ying-yuan-guan-ying-ji-lu/">
+        <title type="html"><![CDATA[因为想要设置评论区邮件提醒，导致后续的问题]]></title>
+        <id>https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/</id>
+        <link href="https://riddler11.github.io/post/yin-wei-xiang-yao-she-zhi-you-jian-ti-xing-dao-zhi-hou-xu-de-wen-ti/">
         </link>
-        <updated>2022-02-19T09:50:43.000Z</updated>
-        <content type="html"><![CDATA[<table>
-<thead>
-<tr>
-<th style="text-align:center">序号</th>
-<th style="text-align:center">电影名</th>
-<th style="text-align:center">观影时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:center">惊天魔盗团2</td>
-<td style="text-align:center">2016-07-17</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:center">异形：契约</td>
-<td style="text-align:center">2017-06-19</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:center">神奇女侠</td>
-<td style="text-align:center">2017-06-19</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:center">加勒比海盗5：死无对证</td>
-<td style="text-align:center">2017-06-20</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:center">变形金刚5：最后的骑士</td>
-<td style="text-align:center">2017-06-23</td>
-</tr>
-<tr>
-<td style="text-align:center">6</td>
-<td style="text-align:center">京城81号Ⅱ</td>
-<td style="text-align:center">2017-07-06</td>
-</tr>
-<tr>
-<td style="text-align:center">7</td>
-<td style="text-align:center">神偷奶爸3</td>
-<td style="text-align:center">2017-07-07</td>
-</tr>
-<tr>
-<td style="text-align:center">8</td>
-<td style="text-align:center">战狼2</td>
-<td style="text-align:center">2017-08-07</td>
-</tr>
-<tr>
-<td style="text-align:center">9</td>
-<td style="text-align:center">极盗车神</td>
-<td style="text-align:center">2017-08-25</td>
-</tr>
-<tr>
-<td style="text-align:center">10</td>
-<td style="text-align:center">星际特工：千星之城</td>
-<td style="text-align:center">2017-09-05</td>
-</tr>
-<tr>
-<td style="text-align:center">11</td>
-<td style="text-align:center">敦刻尔克</td>
-<td style="text-align:center">2017-09-07</td>
-</tr>
-<tr>
-<td style="text-align:center">12</td>
-<td style="text-align:center">正义联盟</td>
-<td style="text-align:center">2017-11-19</td>
-</tr>
-<tr>
-<td style="text-align:center">13</td>
-<td style="text-align:center">抓妖记2</td>
-<td style="text-align:center">2018-02-26</td>
-</tr>
-<tr>
-<td style="text-align:center">14</td>
-<td style="text-align:center">唐人街探案2</td>
-<td style="text-align:center">2018-02-26</td>
-</tr>
-<tr>
-<td style="text-align:center">15</td>
-<td style="text-align:center">黑豹</td>
-<td style="text-align:center">2018-03-10</td>
-</tr>
-<tr>
-<td style="text-align:center">16</td>
-<td style="text-align:center">我不是药神</td>
-<td style="text-align:center">2018-07-17</td>
-</tr>
-<tr>
-<td style="text-align:center">17</td>
-<td style="text-align:center">西虹市首富</td>
-<td style="text-align:center">2018-08-06</td>
-</tr>
-<tr>
-<td style="text-align:center">18</td>
-<td style="text-align:center">憨豆特工3</td>
-<td style="text-align:center">2018-11-24</td>
-</tr>
-<tr>
-<td style="text-align:center">19</td>
-<td style="text-align:center">无名之辈</td>
-<td style="text-align:center">2018-11-24</td>
-</tr>
-<tr>
-<td style="text-align:center">20</td>
-<td style="text-align:center">海王</td>
-<td style="text-align:center">2018-12-16</td>
-</tr>
-<tr>
-<td style="text-align:center">21</td>
-<td style="text-align:center">蜘蛛侠：平行宇宙</td>
-<td style="text-align:center">2018-12-30</td>
-</tr>
-<tr>
-<td style="text-align:center">22</td>
-<td style="text-align:center">密室逃生</td>
-<td style="text-align:center">2019-01-29</td>
-</tr>
-<tr>
-<td style="text-align:center">23</td>
-<td style="text-align:center">疯狂的外星人</td>
-<td style="text-align:center">2019-02-17</td>
-</tr>
-<tr>
-<td style="text-align:center">24</td>
-<td style="text-align:center">雷霆沙赞！</td>
-<td style="text-align:center">2019-04-06</td>
-</tr>
-<tr>
-<td style="text-align:center">25</td>
-<td style="text-align:center">蜘蛛侠：英雄远征</td>
-<td style="text-align:center">2019-06-29</td>
-</tr>
-<tr>
-<td style="text-align:center">26</td>
-<td style="text-align:center">哪吒之魔童降世</td>
-<td style="text-align:center">2019-08-16</td>
-</tr>
-<tr>
-<td style="text-align:center">27</td>
-<td style="text-align:center">误杀</td>
-<td style="text-align:center">2020-01-04</td>
-</tr>
-<tr>
-<td style="text-align:center">28</td>
-<td style="text-align:center">八佰</td>
-<td style="text-align:center">2020-08-25</td>
-</tr>
-<tr>
-<td style="text-align:center">29</td>
-<td style="text-align:center">姜子牙</td>
-<td style="text-align:center">2020-10-06</td>
-</tr>
-<tr>
-<td style="text-align:center">30</td>
-<td style="text-align:center">拆弹专家2</td>
-<td style="text-align:center">2021-01-05</td>
-</tr>
-<tr>
-<td style="text-align:center">31</td>
-<td style="text-align:center">怒火重案</td>
-<td style="text-align:center">2021-08-21</td>
-</tr>
-<tr>
-<td style="text-align:center">32</td>
-<td style="text-align:center">失控玩家</td>
-<td style="text-align:center">2021-08-28</td>
-</tr>
-<tr>
-<td style="text-align:center">33</td>
-<td style="text-align:center">沙丘</td>
-<td style="text-align:center">2021-11-14</td>
-</tr>
-<tr>
-<td style="text-align:center">34</td>
-<td style="text-align:center">007无暇赴死</td>
-<td style="text-align:center">2021-11-15</td>
-</tr>
-<tr>
-<td style="text-align:center">35</td>
-<td style="text-align:center">反贪风暴5</td>
-<td style="text-align:center">2022-01-06</td>
-</tr>
-<tr>
-<td style="text-align:center">36</td>
-<td style="text-align:center">坏蛋联盟</td>
-<td style="text-align:center">2022-05-04</td>
-</tr>
-<tr>
-<td style="text-align:center">37</td>
-<td style="text-align:center">边缘行者</td>
-<td style="text-align:center">2022-05-08</td>
-</tr>
-</tbody>
-</table>
+        <updated>2022-02-12T06:31:03.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="首先第一个问题概念">首先第一个问题：概念</h2>
+<p>域名？ 二级域名？DNS解析 这貌似是计算机基础知识，现在已经忘记得差不多了<br>
+接下来就是学习以及用自己的语言进行解释出来。</p>
+<p>翻箱底找出了计算机网络教程书籍。（2022.2.12）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Reading]]></title>
+        <id>https://riddler11.github.io/post/reading/</id>
+        <link href="https://riddler11.github.io/post/reading/">
+        </link>
+        <updated>2022-02-09T09:28:33.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="book-list">book list:</h2>
+<ol>
+<li>
+<p>物理学的进化</p>
+</li>
+<li>
+<p>程序员数学</p>
+</li>
+<li>
+<p>PR CC教程</p>
+</li>
+<li>
+<p>TensorFlow</p>
+</li>
+<li>
+<p>C#程序设计（以上是2022.2.9添加）</p>
+</li>
+<li>
+<p>计算机网络教程（2022.2.12添加）</p>
+<p>希望一天进行一点阅读，写相应的读后感或者总结。</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[电影大三元观影感受]]></title>
+        <id>https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/</id>
+        <link href="https://riddler11.github.io/post/da-san-yuan-guan-ying-gan-shou/">
+        </link>
+        <updated>2022-02-08T10:05:52.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="电影大三元以下内容可能含有剧透谨慎观看">电影：大三元（以下内容可能含有剧透，谨慎观看）</h2>
+<p>主演：张国荣、袁咏仪、刘青云、洪欣等</p>
+<h3 id="先入为主的感受">先入为主的感受：</h3>
+<p>这部片个人感觉上是一部喜剧片，片中的哥哥很帅气，出场的每一帧感觉都能够作为壁纸。<br>
+那时候的美女美得各有特色、洪欣出场确实很惊艳，其它几个美女如果是正常的妆发也是非常能打。</p>
+<p>以下将有几张感觉很prefect很唯美的几帧画面与文字穿插出现 <strong>（以下内容可能含有剧透，谨慎观看）</strong><br>
+<img src="https://riddler11.github.io/post-images/1644316970495.png" alt="" loading="lazy"></p>
+<h3 id="影片概述">影片概述</h3>
+<p>片中张国荣饰演的角色是一位名为钟国强神父，刘青云饰演的是一位拥有中国男足的脚的警察<br>
+围绕作为娱乐界的白板（袁咏仪饰演）以及一众人物展开的救赎故事。最终是一个happy ending。<br>
+<img src="https://riddler11.github.io/post-images/1644316869564.png" alt="" loading="lazy"></p>
+<h3 id="情节发展">情节发展</h3>
+<p>以倒叙进行开端，先把一个重要的画面先铺垫，再进行故事的开展。我个人认为情节的衔接是没有问题的，有时候插入一些搞笑的情节，确实可以一笑，但是由于在B站总是看到这些片段有点小剧透，反而因为知道情节而少了一番风味。<br>
+<img src="https://riddler11.github.io/post-images/1644316876335.png" alt="" loading="lazy"><br>
+<img src="https://riddler11.github.io/post-images/1644316892070.png" alt="" loading="lazy"></p>
+<h3 id="总的个人评价">总的个人评价</h3>
+<p>我个人觉得这部片还可以，演员阵容现在来看无敌，画面很美，喜剧得不够彻底，正经和深刻也不算太到位，这是我个人的一个感受。不过演员表演得都挺到位的。不过故事情节确实耳目一新。有些画面确实可以做成表情包使用🤣。<br>
+<img src="https://riddler11.github.io/post-images/1644317007317.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[几部电影感受感悟（可能含有剧透）]]></title>
+        <id>https://riddler11.github.io/post/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/</id>
+        <link href="https://riddler11.github.io/post/kan-dian-ying-gan-shou-gan-wu-ke-neng-han-you-ju-tou/">
+        </link>
+        <updated>2022-02-06T05:46:57.000Z</updated>
+        <content type="html"><![CDATA[<p>最近看了以下几部电影，以下皆是个人观影感受，个人看法，不喜勿喷。</p>
+<h2 id="电影名字电影排序暗观看顺序">电影名字（电影排序暗观看顺序）</h2>
+<ol>
+<li>新洗冤录</li>
+<li>闪灵</li>
+<li>断头谷</li>
+<li>扬名立万</li>
+<li>抓鬼敢死队</li>
+<li>天下无贼</li>
+<li>龙珠Z：弗利萨复活</li>
+<li>羞羞的铁拳</li>
+</ol>
+<h3 id="新洗冤录">新洗冤录</h3>
+<p>这部电影貌似除了欧阳震华，其余演员好像都是讲普通话的，使得有点出戏。这部片是悬疑片，但是剧情速度太快了感觉像是一部喜剧片，情节发生得太快太突然了，凶手从一开始就看出来了，有些情节发生得有点牵强，惊悚刺激的成分少了点，总是看看进度条走完没，总的来说这部片对于我个人来说我觉得除了演员长得还不错，加上情怀，还有那些话语，以及一些人物出场铺垫刚好对应上，其余普普通通。</p>
+<h3 id="闪灵">闪灵</h3>
+<p>经典老片，看第二遍，有些情节没看懂的这次打开弹幕看懂了，有些地方是代表与魔鬼交易什么的，发现弹幕除了剧透还能够进行解释剧情，有利有弊。Here's Jonny这句台词深入脑海，第二次看女主有些神经兮兮，而且疯狂尖叫，也就人麻了。那个酒店的管家明明感觉到有危险还只身前往，直接猪队友拉满，千里送人头，礼轻情意重。不过好在送来了交通工具直接跑了。如果是第一次看，可能有些片段是真的会被吓到，背景音乐和男主演员的神情演技很好，作为老片真的挺不错的</p>
+<h3 id="断头谷">断头谷</h3>
+<p>强尼戴普的一部电影，这个警探说实话是真的怂，每次都躲在别人身后，不是躲在小孩，就是躲在女人身后。场景确实可怕，不过德普有几次晕倒确实忍不住笑了。一开始我以为的凶手，最后发现不是， 确实这个观影就很好，除了怂之外，这个角色的特点还是比较鲜明的，崇尚科学、以及为了真理的探索精神值得学习，为保护值得保护的人拼尽全力，happy ending确实有点爽。</p>
+<h3 id="扬名立万">扬名立万</h3>
+<p>这部片子很惊艳，看完之后也看了一下别人对于这部片子的一些解说。那些解说讲述这部片子对于一些现实的一些映射和讽刺，好像也有些道理。确实没看到最后不清楚真正的故事。人物刻画得有血有肉，个人角度来说这部电影很不错。</p>
+<h3 id="抓鬼敢死队">抓鬼敢死队</h3>
+<p>这部电影一开头觉得背景音乐和图书馆这些元素营造了一种恐怖的氛围，误以为是恐怖惊吓类的电影，看到后面发现里面的鬼的元素都挺可爱的，除了一两个，主角之一总是因为是异性总是动一点小歪念。从开头的刻画到最后的刻画，还真的是，感觉他是因为女生才拯救的世界动机不太纯正，感觉是一部喜剧片。鉴于是一部老片，我个人觉得还是合格的，就是剧情走向确实能够看了前面能推出后面这个就很bug。观影体验对于我来说是差了点</p>
+<h3 id="天下无贼">天下无贼</h3>
+<p>刘德华和葛大爷的对戏，这部戏有些地方开了弹幕来看，人物的转变还是处理得挺不错的。这车上这么多小偷我是没想到的，色调有点和2010年决战刹马镇相似，刘德华在里面的哭戏确实演得挺好的，让我认为是讲的真事。剧情明争暗斗确实刻画得挺好。</p>
+<h3 id="龙珠z弗利萨复活">龙珠Z：弗利萨复活</h3>
+<p>作为一个龙珠迷（可能评价很不客观），我是很喜欢龙珠的作品的，输出全靠哄，这部是反派少了talk，改变过去的一种因为话多而被打败的局势。主角光环一直在，所以不输。小时候很喜欢悟空，长大后发现更加喜欢贝吉塔，敢爱敢恨，人就很real，人狠话不多，这次就话多送人头，离谱。大家都是为了提升自己的水平疯狂努力，连弗利萨这种天才也是，很热血，弗利萨的这种自大学不得，不过它的努力确实值得称赞，可以看出这是在逐渐洗白这个反派，就角色角度而言有时应该有卡卡罗特的放松以及处世的坦然，但有时需要有贝吉塔的紧张压迫感，对待事情的认真以及对于事情的一种自我激励，做一个敢爱敢恨的赛亚王子😀（他对自己家人的好dddd，布尔玛、特兰克斯、还有女儿奴就很真实，长大后反而觉得这个就很抓住自己的注意力，而且不会像悟空游手好闲，有自己的一番事业，更讨喜，即使万年老二，但只要悟空达到他不久就能达到真的很厉害）。到了超蓝这些战力就不知道怎么衡量，就很离谱没能对这些成长有什么感悟，对于这些后来的故事，个人还是更喜欢前面成长型的故事，以及打七星龙的那里故事（我依稀记得七星龙片头和片尾曲很好听）。</p>
+<h3 id="羞羞的铁拳">羞羞的铁拳</h3>
+<p>“你过来呀！”这个深入人心。确实挺搞笑的，是一个成长型的故事。通过一次意外事件，两个角色了解了背后的真相，之后通过训练，最终以实力赢得荣耀。两人的成长，坏人锒铛入狱。看这片确实挺爽的。搞笑确实也挺搞笑的，我个人觉得值得一看，能够放松心情。</p>
+<h3 id="这几部片在我心中的排名">这几部片在我心中的排名</h3>
+<ol>
+<li>扬名立万</li>
+<li>天下无贼</li>
+<li>龙珠Z：弗利萨复活</li>
+<li>断头谷</li>
+<li>羞羞的铁拳</li>
+<li>闪灵</li>
+<li>抓鬼敢死队</li>
+<li>新洗冤录</li>
+</ol>
+<p>（2022.2.6 update）</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Vocabulary learning]]></title>
+        <id>https://riddler11.github.io/post/vocabulary-learning/</id>
+        <link href="https://riddler11.github.io/post/vocabulary-learning/">
+        </link>
+        <updated>2021-12-26T08:28:03.000Z</updated>
+        <content type="html"><![CDATA[<p>非常：除了very，可以用exceedingly。<br>
+重要的：除了important，可indispensable。<br>
+政府：除了government，其实可以用authority。<br>
+成功：除了success，可以用glory。<br>
+e.g.</p>
+<ol>
+<li>
+<p>English must be pointed out exceedingly indispensable.<br>
+英语必须被指出非常重要的。</p>
+</li>
+<li>
+<p>Authorities should be proposed to adopt action.<br>
+政府应该被建议采取行动。</p>
+</li>
+<li>
+<p>If there exists a dream, glories are supposed to be achieved.<br>
+如果有梦想，就应该会成功。</p>
+</li>
+</ol>
+<p>(2021.12.26)</p>
+<p>重要的，杰出的：除了important or well known，可以用 prominent<br>
+该词还有显著的、突出的 意思<br>
+e.g.</p>
+<ol>
+<li>
+<p>He played a prominent part in the campaign.<br>
+他在这次运动中发挥了重要作用。</p>
+</li>
+<li>
+<p>She was prominent in the fashion industry.<br>
+她曾在时装界名噪一时。</p>
+</li>
+<li>
+<p>The story was given a prominent position on the front page.<br>
+这则报道刊登在头版的显著位置。</p>
+</li>
+</ol>
+<p>巨大的：除了huge，可用enormous、immense</p>
+<p>enormous pressure 巨大压力<br>
+immense pressure 巨大压力<br>
+(2021.12.27)</p>
+<p>play a  pivotal/ crucial/ vital role in … 在……中扮演重要作用<br>
+(2022.1.10)</p>
+<p>To be continued...</p>
 ]]></content>
     </entry>
 </feed>
